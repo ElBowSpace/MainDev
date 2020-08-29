@@ -7,11 +7,9 @@
 
 * File: Milestone-1/Design.md
 
-* URL: https://github.com/ElBowSpace/ElBowSpaceProject/Milestone-1/Design.md.git
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/Milestone-1/Design.md
 
-* Documents: Documents/swplan/BookBuilder
-
-* Git Repo: Mark-Seaman.github.io
+* Git Repo: https://github.com/ElBowSpace
 
 
 
