@@ -125,10 +125,10 @@ Dev Tools
 Github
 
     Git for version control
-    Github to hold the Book Builder repos
-        * Book-Builder.git - app code 
-        * Book-Builder.github.io.git - Github Pages for client website
-        * Book-Builder.wiki.git
+    Github to hold the ElbowSpace repos
+        * ElbowSpace.git - app code 
+        * ElbowSpace.github.io.git - Github Pages for client website
+        * ElbowSpace.wiki.git
     Github Tools
         * wiki - project documentation
         * kanban - project management workflow
