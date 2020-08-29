@@ -31,10 +31,10 @@ Goal: Technology selection
 
 
 
-## Book Builder - Technology selection
+## ElbowSpace - Technology selection
 
 Selecting the correct technology is the first important technical decision on any project.
-Book Builder is a web service that can support both desktop and mobile web clients.
+ElbowSpace is a web service that can support both desktop and mobile web clients.
 The technology to be used should be optimized for rapid web development.
 
 ### Technology Alternatives
@@ -47,7 +47,7 @@ software. Building software will be at least ten times more expensive that buyin
 existing product.
 
 There are some competitive products in the market but there is nothing that will satisfy 
-the client needs.  We will be building software to create the Book Builder application.
+the client needs.  We will be building software to create the ElbowSpace application.
 It is important to the client to own the intellectual property so that the application can be
 sold to another business.
 
@@ -87,7 +87,7 @@ Criteria for Technology Selection
 * Existing commercial apps that use the technology
 * Proof of concept (building a simple app)
 
-After careful consideration a decision was made to create Book Builder using the Django
+After careful consideration a decision was made to create ElbowSpace using the Django
 web framework which is written in the Python programming language.
 
 Here are the most important considerations that support this decision:
