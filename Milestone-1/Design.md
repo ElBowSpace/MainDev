@@ -7,7 +7,7 @@
 
 * File: Milestone-1/Design.md
 
-* URL: https://github.com/ElBowSpace/ElBowSpaceProject.git
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/Milestone-1/Design.md.git
 
 * Documents: Documents/swplan/BookBuilder
 
