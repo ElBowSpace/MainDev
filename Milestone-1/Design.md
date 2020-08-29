@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Milestone 1. Project Plan Complete - Design
 
 
