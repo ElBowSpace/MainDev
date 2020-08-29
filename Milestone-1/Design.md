@@ -92,8 +92,8 @@ web framework which is written in the Python programming language.
 
 Here are the most important considerations that support this decision:
 
-* The software team has extensive experience with using Django for the past several 
-years.  The accumulated Django experience of the team is 25 years.
+* The software team does not have enough experience with web frameworks. For that reason we
+chose to use Mark Seaman choice in case at some moment we need assistance.
 * The new software is very similar to several existing products that have already been
 completed, allowing for extensive leverage opportunities.
 * Python is growing in popularity and widespread market adoption and Django is the most
