@@ -10,7 +10,7 @@
 
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/Milestone-1/Design.md
 
-* Git Repo: https://github.com/ElBowSpace
+* Git Repo: https://github.com/ElBowSpace/ElBowSpaceProject
 
 
 
