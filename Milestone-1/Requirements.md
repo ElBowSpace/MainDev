@@ -3,13 +3,12 @@
 
 ## PROJECT INFO
 
-* [Software Project Plan - Book Builder](../Index.md)
+* [Software Project Plan - ElBow Space](../Index.md)
 
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
 , [Code.md](Code.md)
 , [Test.md](Test.md)
-
 
 
 * File: Milestone-1/Requirements.md
@@ -19,8 +18,6 @@
 * Documents: Documents/ in progress
 
 * Git Repo: ElBowSpaceProject
-
-
 
 
 ### Milestone 1. Project Plan Complete
@@ -35,7 +32,6 @@ Goal: Project Charter
 * Project scope & budget
 * Client communication
 * Sprint Planning meetings
-
 
 
 ## ElBow Space - Project Charter
@@ -102,51 +98,31 @@ Note the priorities - Schedule will never move, and Money will move only to prot
 the schedule.  Features will be adjusted throughout the milestone and must be constantly
 negotiated with the client.
 
-# TODO: Finish editing this template - Kevin
 #### Project Features
-
-##### Editorial Workflow
-
-Each chapter goes through a series of stages:
-
-* Outline - A strong outline fits into a master outline for the book.
-* Draft - Each of the bullets in the outline is expanded into prose.
-* Edit - The content is reviewed and updated for spelling, grammar, word choice, accuracy, 
-and tone.
-* Review - The content is ready to have external readers review it but remains in a
-state of refinement.
-* Published - The content is released to the public.
+* User generated account with secure login credentials required
+* User created text field to carry a story
+* User uploaded photos
+* User can create network connections with other users, they can also disconnect at will
+* Connected users can reply to stories and photos creating a thread related to the entry
+* Users can apply emotes to individual entries
+* Users can search connected users network to make new connections
 
 ##### User Experience
 
-Author can create book projects, outlines, chapters, text, images, cover artwork, and other
-items needed for the book.
-
-##### Kindle Book
-
-At any time an HTML file and the assets needed can be generated from the content that the
-author has created.  This HTML file can be directly uploaded to Amazon as a Kindle book.
-
-##### Reading Room
-
-The ebook version of the content is displayed on the Book Builder website within the 
-READING ROOM.  This offers a display showcase for authors to present their works and gives
-reader an alternative to the Kindle book format.
-
+A user creates an account.  They can upload an image to facilitate telling a story.  Their
+network of friends and family can like, share, or comment on the thread that the user started.
+Sharing a thread creates a new subthread that expands the reach of the story to new networks.
 
 ### Our Team
 
 #### Development Team
 
-The key to great teamwork is great communication.  This project is done by a mythical 
-team of engineers:
+No great works of software are a solo effort.
 
-* Tony Stark - Client representative
-* Natalia Romanova - Technical lead
-* Hank Pym - Back-end developer
-* Bruce Banner - Front-end developer
-* Mark Seaman - Project manager
-* Wanda Maximoff - Requirements
+* Kevin Ritter - Requirements Lead, Client Advocate
+* Stephen Provost - Dev Ops Lead Software Engineer
+* Angel Rivera - Chief Design Engineer
+* Ben McEwen - Senior Test Engineer
 
 Each person is given a role that matches their expertise. For each Milestone developers will
 commit to the features that they can realistically accomplish in the two-week 
@@ -154,13 +130,10 @@ Development Sprint.
 
 #### Communication Plan
 
-The dev team is geographically distributed in the USA, Japan, and Europe.
-It is essential that developers meet up regularly over Zoom and occasionally in person.
-
-The Book Builder team will meet MWF each week at 11:00-11:30 to coordinate 
+The dev team will meet MWF each week at 11:00-11:30 to coordinate 
 project activities.  Development work will be done outside of this meeting.
-This will serve the
-purpose of the "Scrum Daily Stand-up Meeting".
+This will serve the purpose of the "Scrum Daily Stand-up Meeting".
+There is an additional planning meeting Mondays at 11:30
 
 #### Meeting Agenda
 
@@ -213,14 +186,13 @@ during the Sprint.
 
 #### Sprint Planning meetings
 
-Each Sprint will start with a Sprint Planning Meeting.  Development team will meet with 
+Each Sprint will start with a Sprint Planning Meeting (Mondays).  Development team will meet with 
 the client to determine the client features with the highest priority.  This will be 
 expressed as a Product Backlog which shows the features in sorted order of importance to 
 the client.
 
-For each Milestone developers will
-commit to the features that they can realistically accomplish in the two-week 
-Development Sprint.  Features are selected by the individual developer and must include 
+For each Milestone developers will commit to the features that they can realistically accomplish in 
+the two-week development Sprint.  Features are selected by the individual developer and must include 
 the highest priority issues on the Product Backlog.
 
 If a developer cannot deliver the required functionality then another teammate will be 
@@ -230,32 +202,32 @@ required to produce the missing result.
 
 After each milestone team members will give feedback about the team dynamics they
 experienced. A brief survey will show how the team is working together.  The results of this 
-survey will be recorded as a part of the public record for Book Builder.  
+survey will be recorded as a part of the public record for ElBow Space.  
 
 Each team member is required to complete the survey for each milestone.  Tools will act as
 a reminder.
 
 #### Milestone #1 Team Survey
 
-    Natalia - (2 credits)
-        _X_ participated in team meetings
-        ___ was cooperative -- bit on arrogant side
-        _X_ delivered contribution
+    Kevin - (x/3 credits)
+        ___ participated in team meetings
+        ___ was cooperative
+        ___ delivered contribution
         
-    Wanda - (3 credits)
-        _X_ participated in team meetings
-        _X_ was cooperative
-        _X_ delivered contribution
+    Stephen - (x/3 credits)
+        ___ participated in team meetings
+        ___ was cooperative
+        ___ delivered contribution
         
-    Bruce - (1 credit)
-        ___ participated in team meetings -- attended 2 of 6 meetings
-        ___ was cooperative -- was very anrgy, turn green
-        _X_ delivered contribution
+    Angel - (x/3 credits)
+        ___ participated in team meetings
+        ___ was cooperative
+        ___ delivered contribution
         
-    Hank - (2 credits)
-        _X_ participated in team meetings
-        _X_ was cooperative
-        ___ delivered contribution -- failed to write design doc
+    Ben - (x/3 credits)
+        ___ participated in team meetings
+        ___ was cooperative
+        ___ delivered contribution
         
     * You must add a note for missing credits
         
