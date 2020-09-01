@@ -153,7 +153,7 @@ Python Anywhere
 
 ### Setup Guides
 
-* [Tutorial Documents](../docs/Index.md)
+* [Tutorial Documents](https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/docs/Index.md) - 
 
 
 ### Create "Hello World"
