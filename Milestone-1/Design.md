@@ -147,8 +147,8 @@ Github
         
 Python Anywhere
 
-    Account:  Elbeauspace
-    Web URL:  https://Elbeauspace.pythonanywhere.com
+    Account:  elbeauspace
+    Web URL:  https://elbeauspace.pythonanywhere.com
     
 
 ### Setup Guides
@@ -175,7 +175,7 @@ Alternative Hosting Services
 * Python Anywhere - Free accounts available, optimized for Django
 * Bluehost - Supports PHP but not Django
 
-Book Builder will be using Python Anywhere to do free hosting.  Tutorial documents will show
+ElbowSpace will be using Python Anywhere to do free hosting.  Tutorial documents will show
 all developers how to setup and configure a web app.
 
 =======
