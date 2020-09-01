@@ -98,7 +98,8 @@ web framework which is written in the Python programming language.
 Here are the most important considerations that support this decision:
 
 * The software team does not have enough experience with web frameworks. 
-For that reason we chose to use Mark Seaman's choice in the case at some moment the software team need assistance.
+For that reason the software team chose to follow Mark Seaman's steps in the case at some moment assistance
+is required.
 * The developer team has moderate experience with Python, this could eliminate the need to experiment 
 with other programming languages the developer team is not familiar with.
 * The new software is very similar to several existing products that have already been
