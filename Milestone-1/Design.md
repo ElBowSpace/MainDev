@@ -39,7 +39,7 @@ Goal: Technology selection
 ## ElbowSpace - Technology selection
 
 Selecting the correct technology is the first important technical decision on any project.
-ElbowSpace is a web service that can support both desktop and mobile web clients.
+ElbowSpace is a web service that will support both desktop and mobile web clients.
 The technology to be used should be optimized for rapid web development.
 
 ### Technology Alternatives
