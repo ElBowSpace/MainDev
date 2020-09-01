@@ -6,6 +6,11 @@
 
 * [Software Project Plan - ElbowSpace ](../Index.md)
 
+* Other Roles - [Requirements.md](Requirements.md)
+, [Design.md](Design.md)
+, [Code.md](Code.md)
+, [Test.md](Test.md)
+
 * File: Milestone-1/Design.md
 
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/Milestone-1/Design.md
