@@ -1,6 +1,6 @@
 # Tutorials
 
-## Installing Djanjo
 ## Installing Python
+## Installing Django
 ## Installing Brackets 
 ## 
