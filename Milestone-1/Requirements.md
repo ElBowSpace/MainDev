@@ -130,15 +130,14 @@ Development Sprint.
 
 #### Communication Plan
 
-The dev team will meet MWF each week at 11:00-11:30 to coordinate 
+The dev team will meet MWF each week before class at 12:00-12:20PM to coordinate 
 project activities.  Development work will be done outside of this meeting.
 This will serve the purpose of the "Scrum Daily Stand-up Meeting".
-There is an additional planning meeting Mondays at 11:30
 
 #### Meeting Agenda
 
-Project coordination meetings will occur virtually over Zoom.  https://unco.zoom.us/s/7681109772
-The team will meet weekly a 4:00-5:00PM MDT on Friday for project coordination.
+Project coordination meetings will occur virtually over Discord on a private server.
+The team will meet weekly from 12:00-1:00PM MDT on Thursday for project coordination.
 
 In this coordination each member will answer three questions.
 
@@ -151,7 +150,7 @@ later with each other when they see opportunities.
 
 #### Team Coordination
 
-Mark Seaman will lead the meetings as "Scrum Master".  Tony Stark will represent the
+Kevin Ritter will lead the meetings as "Scrum Master".  Mark Seaman will represent the
 client interests to clarify the requirements.
 
 
