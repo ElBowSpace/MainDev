@@ -3,7 +3,7 @@
 ##Role: Project Manager - Requirements
 Goal: Project Charter
 
-Document: Requirements.md
+Document: [Requirements.md](Requirements.md)
 
 - Business proposition
 - Project scope & budget
@@ -24,7 +24,7 @@ Document: [Design.md](Design.md)
 ##Role: Programmer - Code
 Goal: Version control
 
-Document: Code.md
+Document: [Code.md](Code.md)
 
 - Setup Github account
 - Setup Github Pages repository
@@ -34,7 +34,7 @@ Document: Code.md
 ##Role: QA Engineer - Test
 Goal: Test Plan
 
-Document: Test.md
+Document: [Test.md](Test.md)
 
 - Outline of testing that will be used
 - Setup structure for testing
