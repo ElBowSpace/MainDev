@@ -56,17 +56,6 @@ the client needs.  We will be building software to create the ElbowSpace applica
 It is important to the client to own the intellectual property so that the application can be
 sold to another business.
 
-Content Mangement System
-
-The first solution to be considered is a CMS (Content Mangement System). Examples 
-include WordPress, Joomla, and Drupal.  A CMS is built around the idea of publishing 
-articles and an editorial workflow that is associated.
-
-With very little customization a CMS can be configured to allow end-users to create and 
-maintain their own content.  The difficulty is often trying to get the exact user experience
-that will please the client.  Custom software is probably required in this case to meet the 
-business goals.
-
 Web Development Framework
 
 There are several web development frameworks available that will all meet the project needs.
