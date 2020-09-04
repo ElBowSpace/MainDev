@@ -4,7 +4,7 @@
 
 ## PROJECT INFO
 
-* [Software Project Plan - ElbowSpace ](../Index.md)
+* [Software Project Plan - ElbowSpace ](Index.md)
 
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
@@ -118,8 +118,8 @@ View templates that create amazing productivity.
 
 Framework
 
-    Python 3.7.6
-    Django 3.0.8
+    Python 
+    Django 
     Virtual Environment
     
 Web hosting
@@ -128,23 +128,14 @@ Web hosting
     
 Dev Tools
 
-    Pycharm Professional 2020.1  -- Each developer can choose their own tools
-    Sublime Text 3.2
-    Brackets 1.14
+    Pycharm Professional  
+    Sublime Text           Personal choice
+    Brackets 
     
 Github
 
     Git for version control
-    Github to hold the ElbowSpace repos
-        * ElbowSpace.git - app code 
-        * ElbowSpace.github.io.git - Github Pages for client website
-        * ElbowSpace.wiki.git
-    Github Tools
-        * wiki - project documentation
-        * kanban - project management workflow
-        * issues - issue tracking system
-        * gitter - instant messaging system
-        
+   
 Python Anywhere
 
     Account:  elbeauspace
