@@ -227,24 +227,24 @@ a reminder.
 #### Milestone #1 Team Survey
 
     Kevin - (x/3 credits)
-        ___ participated in team meetings
-        ___ was cooperative
-        ___ delivered contribution
+        __x_ participated in team meetings
+        __x_ was cooperative
+        __x_ delivered contribution
         
     Stephen - (x/3 credits)
-        ___ participated in team meetings
-        ___ was cooperative
-        ___ delivered contribution
+        __x_ participated in team meetings
+        __x_ was cooperative
+        __x_ delivered contribution
         
     Angel - (x/3 credits)
-        ___ participated in team meetings
-        ___ was cooperative
-        ___ delivered contribution
+        __x_ participated in team meetings
+        __x_ was cooperative
+        __x_ delivered contribution
         
     Ben - (x/3 credits)
-        ___ participated in team meetings
-        ___ was cooperative
-        ___ delivered contribution
+        __x_ participated in team meetings
+        __x_ was cooperative
+        __x_ delivered contribution
         
     * You must add a note for missing credits
         
