@@ -30,8 +30,6 @@ Goal: Technology selection
 
 * Select Development Tools
 * Infrastructure - Frameworks & Tools
-* Setup Guide
-* Create "Hello World"
 * Decide on App deployment
 
 
