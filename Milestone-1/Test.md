@@ -3,7 +3,7 @@
 
 ## PROJECT INFO
 
-* [Software Project Plan - Book Builder](../Index.md)
+* [Software Project Plan - Elbow Space](../Index.md)
 
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
@@ -34,7 +34,7 @@ Goal: Test Plan
 
 
 
-## Book Builder - Test Plan
+## Elbow Space - Test Plan
 
 Each level of the hierarchy produces increasing levels of detail.  Test planning should always start at the top and work down. This prevents getting lost
 in the weeds and running out of time.
@@ -44,8 +44,6 @@ testing hierarchy acts as a natural budget for how to spent that time.
 
 
 ### Testing Levels 
-
-This info is not specific to book builder but relates to test planning in general.
 
 
 #### Level 1 - Test Plan
@@ -116,7 +114,7 @@ This task can seem overwhelming if you look at the whole.   We will be using a e
 
 While every item in the hierarchy may have 5-10 legitimate children, they are not all equally important.  Our essential test plan forces us to select the four most important items at every level.  This gives a robust plan for test what is truly important.  Compare the number of artifacts to the complete plan above.  Instead of detailing 2000 Test Cases we are only dealing with 250.
 
-Book Builder Testing Hierarchy
+Elbow Space Testing Hierarchy
 
 This hierarchy can be documented to highlight the key artifacts.
 
@@ -138,34 +136,34 @@ Test Cases - Student Auth
 * Scenario 1 - Guest Access
     * Guests can see system view with Welcome
     * Not logged in displayed
-    * Menu has links to Authors, Books, Chapters, Review
+    * Menu has links to Admins, Posts, Friends, Comments
 
-* Scenario 2 - Register New Author
-    * Author can register
+* Scenario 2 - Register New User
+    * user can register
     * Error for used email
     * New users are created
-    * Dropping a Author removes the user record
+    * Dropping a user removes the user record
     * Existing user records are used
 
-* Scenario 3 - Author Access
-    * Author can log in successfully
-    * Author can see course view with Student Settings and Welcome
+* Scenario 3 - Admin Access
+    * Admin can log in successfully
+    * Admin can see suer view with user Settings and Welcome
     * Login displayed
     * Logout menu item
-    * Menu has links to Authors, Books, Chapters, Review
-    * Books shows all current books
-    * Chapters shows all current chapters
+    * Menu has links to Users, Posts, Friends, Comments
+    * Pages shows all current posts
+    * Friends shows all current Friends
     * Docs shows all current docs
-    * Dropped Authors can not log in
+    * Dropped Admins can not log in
 
 * Scenario 4 - Reader Access
-    * Private books require readers to register
-    * A user access list shows content for specific readers
+    * Private post require user to register
+    * A user access list shows content for specific friends
 
 
 ### Setup structure for testing
 
-The book builder project will start by doing manual testing only.  This means for the
+The Elbow Space project will start by doing manual testing only.  This means for the
 first two milestones we do not need to have any specific infrastructure for automated
 testing.
 
