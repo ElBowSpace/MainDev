@@ -4,7 +4,7 @@
 
 ## PROJECT INFO
 
-* [Software Project Plan - ElbowSpace ](Index.md)
+* Software Project Plan - ElbowSpace
 
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
@@ -67,7 +67,7 @@ Strong consideration was given to the following frameworks.
 * Node with React and Mongo DB - Thriving community and very popular
 
 
-### Select Development Tools
+### Selectiong Development Tools
 
 Criteria for Technology Selection
 
@@ -131,21 +131,7 @@ Python Anywhere
     Web URL:  https://elbeauspace.pythonanywhere.com
     
 
-### Setup Guides
-
-* [Tutorial Documents](https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/docs/Index.md) - 
-
-
-### Create "Hello World"
-
-* [Hello World](../docs/HelloWorld.md) - This simple app ensures that all of the development 
-tools are installed and properly configured.  All developers will do this before any other 
-work is done with the code.
-* [Code Repo](https://github.com/Mark-Seaman/Book-Builder) - 
-Source code is located in "test/hello" directory.
-
-
-### Decide on App deployment
+### Deciding on App deployment
 
 Alternative Hosting Services
 
