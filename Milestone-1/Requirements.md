@@ -99,10 +99,27 @@ the schedule.  Features will be adjusted throughout the milestone and must be co
 negotiated with the client.
 
 #### Project Features
+##### Client Requested Features
+* Simple App - settings, urls, views, templates
+* Multi-view App - data insertion, view inheritance, includes
+* Data Models - data model list, admin views, superuser
+* List Files - table formatter, links, add view, list view
+* CRUD App - details content, links, update, delete
+* Automated Test - design reviews
+* Notes App - data model, CRUD views
+* Logging - page log
+* Image Gallery - photo display
+* Import/Export - objects to/from CSV
+* Data Forms Input - form display, form acceptance
+* Markdown Formatter - run pandoc, markdown display
+* Custom data queries
+* Wiki - user editable content
+
+#### Deliverable Features
 * User generated account with secure login credentials required
 * User created text field to carry a story
 * User uploaded photos
-* User can create network connections with other users, they can also disconnect at will
+* User can add friends to their network, as well as unfriend
 * Connected users can reply to stories and photos creating a thread related to the entry
 * Users can apply emotes to individual entries
 * Users can search connected users network to make new connections
@@ -112,6 +129,7 @@ negotiated with the client.
 A user creates an account.  They can upload an image to facilitate telling a story.  Their
 network of friends and family can like, share, or comment on the thread that the user started.
 Sharing a thread creates a new subthread that expands the reach of the story to new networks.
+Users can also simply write into a text box to make a new thread.
 
 ### Our Team
 
@@ -209,24 +227,24 @@ a reminder.
 #### Milestone #1 Team Survey
 
     Kevin - (x/3 credits)
-        ___ participated in team meetings
-        ___ was cooperative
-        ___ delivered contribution
+        __x_ participated in team meetings
+        __x_ was cooperative
+        __x_ delivered contribution
         
     Stephen - (x/3 credits)
-        ___ participated in team meetings
-        ___ was cooperative
-        ___ delivered contribution
+        __x_ participated in team meetings
+        __x_ was cooperative
+        __x_ delivered contribution
         
     Angel - (x/3 credits)
-        ___ participated in team meetings
-        ___ was cooperative
-        ___ delivered contribution
+        __x_ participated in team meetings
+        __x_ was cooperative
+        __x_ delivered contribution
         
     Ben - (x/3 credits)
-        ___ participated in team meetings
-        ___ was cooperative
-        ___ delivered contribution
+        __x_ participated in team meetings
+        __x_ was cooperative
+        __x_ delivered contribution
         
     * You must add a note for missing credits
         
