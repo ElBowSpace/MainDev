@@ -1,5 +1,5 @@
 
-# Milestone 1. Project Plan Complete - Design
+# Milestone 1. - Design
 
 
 ## PROJECT INFO
