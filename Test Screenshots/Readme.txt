@@ -1,0 +1,1 @@
+Folders contain screen shots to verify tests have been completed.
