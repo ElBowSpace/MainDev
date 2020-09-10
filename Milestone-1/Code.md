@@ -1,10 +1,10 @@
-# Milestone 1. Project Elbow Space Begins
+# Milestone 1. ElBowSpace Code
 
 
 ## PROJECT INFO
 
 * [Software Project Plan - Elbow Space]
-* File: Milestone-1/ElbowSpaceCode.md
+* File: Milestone-1/Code.md
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/new/master/Milestone-1/ElbowSpaceCode.md
 * Git Repo: github.com/ElBowSpace/ElBowSpaceProject/
 
@@ -50,7 +50,7 @@ The Elbow Space client website will be built so that the automatic publishing of
 Github Pages will make it publicly available.
 A "Elbow Space" directory will be used to hold the documents for the website.
 
-The customer website's location has yet to be determined at this time.
+The client's website will be hosted on PythonAnywhere, partially due to his familiarity with it, and also due to the cost benefits present.
 
 
 ### Decide how to publish your project docs
@@ -62,3 +62,12 @@ the document visibility to the same people that have permissions to the code rep
 The [Github Repo](https://github.com/ElBowSpace/ElBowSpaceProject/new/master/)
 holds the 
 [Elbow Space Documents](https://github.com/ElBowSpace/ElBowSpaceProject/new/master/)
+
+### User Guide for Development Workflow
+
+The requirements for project development will be relatively simple: every collaborator will be able to work on a clone of the master file,
+and then are able to push their changes to the server. This change is not immediately accepted, but rather needs to be approved by one other
+member of the group before it will be merged with the master file.
+
+There will be a "master" account, but access to it will be restricted to times where the entire group agrees that accessing it is necessary.
+
