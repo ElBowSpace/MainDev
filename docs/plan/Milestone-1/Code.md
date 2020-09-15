@@ -3,9 +3,9 @@
 
 ## PROJECT INFO
 
-* [Software Project Plan - Elbow Space]
+* Software Project Plan - Elbow Space
 * File: Milestone-1/Code.md
-* URL: https://github.com/ElBowSpace/ElBowSpaceProject/new/master/Milestone-1/ElbowSpaceCode.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/edit/master/docs/plan/Milestone-1/Code.md
 * Git Repo: github.com/ElBowSpace/ElBowSpaceProject/
 
 
