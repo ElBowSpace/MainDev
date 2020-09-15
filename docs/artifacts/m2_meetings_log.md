@@ -3,8 +3,8 @@
 ## Format:
 ### Date: MM/DD/YY
 ### Participants: 
-*role - party 1
-*role - party 2
+* role - party 1
+* role - party 2
 ### Topics Discussed:
 * topic 1
 * topic 2
