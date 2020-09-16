@@ -12,13 +12,12 @@
 
 
 ## Elbow Space Group Meeting Milestone 2:
-### Date: 7:00 PM 9/14/2020
+### Date: 9/14/2020
 ### Participants:
-* Requirements - Kevin Ritter
-* Design - Angel Rivera
-* Code - Stephen Provost
-* Test - Ben McEwen
-
+* Requirements - Ben McEwen
+* Design - Kevin Ritter
+* Code - Angel Rivera
+* Test - Stephen Provost
 ### Topics Discussed:
 * Discussed the future of Milestone 2 regarding the coding direction we are meant to take place.
 * Moved on to discussing the ‘Issues’ tab on Github, and how to best assign people to the issues, as well as how to best address future backlogs.
