@@ -25,7 +25,7 @@ SECRET_KEY = '7!#7doa&17x1r@8=)3vm-@=pspu5wkbg^y55d2t*6zit#+9c1+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['elbeauspace.pythonanywhere.com']
 
 
 # Application definition
