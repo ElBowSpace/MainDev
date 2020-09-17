@@ -24,7 +24,7 @@ Team members will communicate through Discord on the &quot;CS350 FB Cloning the 
 
 * Actively Focused on App: Used for individual or pair programming sessions when you need to focus on the task and not be disturbed by general discussion.
 
-###Screen sharing:
+### Screen sharing:
 
 * Screen sharing will be used to enrichen the communication channels and for visual verification of progress. All team members will be required to share their screen during progress reports.
 
