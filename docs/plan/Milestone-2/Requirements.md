@@ -14,7 +14,7 @@
 
 * File: Milestone-1/Requirements.md
 
-* URL: https://github.com/ElBowSpace/ElBowSpaceProject/tree/master/Milestone-1/Requirements.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-1/Requirements.md
 
 * Documents: Documents/ in progress
 
@@ -38,7 +38,7 @@ Goal: Project Charter
 
 * File: Milestone-2/Requirements.md
 
-* URL: https://github.com/ElBowSpace/ElBowSpaceProject/tree/master/Milestone-2/Requirements.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-2/Requirements.md
 
 * Documents: Documents/ in progress
 
