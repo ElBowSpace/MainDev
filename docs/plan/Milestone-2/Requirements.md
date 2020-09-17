@@ -1,5 +1,4 @@
-# Milestone 1. Project Plan Complete - Requirements
-
+# ElbowSpace Project
 
 ## PROJECT INFO
 
@@ -9,6 +8,8 @@
 , [Design.md](Design.md)
 , [Code.md](Code.md)
 , [Test.md](Test.md)
+
+# Milestone 1. Project Plan Complete - Requirements
 
 
 * File: Milestone-1/Requirements.md
@@ -23,7 +24,6 @@
 ### Milestone 1. Project Plan Complete
 
 
-
 Role: Project Manager - Requirements
 
 Goal: Project Charter
@@ -32,6 +32,41 @@ Goal: Project Charter
 * Project scope & budget
 * Client communication
 * Sprint Planning meetings
+
+# Milestone 2. Technology Proven - Requirements
+
+
+* File: Milestone-2/Requirements.md
+
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-2/Requirements.md
+
+* Documents: Documents/ in progress
+
+* Git Repo: ElBowSpaceProject
+
+
+### Milestone 2. Technology Proven
+
+
+Role: Project Manager - Requirements
+
+Goal: Setup communications
+
+* Configure communication tools
+* Team communication
+* Plan daily meetings
+
+
+## Elbow Space - communications
+
+### Configure communication tools
+
+### Team communication
+https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/communications_tools.md
+
+### Plan daily meetings
+https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/commnications_schedule.md
+
 
 
 ## ElBow Space - Project Charter
