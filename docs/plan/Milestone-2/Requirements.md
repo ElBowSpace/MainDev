@@ -78,10 +78,10 @@ Goal: Setup communications
 ### Configure communication tools
 
 ### Team communication
-https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/communications_20tools.md
+https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/communications_tools.md
 
 ### Plan daily meetings
-https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/communications_schedule.md
+https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/commnications_schedule.md
 
 
 
