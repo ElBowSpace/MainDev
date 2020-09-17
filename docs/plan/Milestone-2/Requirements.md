@@ -73,16 +73,17 @@ Goal: Setup communications
 * Plan daily meetings
 
 
-
-## Elbow Space - Setup communications
+## Elbow Space - communications
 
 ### Configure communication tools
 
 ### Team communication
-https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/Communications%20Tools.docx
+https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/communications_20tools.md
 
 ### Plan daily meetings
-https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/Communications_Schedule.xlsx
+https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/communications_schedule.md
+
+
 
 ## ElBow Space - Project Charter
 
