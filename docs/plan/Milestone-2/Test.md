@@ -48,3 +48,30 @@ Goal: Test Infrastructure
 
 
 ### Regression testing
+
+Each team member is required to complete the survey for each milestone.  Tools will act as
+a reminder.
+
+#### Milestone #2 Team Survey
+
+    Kevin - (x/3 credits)
+        ____ participated in team meetings
+        ____ was cooperative
+        ____ delivered contribution
+        
+    Stephen - (x/3 credits)
+        ____ participated in team meetings
+        ____ was cooperative
+        ____ delivered contribution
+        
+    Angel - (x/3 credits)
+        ____ participated in team meetings
+        ____ was cooperative
+        ____ delivered contribution
+        
+    Ben - (x/3 credits)
+        ____ participated in team meetings
+        ____ was cooperative
+        ____ delivered contribution
+        
+    * You must add a note for missing credits
