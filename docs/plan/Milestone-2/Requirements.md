@@ -1,7 +1,4 @@
-
-
-# Milestone 1. Project Plan Complete - Requirements
-
+# ElbowSpace Project
 
 ## PROJECT INFO
 
@@ -11,6 +8,8 @@
 , [Design.md](Design.md)
 , [Code.md](Code.md)
 , [Test.md](Test.md)
+
+# Milestone 1. Project Plan Complete - Requirements
 
 
 * File: Milestone-1/Requirements.md
@@ -25,7 +24,6 @@
 ### Milestone 1. Project Plan Complete
 
 
-
 Role: Project Manager - Requirements
 
 Goal: Project Charter
@@ -38,30 +36,16 @@ Goal: Project Charter
 # Milestone 2. Technology Proven - Requirements
 
 
-## PROJECT INFO
-
-* [Software Project Plan - Book Builder](../Index.md)
-
-* Other Roles - [Requirements.md](Requirements.md)
-, [Design.md](Design.md)
-, [Code.md](Code.md)
-, [Test.md](Test.md)
-
-
-
 * File: Milestone-2/Requirements.md
 
-* URL: https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/Milestone-2/Requirements.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/tree/master/Milestone-2/Requirements.md
 
-* Documents: Documents/swplan/BookBuilder
+* Documents: Documents/ in progress
 
-* Git Repo: Mark-Seaman.github.io
-
-
+* Git Repo: ElBowSpaceProject
 
 
 ### Milestone 2. Technology Proven
-
 
 
 Role: Project Manager - Requirements
