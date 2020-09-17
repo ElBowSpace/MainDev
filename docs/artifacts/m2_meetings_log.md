@@ -12,6 +12,21 @@
 
 
 ## Elbow Space Group Meeting Milestone 2:
+
+### Date: 9/17/2020
+### Participants:
+* Requirements - Ben McEwen
+* Design - Kevin Ritter
+* Code - Angel Rivera
+* Test - Stephen Provost
+### Topics Discussed:
+* Creation and editing of Milestone 2 planning documents
+* Migrating code from local creation through GitHub up to Pythong Anywhere
+* User stories dealing with new registration and database connection
+* UML Diagram templates, location, contents, style
+* Adding new views to design and code implementation of the same
+* Coordinating one on ones between code and testing for Milestone 2
+
 ### Date: 9/14/2020
 ### Participants:
 * Requirements - Ben McEwen
