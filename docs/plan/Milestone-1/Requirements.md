@@ -13,7 +13,7 @@
 
 * File: Milestone-1/Requirements.md
 
-* URL: https://github.com/ElBowSpace/ElBowSpaceProject/tree/master/Milestone-1/Requirements.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-1/Requirements.md
 
 * Documents: Documents/ in progress
 
