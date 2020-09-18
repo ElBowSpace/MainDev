@@ -47,24 +47,6 @@ Goal: Test-driven development workflow
 * Elbow space Tests
 
 
-### View Prototype Code
-* [Book Builder View Prototype](../../ViewPrototype.md)
-
-
-### Data Model Code
-* [Book Builder Data Models](../../DataModels.md)
-
-
-### Build simple test
-* Setup context
-* Do an action
-* Verify the result
-
-Example:
-
-* Add Author "Mark Seaman"
-* Add author again
-* Verify that there is only one
 
 
 Each team member is required to complete the survey for each milestone.  Tools will act as
