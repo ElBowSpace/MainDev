@@ -3,16 +3,15 @@
 
 ## PROJECT INFO
 
-* [Software Project Plan - Book Builder](../Index.md)
+* Software Project Plan - Book Builder
 
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
 , [Code.md](Code.md)
 , [Test.md](Test.md)
 * File: Milestone-2/Code.md
-* URL: https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/Milestone-2/Code.md
-* Documents: Documents/swplan/BookBuilder
-* Git Repo: Mark-Seaman.github.io
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-2/Code.md
+* Git Repo: https://github.com/ElBowSpace/ElBowSpaceProject
 
 
 ### Milestone 2. Technology Proven
