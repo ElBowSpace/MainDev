@@ -24,6 +24,12 @@ Goal: Test-driven development workflow
 * Build simple test
 * Document workflow built around tests
 
+### Coomming Soon sample app
+* see sample app at http://elbeauspace.pythonanywhere.com/CommingSoon/
+
+### Create connection between GitHub and Pythonanywhere
+*The connection between GitHub and pythonanywhere has created and tested
+*The team is now able to use git pull
 
 ### ElbowSpace - Test-driven development workflow
 * Developer tools setup
