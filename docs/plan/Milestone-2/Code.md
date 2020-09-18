@@ -66,24 +66,24 @@ a reminder.
 
 #### Milestone #2 Team Survey
 
-    Kevin - (x/3 credits)
-        ____ participated in team meetings
-        ____ was cooperative
-        ____ delivered contribution
+    Kevin - (3/3 credits)
+        __x__ participated in team meetings
+        __x__ was cooperative
+        __x__ delivered contribution
         
-    Stephen - (x/3 credits)
-        ____ participated in team meetings
-        ____ was cooperative
-        ____ delivered contribution
+    Stephen - (3/3 credits)
+        __x__ participated in team meetings
+        __x__ was cooperative
+        __x__ delivered contribution
         
-    Angel - (x/3 credits)
-        ____ participated in team meetings
-        ____ was cooperative
-        ____ delivered contribution
+    Angel - (3/3 credits)
+        __x__ participated in team meetings
+        __x__ was cooperative
+        __x__ delivered contribution
         
-    Ben - (x/3 credits)
-        ____ participated in team meetings
-        ____ was cooperative
-        ____ delivered contribution
+    Ben - (3/3 credits)
+        __x__ participated in team meetings
+        __x__ was cooperative
+        __x__ delivered contribution
         
-    * You must add a note for missing credits
+    * Everyone worked with the team
