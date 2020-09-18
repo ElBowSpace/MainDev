@@ -28,8 +28,8 @@ Goal: Test-driven development workflow
 * see sample app at http://elbeauspace.pythonanywhere.com/CommingSoon/
 
 ### Create connection between GitHub and Pythonanywhere
-*The connection between GitHub and pythonanywhere has created and tested
-*The team is now able to use git pull
+* The connection between GitHub and pythonanywhere has created and tested
+* The team is now able to use git pull
 
 ### ElbowSpace - Test-driven development workflow
 * Developer tools setup
