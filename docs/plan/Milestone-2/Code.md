@@ -3,7 +3,7 @@
 
 ## PROJECT INFO
 
-* Software Project Plan - Book Builder
+* Software Project Plan - ElbowSpace
 
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
@@ -25,12 +25,7 @@ Goal: Test-driven development workflow
 * Document workflow built around tests
 
 
-### Create New Project
-* [Create a new Django Project for Book Builder](../../NewProject.md)
-* [Code Structure for Book Builder](../../CodeStructure.md)
-
-
-### Book Builder - Test-driven development workflow
+### ElbowSpace - Test-driven development workflow
 * Developer tools setup
 * Workflow
     * Pull code
@@ -43,7 +38,7 @@ Goal: Test-driven development workflow
     * Run all tests
     * Fix all defects
     * Push code
-* [Book Builder Tests](../../DjangoTests.md)
+* Elbow space Tests
 
 
 ### View Prototype Code
