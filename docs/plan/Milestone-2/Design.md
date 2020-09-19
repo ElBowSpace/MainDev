@@ -22,7 +22,6 @@ Goal: Technology selection
 ## PROJECT INFO
 
 * [Software Project Plan - ElBow Space](Index.md)
-
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
 , [Code.md](Code.md)
@@ -42,18 +41,10 @@ Goal: Software Architecture
 ### Design Around User Stories
 User Stories
 
-* Reader - C R U
-* Author - C R U
-* Book - C R U
-* Chapter - C R U D
-* Paragraph - C R U D
+* User - C R U D
+* Story - C R U D
+* Emotes - C R U D
 * Image - C R U D
-
-NOTE: Readers, Authors, and Book can be modified but not deleted.
-Example:   Author support operations for Create, Read, Update.  This means
-the the list of available authors can be created and modified.  The arrow
-from Book to Author means that every book has an Author.
-
 
 ### Design Architecture
 * Apps = Data + Views
@@ -62,16 +53,18 @@ and the Views that will be implemented.
 
 
 ### Data Schema
-* This diagram shows the key data models and how they fit together.
-* The boxes represent data classes and database tables
-* The arrows represent object references and database joins
+#### Not Yet Implemented
+<!-- * This diagram shows the key data models and how they fit together. -->
+<!-- * The boxes represent data classes and database tables -->
+<!-- * The arrows represent object references and database joins -->
 
-![](img/Book_Data.png)
+<!-- ![](img/Book_Data.png) -->
 
 
 
 ### Data models
-
+#### Not Yet Implemented
+<!--
 Data Classes and database tables
 
 * Reader
@@ -102,9 +95,11 @@ by a foreign key relationship between the two tables.
 Example: Books have Authors so the Book data model has
 a ForeignKeyField that points to the Author Model class.
 
+-->
 
 ### App Views
-
+#### Not Yet Implemented
+<!--
 * Users
     * Register Author
     * Register Reader
@@ -118,10 +113,11 @@ a ForeignKeyField that points to the Author Model class.
     * New Chapter
     * Edit Chapter
     * Read Chapter
-
+-->
 
 ### Phases Of Implementation
-
+#### Not Yet Implemented
+<!--
 * 1 - Proof of concept
     * Milestone 2
     * Define the Data Models
@@ -152,6 +148,7 @@ a ForeignKeyField that points to the Author Model class.
 * 5 - Code Complete
     * Fix all defects
     * Implement 100% test coverage
+-->
 
 ## ElbowSpace - Technology selection
 Selecting the correct technology is the first important technical decision on any project.
