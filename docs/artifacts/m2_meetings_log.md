@@ -11,6 +11,18 @@
 * topic 3
 
 
+## Meeting with Professor Seaman (Not to be confused with client)
+###9/18/2020
+###Participants: 
+* Kevin Ritter 
+* Angel Rivera 
+* Stephen Provost 
+* Mark Seaman
+###Topics Discussed
+* Angel provides Elbowspace github link for Mark to review the code in ‘Comming Soon.’
+* URL is looking for blank page. When it’s reached, provide ‘Hello World.’
+* Updates were needed for several files to properly work with Seaman’s code.
+
 ## Elbow Space Group Meeting Milestone 2:
 
 ### Date: 9/17/2020
