@@ -23,7 +23,7 @@ Goal: Test-driven development workflow
 * Build simple app
 * Document workflow built around tests
 
-### Coomming Soon sample app
+### Early stage of the app
 * New views http://elbeauspace.pythonanywhere.com
 
 ### Create connection between GitHub and Pythonanywhere
