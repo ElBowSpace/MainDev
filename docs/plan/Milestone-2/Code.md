@@ -21,11 +21,10 @@ Role: Programmer - Code
 Goal: Test-driven development workflow
 
 * Build simple app
-* Build simple test
 * Document workflow built around tests
 
 ### Coomming Soon sample app
-* see sample app at http://elbeauspace.pythonanywhere.com/CommingSoon/
+* New views http://elbeauspace.pythonanywhere.com
 
 ### Create connection between GitHub and Pythonanywhere
 * The connection between GitHub and pythonanywhere has created and tested
@@ -45,8 +44,6 @@ Goal: Test-driven development workflow
     * Fix all defects
     * Push code
 * Elbow space Tests
-
-
 
 
 Each team member is required to complete the survey for each milestone.  Tools will act as
