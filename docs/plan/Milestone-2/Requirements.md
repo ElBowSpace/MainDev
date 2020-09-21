@@ -172,10 +172,10 @@ Users can also simply write into a text box to make a new thread.
 
 No great works of software are a solo effort.
 
-* Kevin Ritter - Requirements Lead, Client Advocate
-* Stephen Provost - Dev Ops Lead Software Engineer
-* Angel Rivera - Chief Design Engineer
-* Ben McEwen - Senior Test Engineer
+* Ben McEwen - Requirements Lead, Client Advocate
+* Kevin Ritter - Dev Ops Lead Software Engineer
+* Stephen Provost - Chief Design Engineer
+* Angel Rivera - Senior Test Engineer
 
 Each person is given a role that matches their expertise. For each Milestone developers will
 commit to the features that they can realistically accomplish in the two-week 
@@ -203,7 +203,7 @@ later with each other when they see opportunities.
 
 #### Team Coordination
 
-Kevin Ritter will lead the meetings as "Scrum Master".  Mark Seaman will represent the
+Person in requirements role will lead the meetings as "Scrum Master".  Mark Seaman will represent the
 client interests to clarify the requirements.
 
 
@@ -261,6 +261,11 @@ a reminder.
 
 #### Milestone #1 Team Survey
 
+    Ben - (x/3 credits)
+        __x_ participated in team meetings
+        __x_ was cooperative
+        __x_ delivered contribution
+        
     Kevin - (x/3 credits)
         __x_ participated in team meetings
         __x_ was cooperative
@@ -272,11 +277,6 @@ a reminder.
         __x_ delivered contribution
         
     Angel - (x/3 credits)
-        __x_ participated in team meetings
-        __x_ was cooperative
-        __x_ delivered contribution
-        
-    Ben - (x/3 credits)
         __x_ participated in team meetings
         __x_ was cooperative
         __x_ delivered contribution
