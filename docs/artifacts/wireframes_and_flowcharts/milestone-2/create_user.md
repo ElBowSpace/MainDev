@@ -1,3 +1,3 @@
 # Create User
 
-![](communications_schedule.png)
+![](create_user.png)
