@@ -2,6 +2,10 @@ from django.test import SimpleTestCase
 
 class ViewTests(SimpleTestCase):
 
+    def test_fail(self):
+        response = self.client.get('hello')
+        self.assertEqual(response.status_code, 200)
+    
     def test_view_index(self):
         response = self.client.get('')
         self.assertEqual(response.status_code, 200)
