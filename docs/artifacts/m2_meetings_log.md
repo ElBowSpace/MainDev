@@ -10,21 +10,28 @@
 * topic 2
 * topic 3
 
+### Date: 09/19/20
+### Participants: 
+* Angel Rivera
+* Kevin Ritter
+### Topics Discussed:
+* Installation of JetBrains Toolbox
+* Migrating the project to PyCharm for development
+* Learning the new workflow
 
 ## Meeting with Professor Seaman (Not to be confused with client)
-###9/18/2020
-###Participants: 
+### 9/18/2020
+### Participants: 
 * Kevin Ritter 
 * Angel Rivera 
 * Stephen Provost 
 * Mark Seaman
-###Topics Discussed
+### Topics Discussed
 * Angel provides Elbowspace github link for Mark to review the code in ‘Comming Soon.’
 * URL is looking for blank page. When it’s reached, provide ‘Hello World.’
 * Updates were needed for several files to properly work with Seaman’s code.
 
 ## Elbow Space Group Meeting Milestone 2:
-
 ### Date: 9/17/2020
 ### Participants:
 * Requirements - Ben McEwen

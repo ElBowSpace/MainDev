@@ -1,6 +1,6 @@
-#Milestone 1. Project Plan Complete
+# Milestone 1. Project Plan Complete
 
-##Role: Project Manager - Requirements
+## Role: Project Manager - Requirements
 Goal: Project Charter
 
 Document: [Requirements.md](Requirements.md)
@@ -10,7 +10,7 @@ Document: [Requirements.md](Requirements.md)
 - Client communication
 - Sprint Planning meetings
 
-##Role: Designer - Design
+## Role: Designer - Design
 Goal: Technology selection
 
 Document: [Design.md](Design.md)
@@ -21,7 +21,7 @@ Document: [Design.md](Design.md)
 - Create "Hello World"
 - Decide on App deployment
 
-##Role: Programmer - Code
+## Role: Programmer - Code
 Goal: Version control
 
 Document: [Code.md](Code.md)
@@ -31,7 +31,7 @@ Document: [Code.md](Code.md)
 - Decide how to publish your project docs
 - User Guide for development workflow
 
-##Role: QA Engineer - Test
+## Role: QA Engineer - Test
 Goal: Test Plan
 
 Document: [Test.md](Test.md)

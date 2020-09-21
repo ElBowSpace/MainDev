@@ -13,7 +13,7 @@
 
 * File: Milestone-1/Design.md
 
-* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/Milestone-1/Design.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-1/Design.md
 
 * Git Repo: https://github.com/ElBowSpace/ElBowSpaceProject
 
