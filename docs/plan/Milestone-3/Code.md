@@ -2,7 +2,7 @@
 
 ## PROJECT INFO
 
-* [Software Project Plan - Book Builder](Index.md)
+* [Software Project Plan - ElBow Space](Index.md)
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
 , [Code.md](Code.md)
@@ -10,22 +10,17 @@
 
 ### Milestone 1. Project Elbow Space Begins
 
-
 Role: Programmer - Code
-
 Goal: Version control
-
 * Setup Github account
 * Setup Github Pages repository
 * Decide how to publish your project docs
 * User Guide for development workflow
 
-### Milestone 2. Technology Proven
+# Milestone 2. Technology Proven - Code
 
 Role: Programmer - Code
-
 Goal: Test-driven development workflow
-
 * Build simple app
 * Document workflow built around tests
 
@@ -57,6 +52,7 @@ Goal: Test-driven development workflow
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-3/Code.md
 * Documents: docs/plan/Milestone-3
 * Git Repo: ElBowSpace/ElBowSpaceProject
+
 ### Milestone 3. Core Features Implemented
 Role: Programmer - Code
 Goal: Incremental development (Sprints)
