@@ -19,3 +19,12 @@
 * Choosing a priority order for features
 * User story document editing
 
+### Date: 9/21/20
+### Participants:
+* Requirements - Stephen Provost
+* Design - Ben McEwen
+* Code - Kevin Ritter
+### Topics Discussed:
+* Creating a set of user stories
+* Repairing broken links on documents after handing off assignments
+* Pass on what you have learned, ie share tutorials
