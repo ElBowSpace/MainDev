@@ -62,7 +62,7 @@ Goal: Setup communications
 
 ## PROJECT INFO
 
-* [Software Project Plan - Book Builder](Index.md)
+* [Software Project Plan - ElbowSpace](Index.md)
 
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
@@ -73,11 +73,11 @@ Goal: Setup communications
 
 * File: Milestone-3/Requirements.md
 
-* URL: https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/Milestone-3/Requirements.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-3/Requirements.md
 
-* Documents: Documents/swplan/BookBuilder
+* Documents: docs / plan / Milestone - 3
 
-* Git Repo: Mark-Seaman.github.io
+* Git Repo: ElbowSpaceProject
 
 
 
