@@ -95,9 +95,13 @@ Goal: Functional requirements
 
 ### User Stories
 User Story 1: As a user of ElbowSpace, I would like to be able to see the main homepage upon putting in the link https://elbeauspace.pythonanywhere.com so that I can enter the site.
-Use Story 2: As a user, I would like to enter my user name and password after I have set them up, so I can log in to the site.
+
+User Story 2: As a user, I would like to enter my user name and password after I have set them up, so I can log in to the site.
+
 User Story 3: As a user, I would like to be redirected to the login page after I register my account, so I can log in immediately.
+
 User Story 4: As a user, if I already have an account created and try to create a new one using the same email, I will see a message telling me that an account already exists for that email.
+
 User Story 5: As a user, I would like to be able to send a connection request to other users, so I can expand my list of connections.
 
 User Story 6: As a user, I would like to be able to decline the connection requests I receive, so I can inform other users I’m not open to expanding my connection list.
