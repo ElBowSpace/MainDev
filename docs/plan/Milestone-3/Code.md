@@ -11,7 +11,9 @@
 ### Milestone 1. Project Elbow Space Begins
 
 Role: Programmer - Code
+
 Goal: Version control
+
 * Setup Github account
 * Setup Github Pages repository
 * Decide how to publish your project docs
@@ -20,7 +22,9 @@ Goal: Version control
 # Milestone 2. Technology Proven - Code
 
 Role: Programmer - Code
+
 Goal: Test-driven development workflow
+
 * Build simple app
 * Document workflow built around tests
 
@@ -55,7 +59,9 @@ Goal: Test-driven development workflow
 
 ### Milestone 3. Core Features Implemented
 Role: Programmer - Code
+
 Goal: Incremental development (Sprints)
+
 * Select features for sprint
 * Implement the features
 * Test the features
