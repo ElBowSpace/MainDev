@@ -66,13 +66,13 @@ Goal: Incremental development (Sprints)
 * Implement the features
 * Test the features
 * Fix all defects
-<!--
-## Book Builder - Incremental development (Sprints)
-### Select features for sprint
-### Implement the features
-### Test the features
-### Fix all defects
--->
+
+Current sprint:
+
+* integrate CRUD Create between Register, submit button and SQL database
+* integrate CRUD Read between Login, login button and SQL database
+* create new view Home page
+* Read from SQL to Home Page - stories
 
 ## Elbow Space - Version control
 
