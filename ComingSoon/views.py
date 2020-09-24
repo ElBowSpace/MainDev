@@ -1,6 +1,7 @@
 from django.views.generic import TemplateView
 from os.path import exists
 
+
 class IndexView(TemplateView):
 
     def get_template_names(self):
@@ -8,5 +9,3 @@ class IndexView(TemplateView):
         if not exists('templates/' + template_name):
             template_name = 'missing.html'
         return template_name
-
-    
