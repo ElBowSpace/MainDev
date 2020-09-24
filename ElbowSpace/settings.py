@@ -25,7 +25,7 @@ SECRET_KEY = '7!#7doa&17x1r@8=)3vm-@=pspu5wkbg^y55d2t*6zit#+9c1+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['elbeauspace.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['elbeauspace.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'ElbowSpace.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'LocalElBowDBS',
+        'NAME': 'local_elbowspace',
         'USER': 'kevinritter',
         'PASSWORD': '4dmin4S3rv3r',
         'port': '3306',
