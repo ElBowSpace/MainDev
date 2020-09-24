@@ -132,15 +132,18 @@ User Story 17: As a user, I would like to be able to edit my comments, so I can 
 | Requirement #   | Written Requirement |
 | --------------------- | -----------------------------|
 | Requirement 1  | Site is accessible at https://elbeauspace.pythonanywhere.com. |
-| Requirement 2 | Database contains and associates data between customer’s name, email, account name, and password.|
-| Requirement 3 | Database is able to be referenced through the website so clients are able to access their account and all associated information. |
-| Requirement 4 | Users will be able to connect to other users through submitting connection requests, which will be visible to both members. |
-| Requirement 5 | Users will be able to accept, decline, or cancel connection requests. |
-| Requirement 6 | Users can create posts that are viewable by ‘connected’ members: connected meaning users that have accepted connection requests. |
-| Requirement 7 | Users are able to edit or delete posts that they have created in the past. |
-| Requirement 8 | User posts may contain text or images.|
-| Requirement 9 | Posts are organized by date and time, and display the date and time. |
-| Requirement 10 | Users are informed via email that they have a new post. |
+| Requirement 2 | Users are able to create an account which will be stored in a database. |
+| Requirement 3 | Database contains and associates data between customer’s name, email, and password.|
+| Requirement 4 | Database is able to be referenced through the website so clients are able to access their account and all associated information. |
+| Requirement 5 | Users can create posts that are viewable by ‘connected’ members: connected meaning users that have accepted connection requests with that person. |
+| Requirement 6 | User posts may contain text or images.|
+| Requirement 7 | Users will be able to connect to other users through submitting connection requests, which will be visible to both members. |
+| Requirement 8 | Users will be able to accept, decline, or cancel connection requests. |
+| Requirement 9 | Users will be able to remove connections (IE: people connected with them). |
+| Requirement 10 | Users are able to edit or delete posts that they have created in the past. |
+| Requirement 11 | Posts are organized by date and time, and display the date and time. |
+| Requirement 12 | Users are informed via email that they have a new post. |
+| Requirement 13 | Accounts may be deactivated, upon which clients will no longer be contacted. |
 
 
 ### Customer review
