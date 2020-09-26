@@ -35,11 +35,11 @@ Goal: Test Plan
 
 * File: Milestone-2/Test.md
 
-* URL: https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/Milestone-2/Test.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-2/Test.md
 
-* Documents: Documents/swplan/BookBuilder
+* Documents: Documents/plan/Milestone2
 
-* Git Repo: Mark-Seaman.github.io
+* Git Repo: ElBowSpaceProject
 
 
 ### Milestone 2. Technology Proven
@@ -57,12 +57,11 @@ Goal: Test Infrastructure
 
 * File: Milestone-3/Test.md
 
-* URL: https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/Milestone-3/Test.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-3/Test.md
 
-* Documents: Documents/swplan/BookBuilder
+* Documents: Documents/plan/Milestone3
 
-* Git Repo: Mark-Seaman.github.io
-
+* Git Repo: ElBowSpaceProject
 
 ### Milestone 3. Core Features Implemented
 
