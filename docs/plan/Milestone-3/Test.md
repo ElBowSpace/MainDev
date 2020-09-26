@@ -1,9 +1,9 @@
-# Milestone 3. Core Features Implemented - Test
+# Milestone 1. Project Plan Complete - Test
 
 
 ## PROJECT INFO
 
-* [Software Project Plan - Book Builder](Index.md)
+* [Software Project Plan - Elbow Space](../Index.md)
 
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
@@ -11,6 +11,27 @@
 , [Test.md](Test.md)
 
 
+* File: Milestone-1/Test.md
+
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/tree/master/Milestone-1/Test.md
+
+* Documents: Documents/ in progress
+
+* Git Repo: ElBowSpaceProject
+
+
+### Milestone 1. Project Plan Complete
+
+Role: QA Engineer - Test
+
+Goal: Test Plan
+
+* Outline of testing that will be used
+* Setup structure for testing
+* Log issues
+* Document how to log issues
+
+# Milestone 3. Core Features Implemented - Test
 
 * File: Milestone-3/Test.md
 
@@ -20,6 +41,30 @@
 
 * Git Repo: Mark-Seaman.github.io
 
+# Milestone 2. Technology Proven - Test
+
+* File: Milestone-2/Test.md
+
+* URL: https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/Milestone-2/Test.md
+
+* Documents: Documents/swplan/BookBuilder
+
+* Git Repo: Mark-Seaman.github.io
+
+
+
+
+### Milestone 2. Technology Proven
+
+
+
+Role: QA Engineer - Test
+
+Goal: Test Infrastructure
+
+* Unit test framework
+* System testing framework
+* Regression testing
 
 
 
