@@ -10,7 +10,7 @@
 , [Code.md](Code.md)
 , [Test.md](Test.md)
 
-## Milestone 1. Project Plan Complete - Test
+# Milestone 1. Project Plan Complete - Test
 
 * File: Milestone-1/Test.md
 
