@@ -27,7 +27,7 @@ class Post(models.Model):
     id = models.AutoField(primary_key=True)
     body = models.CharField(max_length=255)
     time_stamp = models.DateTimeField()
-    # image = models.CharField(max_length=30) <-- url here? how do images get stored
+    image = models.TextField(max_length=255)
     user = models.ForeignKey(User.id, on_delete=models.CASCADE)
 
     class Meta:
