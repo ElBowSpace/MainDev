@@ -31,16 +31,6 @@ Goal: Test Plan
 * Log issues
 * Document how to log issues
 
-# Milestone 3. Core Features Implemented - Test
-
-* File: Milestone-3/Test.md
-
-* URL: https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/Milestone-3/Test.md
-
-* Documents: Documents/swplan/BookBuilder
-
-* Git Repo: Mark-Seaman.github.io
-
 # Milestone 2. Technology Proven - Test
 
 * File: Milestone-2/Test.md
@@ -52,10 +42,7 @@ Goal: Test Plan
 * Git Repo: Mark-Seaman.github.io
 
 
-
-
 ### Milestone 2. Technology Proven
-
 
 
 Role: QA Engineer - Test
@@ -66,6 +53,15 @@ Goal: Test Infrastructure
 * System testing framework
 * Regression testing
 
+# Milestone 3. Core Features Implemented - Test
+
+* File: Milestone-3/Test.md
+
+* URL: https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/Milestone-3/Test.md
+
+* Documents: Documents/swplan/BookBuilder
+
+* Git Repo: Mark-Seaman.github.io
 
 
 ### Milestone 3. Core Features Implemented
@@ -79,7 +75,6 @@ Goal: Automated testing
 * Unit testing
 * System testing
 * Code coverage of tests
-
 
 
 ## Book Builder - Automated testing
