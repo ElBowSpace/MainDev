@@ -1,7 +1,7 @@
-# Milestone 1. Project Plan Complete - Test
 
 
-## PROJECT INFO
+
+### PROJECT INFO
 
 * [Software Project Plan - Elbow Space](../Index.md)
 
@@ -10,7 +10,7 @@
 , [Code.md](Code.md)
 , [Test.md](Test.md)
 
-### Milestone 1
+## Milestone 1. Project Plan Complete - Test
 
 * File: Milestone-1/Test.md
 
@@ -21,7 +21,7 @@
 * Git Repo: ElBowSpaceProject
 
 
-### Milestone 1. Project Plan Complete
+## Milestone 1. Project Plan Complete
 
 Role: QA Engineer - Test
 
