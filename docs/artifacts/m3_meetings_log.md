@@ -10,6 +10,15 @@
 * topic 2
 * topic 3
 
+### Date: 9/26/20
+### Participants:
+* Design - Ben McEwen
+* Code - Kevin Ritter
+### Topics Discussed:
+* ERD
+* Model design
+* File organisation
+
 ### Date: 9/23/20
 ### Participants:
 * Design - Ben McEwen
