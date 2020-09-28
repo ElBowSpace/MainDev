@@ -25,7 +25,7 @@ SECRET_KEY = '7!#7doa&17x1r@8=)3vm-@=pspu5wkbg^y55d2t*6zit#+9c1+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['elbeauspace.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['elbeauspace.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'MainApp',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,11 @@ WSGI_APPLICATION = 'ElbowSpace.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'local_elbowspace',
+        'USER': 'kevinritter',
+        'PASSWORD': '4dmin4S3rv3r',
+        'port': '3306',
     }
 }
 
@@ -118,3 +122,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/home/elbeauspace/ElBowSpaceProject/static'

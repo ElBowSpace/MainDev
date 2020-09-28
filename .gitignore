@@ -1,0 +1,4 @@
+*.xml
+*.iml
+ElbowSpace/settings.py
+*.pyc
