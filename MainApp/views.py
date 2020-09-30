@@ -6,35 +6,35 @@ from .models import Post
 class IndexView(TemplateView):
 
     def get_template_names(self):
-        template_name = self.kwargs.get('template','index.html')
+        template_name = self.kwargs.get('template', 'index.html')
         if not exists('templates/' + template_name):
             template_name = 'missing.html'
         return template_name
 
 
-class PostListView(ListView):
+class PostListView(TemplateView):
     model = Post
     template_name = 'post_list.html'
 
 
-class PostDetailView(DetailView):
+class PostDetailView(TemplateView):
     model = Post
     template_name = 'post_detail.html'
 
 
-class PostCreateView(CreateView):
+class PostCreateView(TemplateView):
     model = Post
     template_name = 'post_new.html'
     fields = ['title', 'author', 'body']
 
 
-class PostUpdateView(UpdateView):
+class PostUpdateView(TemplateView):
     model = Post
     template_name = 'post_edit.html'
     fields = ['title', 'body']
 
 
-class PostDeleteView(DeleteView): 
+class PostDeleteView(TemplateView):
     model = Post
     template_name = 'post_delete.html'
-    success_url = reverse_lazy('post_list')
+    # success_url = reverse_lazy('post_list')

@@ -1,11 +1,12 @@
 from django.test import SimpleTestCase
 
+
 class ViewTests(SimpleTestCase):
 
     def check_template(self, page, template):
         response = self.client.get(page)
-        self.assertEqual(response.status_code,200)
-        self.assertTemplateUsed(response,template_name=template)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, template_name=template)
 
     def test_view(self):
         self.check_template('/', 'index.html')
