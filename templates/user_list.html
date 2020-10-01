@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+
+<hr> {% for user in object_list %}
+
+<div class="user-entry">
+    <h3>
+        #{{ user.pk }}
+        <!-- user.id is a temp place holder and may not be appropriate. -->
+        <a href="{% url 'user_detail' user.pk %}">{{ user.id }}</a>
+    </h3>
+    <p>{{ user.first_name }}</p>
+    <p>{{ user.last_name }}</p>
+    <!-- should add additional fields as appropriate -->
+</div>
+
+<hr> {% endfor %} {% endblock content %}
