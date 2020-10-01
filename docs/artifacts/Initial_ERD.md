@@ -1,3 +1,3 @@
 # Entity Relation Diagram
 
-![](initial_erd.png)
+![](Initial_ERD.png)
