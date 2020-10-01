@@ -8,11 +8,11 @@ from .views import (
     PostCreateView,
     PostUpdateView,
     PostDeleteView,
-    # UserListView,
-    # UserDetailView,
-    # UserCreateView,
-    # UserUpdateView,
-    # UserDeleteView,
+    UserListView,
+    UserDetailView,
+    UserCreateView,
+    UserUpdateView,
+    UserDeleteView,
 )
 
 
@@ -24,9 +24,9 @@ urlpatterns = [
     path('<int:pk>/detail/', PostDetailView.as_view(), name='post_detail'),
     path('<int:pk>/edit/', PostUpdateView.as_view(), name='post_edit'),
     path('', PostListView.as_view(), name='post_list'),
-    # path('<int:pk>/delete/', UserDeleteView.as_view(), name='user_delete'),
-    # path('new/', UserCreateView.as_view(), name='user_new'),
-    # path('<int:pk>/', UserDetailView.as_view(), name='user_detail'),
-    # path('<int:pk>/edit/', UserUpdateView.as_view(), name='user_edit'),
-    # path('', UserListView.as_view(), name='user_list'),
+    path('<int:pk>/delete/', UserDeleteView.as_view(), name='user_delete'),
+    path('new/', UserCreateView.as_view(), name='user_new'),
+    path('<int:pk>/', UserDetailView.as_view(), name='user_detail'),
+    path('<int:pk>/edit/', UserUpdateView.as_view(), name='user_edit'),
+    path('', UserListView.as_view(), name='user_list'),
 ]

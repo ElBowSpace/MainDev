@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <hr>
+{% for user in object_list %}
 <!-- "user-entry" needs to be added to stylesheets -->
 <div class="user-entry">
     <h2>{{ user.id }}</h2>
@@ -12,5 +13,5 @@
 
 <p><a href="{% url 'user_edit' user.pk %}">Edit user</a></p>
 <p><a href="{% url 'user_delete' user.pk %}">Delete User</a></p>
-
+{% endfor %}
 <hr> {% endblock content %}

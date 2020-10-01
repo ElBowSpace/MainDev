@@ -11,19 +11,30 @@ class ViewTests(SimpleTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, template_name=template)
 
-    def test_view(self):
+    def test_view_home(self):
         self.check_template('/', 'index.html')
 
-    def test_view_prototype(self):
+    def test_base_html(self):
+        self.check_template('/base.html', 'base.html')
+        
+    def test_user_credential_templates(self):
         self.check_template('/register.html', 'register.html')
         self.check_template('/login.html', 'login.html')
+        self.check_template('/logout.html', 'logout.html')
+        
+    def test_post_templates(self):
         self.check_template('/post_delete.html', 'post_delete.html')
         self.check_template('/post_edit.html', 'post_edit.html')
         self.check_template('/post_detail.html', 'post_detail.html')
-        self.check_template('/base.html', 'base.html')
-        self.check_template('/logout.html', 'logout.html')
         self.check_template('/post_list.html', 'post_list.html')
         self.check_template('/post_new.html', 'post_new.html')
+        
+    def test_user_templates(self):
+        self.check_template('/user_delete.html', 'user_delete.html')
+        self.check_template('/user_edit.html', 'user_edit.html')
+        self.check_template('/user_detail.html', 'user_detail.html')
+        self.check_template('/user_list.html', 'user_list.html')
+        self.check_template('/user_new.html', 'user_new.html')
 
 
 class AppTester(TestCase):
