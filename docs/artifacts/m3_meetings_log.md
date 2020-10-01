@@ -10,6 +10,15 @@
 * topic 2
 * topic 3
 
+### Date: 10/1/2020
+### Participants: 
+* Design - Ben McEwen
+* Code - Kevin Ritter
+### Topics Discussed:
+* Workflow
+* Creating Test branches for github and pull requests
+* Wireframes
+
 ### Date: 9/26/20
 ### Participants:
 * Design - Ben McEwen
@@ -17,7 +26,7 @@
 ### Topics Discussed:
 * ERD
 * Model design
-* File organisation
+* File organization
 
 ### Date: 9/23/20
 ### Participants:
