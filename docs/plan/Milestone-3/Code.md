@@ -1,4 +1,4 @@
-# Milestone 1. ElBowSpace Code
+# Elbow Space Project
 
 ## PROJECT INFO
 

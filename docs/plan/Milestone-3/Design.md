@@ -1,3 +1,4 @@
+# Elbow Space Project
 
 ## PROJECT INFO
 * Software Project Plan - ElbowSpace
@@ -6,8 +7,7 @@
 , [Code.md](Code.md)
 , [Test.md](Test.md)
 
-# Milestone 1. - Design
-
+# Milestone 1. - Desig
 
 * File: Milestone-1/Design.md
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-1/Design.md
@@ -45,7 +45,6 @@ User Stories
 * Apps = Data + Views
 * The design for the app requires designing the data models
 and the Views that will be implemented.
-
 
 
 ### Milestone 3. Core Features Implemented
