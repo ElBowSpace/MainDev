@@ -18,10 +18,10 @@ class User(models.Model):
 
 class Post(models.Model):
     id = models.AutoField(primary_key=True)
-    reply = models.ForeignKey('self', on_delete=models.CASCADE)
+    reply = models.ForeignKey('self', null=True, on_delete=models.CASCADE)
     body = models.CharField(max_length=255)
     time_stamp = models.DateTimeField()
-    image = models.TextField(max_length=255)
+    image = models.TextField(null=True, max_length=255)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
