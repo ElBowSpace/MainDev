@@ -10,6 +10,16 @@
 * topic 2
 * topic 3
 
+### Date: 10/02/2020
+### Participants: 
+* Code - Kevin Ritter
+* Test - Angel Rivera
+### Topics Discussed:
+* Pair programming session
+* Improved testing for models User and Post
+* Used Test Driven Development(TDD) to improve the models
+* Used TDD to create and improve CRUD operations for Users
+
 ### Date: 10/1/2020
 ### Participants: 
 * Design - Ben McEwen
