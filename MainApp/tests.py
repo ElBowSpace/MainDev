@@ -120,3 +120,19 @@ class UserCRUDTest(TestCase):
         u = get_user(first_name=first, last_name=last)
         self.assertEqual(u.first_name, first)
         self.assertEqual(u.last_name, last)
+
+    def test_d_get_all(self):
+        add_user("John", "Smith", 'test@mail.com', 'secret')
+        add_user("Karen", "Smith", 'test@mail.com', 'secret')
+        add_user("Jordan", "Smith", 'test@mail.com', 'secret')
+        print(get_all_users())
+
+    def test_e_delete(self):
+        add_user("John", "Smith", 'test@mail.com', 'secret')
+        add_user("Karen", "Smith", 'test@mail.com', 'secret')
+        add_user("Jordan", "Smith", 'test@mail.com', 'secret')
+        delete_user("Karen", "Smith")
+        print(get_all_users())
+
+
+
