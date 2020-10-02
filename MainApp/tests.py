@@ -4,8 +4,15 @@ from django.test import SimpleTestCase, TestCase
 from MainApp.models import User, Post
 from .user import *
 
+# python manage.py test
 
+
+# -----------------------------------------------------
+#   S I M P L E V I E W S
+#
 class ViewTests(SimpleTestCase):
+    # python manage.py test MainApp.tests.ViewTests
+    # python manage.py test MainApp.tests.ViewTests.test_view_home
 
     def check_template(self, page, template):
         response = self.client.get(page)
@@ -38,7 +45,12 @@ class ViewTests(SimpleTestCase):
         self.check_template('/user_new.html', 'user_new.html')
 
 
+# -----------------------------------------------------
+#   N O N C R U D
+#
 class AppTester(TestCase):
+    # python manage.py test MainApp.tests.AppTester
+    # python manage.py test MainApp.tests.AppTester.test_user_creation
 
     def setup_user(self, first, last, email, password):
         self.user = User.objects.create(
@@ -78,10 +90,11 @@ class AppTester(TestCase):
 
 
 # -----------------------------------------------------
-#   U S E R
+#   U S E R C R U D
 #
 class UserCRUDTest(TestCase):
     # python manage.py test MainApp.tests.UserCRUDTest
+    # python manage.py test MainApp.tests.UserCRUDTest.test_a_new_user
 
     def get_user_by_name(self, first_name, last_name):
         return User.objects.get(first_name=first_name, last_name=last_name)
