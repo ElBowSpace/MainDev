@@ -2,6 +2,7 @@ import datetime
 
 from django.test import SimpleTestCase, TestCase
 from MainApp.models import User, Post
+from .user import *
 
 
 class ViewTests(SimpleTestCase):
@@ -74,3 +75,22 @@ class AppTester(TestCase):
         post = self.setup_post(body, time_stamp, user)
         self.assertEqual(f'{post.body}', body)
         self.assertEqual(f'{user.id}', '1')
+
+
+# -----------------------------------------------------
+#   U S E R
+#
+class UserCRUDTest(TestCase):
+
+    def setUpUser(self):
+        self.user = add_user()
+
+    def check_user_name(self, pk, first_name, last_name):
+        u = User.objects.get(pk=pk)
+        self.assertEqual(u.first_name, first_name)
+        self.assertEqual(u.last_name, last_name)
+
+    def test_new_user(self):
+        add_user('generic', 'person', 'test@mail.com', 'secret')
+        self.check_user_name(1, 'generic', 'person')
+
