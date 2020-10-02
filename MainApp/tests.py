@@ -81,16 +81,29 @@ class AppTester(TestCase):
 #   U S E R
 #
 class UserCRUDTest(TestCase):
+    # python manage.py test MainApp.tests.UserCRUDTest
 
-    def setUpUser(self):
-        self.user = add_user()
+    def get_user_by_name(self, first_name, last_name):
+        return User.objects.get(first_name=first_name, last_name=last_name)
 
-    def check_user_name(self, pk, first_name, last_name):
-        u = User.objects.get(pk=pk)
+    def check_user_name(self, first_name, last_name):
+        u = self.get_user_by_name(first_name, last_name)
         self.assertEqual(u.first_name, first_name)
         self.assertEqual(u.last_name, last_name)
 
-    def test_new_user(self):
+    def test_a_new_user(self):
         add_user('generic', 'person', 'test@mail.com', 'secret')
-        self.check_user_name(1, 'generic', 'person')
+        self.check_user_name('generic', 'person')
 
+    def test_b_edit_users(self):
+        add_user('bland', 'person', 'test@mail.com', 'secret')
+        edit_user(old_first='bland', old_last='person', new_first='chuck')
+        self.check_user_name('chuck', 'person')
+
+    def test_c_get_user(self):
+        first = 'fname'
+        last = 'lname'
+        add_user(first, last, 'test@mail.com', 'secret')
+        u = get_user(first_name=first, last_name=last)
+        self.assertEqual(u.first_name, first)
+        self.assertEqual(u.last_name, last)
