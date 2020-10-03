@@ -77,14 +77,7 @@ Goal: Automated testing
 * Code coverage of tests
 
 
-## Book Builder - Automated testing
+## ElbowSpace test code
 
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/MainApp/tests.py
 
-
-### Unit testing
-
-
-### System testing
-
-
-### Code coverage of tests
