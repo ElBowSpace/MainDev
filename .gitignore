@@ -1,13 +1,4 @@
 *.xml
 *.iml
-ElbowSpace/settings.py
 *.pyc
-ElbowSpace/settings.py
-ElbowSpace/__pycache__/urls.cpython-38.pyc
-ElbowSpace/__pycache__/settings.cpython-38.pyc
-ElbowSpace/__pycache__/__init__.cpython-38.pyc
-*.pyc
-ElbowSpace/__pycache__/__init__.cpython-38.pyc
-ElbowSpace/__pycache__/settings.cpython-38.pyc
-ElbowSpace/__pycache__/urls.cpython-38.pyc
 ElbowSpace/settings.py
