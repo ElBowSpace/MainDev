@@ -3,7 +3,7 @@
 
 ### PROJECT INFO
 
-* [Software Project Plan - Elbow Space](../Index.md)
+* [Software Project Plan - Elbow Space](Index.md)
 
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
@@ -14,7 +14,7 @@
 # Milestone 1. Project Plan Complete - Test
 
 * File: Milestone-1/Test.md
-* URL: https://github.com/ElBowSpace/ElBowSpaceProject/tree/master/Milestone-1/Test.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-1/Test.md
 * Documents: Documents/ in progress
 * Git Repo: ElBowSpaceProject
 
