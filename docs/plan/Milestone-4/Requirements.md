@@ -86,11 +86,9 @@ Goal: Setup communications
 
 * File: Milestone-4/Requirements.md
 
-* URL: https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/Milestone-4/Requirements.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-4/Requirements.md
 
-* Documents: Documents/swplan/BookBuilder
-
-* Git Repo: Mark-Seaman.github.io
+* Git Repo: ElbowSpaceProject
 
 
 ### Milestone 4. Functionality Complete
