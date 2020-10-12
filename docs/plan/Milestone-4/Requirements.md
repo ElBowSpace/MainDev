@@ -60,17 +60,6 @@ Goal: Setup communications
 # Milestone 3. Core Features Implemented - Requirements
 
 
-## PROJECT INFO
-
-* [Software Project Plan - ElbowSpace](Index.md)
-
-* Other Roles - [Requirements.md](Requirements.md)
-, [Design.md](Design.md)
-, [Code.md](Code.md)
-, [Test.md](Test.md)
-
-
-
 * File: Milestone-3/Requirements.md
 
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-3/Requirements.md
@@ -79,11 +68,41 @@ Goal: Setup communications
 
 * Git Repo: ElbowSpaceProject
 
-
-
-
 ### Milestone 3. Core Features Implemented
 
+
+# Milestone 4. Functionality Complete - Requirements
+
+
+## PROJECT INFO
+
+* [Software Project Plan - Book Builder](../Index.md)
+
+* Other Roles - [Requirements.md](Requirements.md)
+, [Design.md](Design.md)
+, [Code.md](Code.md)
+, [Test.md](Test.md)
+
+
+* File: Milestone-4/Requirements.md
+
+* URL: https://github.com/Mark-Seaman/Mark-Seaman.github.io/blob/master/BookBuilder/Milestone-4/Requirements.md
+
+* Documents: Documents/swplan/BookBuilder
+
+* Git Repo: Mark-Seaman.github.io
+
+
+### Milestone 4. Functionality Complete
+
+
+Role: Project Manager - Requirements
+
+Goal: Team coordinator
+
+* Task Kanban
+* Prioritize feature requests
+* Sprint planning
 
 
 Role: Project Manager - Requirements
@@ -365,4 +384,11 @@ a reminder.
     * You must add a note for missing credits
         
 
+### Task Kanban
+
+
+### Prioritize feature requests
+
+
+### Sprint planning
 
