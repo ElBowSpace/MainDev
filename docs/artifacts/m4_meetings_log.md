@@ -10,6 +10,19 @@
 * topic 2
 * topic 3
 
+### Date: 10/08/2020
+### Participants: 
+* Undecided - Kevin Ritter
+* Undecided - Ben McEwen
+* Undecided - Angel Rivera
+* Undecided - Stephen Provost
+### Topics Discussed:
+* Milestone 4 design choices
+* Onboarding of new member
+* Updated settings.py on Python Anywhere
+* Made Migrations on Python Anywhere
+* Tested model code on Python Anywhere
+
 ### Date: 10/05/2020
 ### Participants: 
 * Undecided - Kevin Ritter
