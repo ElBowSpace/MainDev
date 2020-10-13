@@ -76,9 +76,15 @@ WSGI_APPLICATION = 'ElbowSpace.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'local_elbowspace',
+        'USER': 'kevinritter',
+        'PASSWORD': '4dmin4S3rv3r',
+        'HOST': 'localhost',
+        'TEST': {
+            'NAME': 'local_elbowspac$test_Elbow_Database',
+        },
+    },
 }
 
 
