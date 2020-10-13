@@ -135,4 +135,56 @@ class UserCRUDTest(TestCase):
         print(get_all_users())
 
 
+# -----------------------------------------------------
+#   P O S T C R U D
+#
+class PostCRUDTest(TestCase):
+    # python manage.py test MainApp.tests.PostCRUDTest
+    # python manage.py test MainApp.tests.PostCRUDTest.test_a_new_user
 
+    # def get_user_by_name(self, first_name, last_name):
+    #     return User.objects.get(first_name=first_name, last_name=last_name)
+    #
+    # def check_user_name(self, first_name, last_name):
+    #     u = self.get_user_by_name(first_name, last_name)
+    #     self.assertEqual(u.first_name, first_name)
+    #     self.assertEqual(u.last_name, last_name)
+    #
+    def test_a_new_post(self):
+        body = 'Lorem Ipsum dolor sit amet, ' \
+              'consectetur adipiscing elit, ' \
+              'sed do eiusmod tempor incididunt ut ' \
+              'labore et dolore magna aliqua.'
+        time_stamp = datetime.datetime.now()
+        first = 'fname'
+        last = 'lname'
+        user = add_user(first, last, 'test@mail.com', 'secret')
+        post = add_post(body, time_stamp, user)
+        self.assertEqual(f'{post.body}', body)
+        self.assertEqual(f'{post.id}', '1')
+    #
+    # def test_b_edit_users(self):
+    #     add_user('bland', 'person', 'test@mail.com', 'secret')
+    #     edit_user(old_first='bland', old_last='person', new_first='chuck')
+    #     self.check_user_name('chuck', 'person')
+    #
+    # def test_c_get_user(self):
+    #     first = 'fname'
+    #     last = 'lname'
+    #     add_user(first, last, 'test@mail.com', 'secret')
+    #     u = get_user(first_name=first, last_name=last)
+    #     self.assertEqual(u.first_name, first)
+    #     self.assertEqual(u.last_name, last)
+    #
+    # def test_d_get_all(self):
+    #     add_user("John", "Smith", 'test@mail.com', 'secret')
+    #     add_user("Karen", "Smith", 'test@mail.com', 'secret')
+    #     add_user("Jordan", "Smith", 'test@mail.com', 'secret')
+    #     print(get_all_users())
+    #
+    # def test_e_delete(self):
+    #     add_user("John", "Smith", 'test@mail.com', 'secret')
+    #     add_user("Karen", "Smith", 'test@mail.com', 'secret')
+    #     add_user("Jordan", "Smith", 'test@mail.com', 'secret')
+    #     delete_user("Karen", "Smith")
+    #     print(get_all_users())

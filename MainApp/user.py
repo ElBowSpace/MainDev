@@ -31,7 +31,7 @@ def get_user(first_name, last_name):
 
 
 def get_all_users():
-    return  User.objects.all()
+    return User.objects.all()
 
 
 def delete_user(first_name, last_name):
