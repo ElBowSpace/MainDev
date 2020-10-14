@@ -3,3 +3,4 @@
 *.pyc
 ElbowSpace/settings.py
 !.gitignore
+ElbowSpace/settings.py
