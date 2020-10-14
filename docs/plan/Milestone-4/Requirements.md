@@ -348,42 +348,11 @@ the highest priority issues on the Product Backlog.
 If a developer cannot deliver the required functionality then another teammate will be 
 required to produce the missing result.
 
-#### Team Survey
-
-After each milestone team members will give feedback about the team dynamics they
-experienced. A brief survey will show how the team is working together.  The results of this 
-survey will be recorded as a part of the public record for ElBow Space.  
-
-Each team member is required to complete the survey for each milestone.  Tools will act as
-a reminder.
-
-#### Milestone #1 Team Survey
-
-    Ben - (x/3 credits)
-        __x_ participated in team meetings
-        __x_ was cooperative
-        __x_ delivered contribution
-        
-    Kevin - (x/3 credits)
-        __x_ participated in team meetings
-        __x_ was cooperative
-        __x_ delivered contribution
-        
-    Stephen - (x/3 credits)
-        __x_ participated in team meetings
-        __x_ was cooperative
-        __x_ delivered contribution
-        
-    Angel - (x/3 credits)
-        __x_ participated in team meetings
-        __x_ was cooperative
-        __x_ delivered contribution
-        
-    * You must add a note for missing credits
-        
-
 ### Task Kanban
 
+<img src="markdownmonstericon.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 
 ### Prioritize feature requests
 | Priority #   | Feature |
