@@ -386,7 +386,7 @@ a reminder.
 
 
 ### Prioritize feature requests
-| Priority #   | Written Requirement |
+| Priority #   | Feature |
 | --------------------- | -----------------------------|
 |  1 | ~~Site is accessible at https://elbeauspace.pythonanywhere.com.~~ |
 |  2 | Users are able to create an account which will be stored in a database. |
