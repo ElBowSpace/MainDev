@@ -386,6 +386,21 @@ a reminder.
 
 
 ### Prioritize feature requests
+| Priority #   | Written Requirement |
+| --------------------- | -----------------------------|
+|  1 | ~~Site is accessible at https://elbeauspace.pythonanywhere.com.~~ |
+|  2 | Users are able to create an account which will be stored in a database. |
+|  3 | Database contains and associates data between customer’s name, email, and password.|
+|  4 | Database is able to be referenced through the website so clients are able to access their account and all associated information. |
+|  5 | Users can create posts that are viewable by ‘connected’ members: connected meaning users that have accepted connection requests with that person. |
+|  6 | User posts may contain text or images.|
+|  7 | Users will be able to connect to other users through submitting connection requests, which will be visible to both members. |
+|  8 | Users will be able to accept, decline, or cancel connection requests. |
+|  9 | Users will be able to remove connections (IE: people connected with them). |
+|  10 | Users are able to edit or delete posts that they have created in the past. |
+|  11 | Posts are organized by date and time, and display the date and time. |
+|  12 | Users are informed via email that they have a new post. |
+|  13 | Accounts may be deactivated, upon which clients will no longer be contacted. |
 
 
 ### Sprint planning
