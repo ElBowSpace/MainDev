@@ -12,6 +12,15 @@
 
 ### Date: 10/15/2020
 ### Participants: 
+* Senior Code Developer - Ben McEwen
+* Head Design Engineer - Stephen Provost
+### Topics Discussed:
+* Worked on discussing design role in M3 and M4.
+* Discussed DFD diagrams.
+* Discussed APIs and Code Analysis Tools.
+
+### Date: 10/15/2020
+### Participants: 
 * Test Engineer - Kevin Ritter
 * Senior Code Developer - Ben McEwen
 * Project Manager - Angel Rivera
