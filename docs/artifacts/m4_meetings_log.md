@@ -10,12 +10,32 @@
 * topic 2
 * topic 3
 
+### Date: 10/15/2020
+### Participants: 
+* Test Engineer - Kevin Ritter
+* Senior Code Developer - Ben McEwen
+* Project Manager - Angel Rivera
+* Head Design Engineer - Stephen Provost
+### Topics Discussed:
+* Worked on resolving post test failures
+* Demonstrated Kanban chart and discussed building a project chart
+* Planned testing for new views and future views
+* Demonstrated data flow diagram 
+
+### Date: 10/13/2020
+### Participants: 
+* Test Engineer - Kevin Ritter
+* Senior Coder Developer - Ben McEwen
+### Topics Discussed:
+* Test Driven Development
+* Wrote test for and created code for Posts
+
 ### Date: 10/08/2020
 ### Participants: 
-* Undecided - Kevin Ritter
-* Undecided - Ben McEwen
-* Undecided - Angel Rivera
-* Undecided - Stephen Provost
+* Test Engineer - Kevin Ritter
+* Senior Code Developer - Ben McEwen
+* Project Manager - Angel Rivera
+* Head Design Engineer - Stephen Provost
 ### Topics Discussed:
 * Milestone 4 design choices
 * Onboarding of new member
@@ -25,10 +45,10 @@
 
 ### Date: 10/05/2020
 ### Participants: 
-* Undecided - Kevin Ritter
-* Undecided - Ben McEwen
-* Undecided - Angel Rivera
-* Undecided - Stephen Provost
+* Test Engineer - Kevin Ritter
+* Senior Coder Developer - Ben McEwen
+* Project Manager - Angel Rivera
+* Head Design Engineer - Stephen Provost
 ### Topics Discussed:
 * Discussed where we expect M4 to go.
 * Determined to ensure that accounts can be created and saved to the database.
