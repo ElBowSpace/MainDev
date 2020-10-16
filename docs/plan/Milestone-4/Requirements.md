@@ -350,9 +350,7 @@ required to produce the missing result.
 
 ### Task Kanban
 
-<img src="https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/document%20images/Untitled%20Diagram%20(15).jpg?raw=true"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
+https://github.com/ElBowSpace/ElBowSpaceProject/projects/1
 
 ### Prioritize feature requests
 | Priority #   | Feature |
