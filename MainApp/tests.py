@@ -175,47 +175,48 @@ class PostCRUDTest(TestCase):
         # TODO: debug" AssertionError: '2' != '1'"
         # self.assertEqual(f'{post.id}', '1')
 
-    # def test_b_edit_post(self):
-    #     user = self.create_and_get_user()
-    #     time_stamp = datetime.datetime.now()
-    #     body = self.generic_post_body_a()
-    #     post = add_post(body, time_stamp, user)
-    #     new_body = self.generic_post_body_b()
-    #     edit_post(post.id, new_body)
-    #     self.assertEqual(post.body, new_body)
-    #
-    # def test_c_get_post(self):
-    #     user = self.create_and_get_user()
-    #     time_stamp = datetime.datetime.now()
-    #     body = self.generic_post_body_b()
-    #     post = add_post(body, time_stamp, user)
-    #     self.assertEqual(post.body, get_post(post.id).body)
-    #
-    # def test_d_get_all_posts(self):
-    #     user = self.create_and_get_user()
-    #     time_stamp = datetime.datetime.now()
-    #     body = self.generic_post_body_b()
-    #     add_post(body, time_stamp, user)
-    #
-    #     self.assertEqual(get_all_posts().count(), 1)
-    #
-    #     time_stamp = datetime.datetime.now()
-    #     body = self.generic_post_body_a()
-    #     add_post(body, time_stamp, user)
-    #
-    #     self.assertEqual(get_all_posts().count(), 2)
-    #
-    #     time_stamp = datetime.datetime.now()
-    #     body = self.generic_post_body_b()
-    #     add_post(body, time_stamp, user)
-    #
-    #     self.assertEqual(get_all_posts().count(), 3)
-    #
-    # def test_e_delete_post(self):
-    #     user = self.create_and_get_user()
-    #     time_stamp = datetime.datetime.now()
-    #     body = self.generic_post_body_a()
-    #     post = add_post(body, time_stamp, user)
-    #     self.assertEqual(get_all_posts().count(), 1)
-    #     delete_post(post.id)
-    #     self.assertEqual(get_all_posts().count(), 0)
+    def test_b_edit_post(self):
+        user = self.create_and_get_user()
+        time_stamp = datetime.datetime.now()
+        body = self.generic_post_body_a()
+        post = add_post(body, time_stamp, user)
+        new_body = self.generic_post_body_b()
+        edit_post(post.id, new_body)
+        post = Post.objects.get(id=post.id)
+        self.assertEqual(post.body, new_body)
+
+    def test_c_get_post(self):
+        user = self.create_and_get_user()
+        time_stamp = datetime.datetime.now()
+        body = self.generic_post_body_b()
+        post = add_post(body, time_stamp, user)
+        self.assertEqual(post.body, get_post(post.id).body)
+
+    def test_d_get_all_posts(self):
+        user = self.create_and_get_user()
+        time_stamp = datetime.datetime.now()
+        body = self.generic_post_body_b()
+        add_post(body, time_stamp, user)
+
+        self.assertEqual(get_all_posts().count(), 1)
+
+        time_stamp = datetime.datetime.now()
+        body = self.generic_post_body_a()
+        add_post(body, time_stamp, user)
+
+        self.assertEqual(get_all_posts().count(), 2)
+
+        time_stamp = datetime.datetime.now()
+        body = self.generic_post_body_b()
+        add_post(body, time_stamp, user)
+
+        self.assertEqual(get_all_posts().count(), 3)
+
+    def test_e_delete_post(self):
+        user = self.create_and_get_user()
+        time_stamp = datetime.datetime.now()
+        body = self.generic_post_body_a()
+        post = add_post(body, time_stamp, user)
+        self.assertEqual(get_all_posts().count(), 1)
+        delete_post(post.id)
+        self.assertEqual(get_all_posts().count(), 0)
