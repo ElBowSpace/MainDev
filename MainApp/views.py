@@ -18,6 +18,7 @@ class IndexView(TemplateView):
 class PostListView(TemplateView):
     model = Post
     template_name = 'post_list.html'
+    fields = ['id', 'reply', 'body', 'time_stamp', 'image', 'user']
 
 
 class PostDetailView(TemplateView):
@@ -28,18 +29,19 @@ class PostDetailView(TemplateView):
 class PostCreateView(TemplateView):
     model = Post
     template_name = 'post_new.html'
-    fields = ['title', 'author', 'body']
+    fields = ['reply', 'body', 'time_stamp', 'image', 'user']
 
 
 class PostUpdateView(TemplateView):
     model = Post
     template_name = 'post_edit.html'
-    fields = ['title', 'body']
+    fields = ['body']
 
 
 class PostDeleteView(TemplateView):
     model = Post
     template_name = 'post_delete.html'
+    fields = ['id']
     success_url = reverse_lazy('post_list')
 
 
@@ -48,6 +50,7 @@ class PostDeleteView(TemplateView):
 class UserListView(TemplateView):
     model = User
     template_name = 'user_list.html'
+    fields = ['id', 'connection', 'first_name', 'last_name', 'email', 'password', 'active']
 
 
 class UserDetailView(TemplateView):
@@ -64,10 +67,11 @@ class UserCreateView(TemplateView):
 class UserUpdateView(TemplateView):
     model = User
     template_name = 'user_edit.html'
-    fields = ['first_name', 'last_name', 'email']
+    fields = ['id', 'first_name', 'last_name', 'email']
 
 
 class UserDeleteView(TemplateView):
     model = User
     template_name = 'user_delete.html'
+    fields = ['id']
     success_url = reverse_lazy('User_list')

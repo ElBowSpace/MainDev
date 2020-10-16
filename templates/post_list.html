@@ -10,7 +10,7 @@
 <div class="post-entry">
     <h3>
         #{{ post.pk }}
-        <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+        <a href="{% url 'post_detail' post.pk %}">{{ post.time_stamp }}</a>
     </h3>
     <p>{{ post.body }}</p>
 </div>
