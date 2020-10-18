@@ -17,11 +17,14 @@ def edit_post(post_id, new_body=None):
         revised_post.body = new_body
     revised_post.save()
 
+
 def get_post(post_id):
     return Post.objects.get(id=post_id)
 
+
 def get_all_posts():
     return Post.objects.all()
+
 
 def delete_post(post_id):
     return Post.objects.get(id=post_id).delete()
