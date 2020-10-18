@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <h1>Login</h1>
-        <p>   </p>
-        <p>Email <input></p>
-        <p>Password <input></p>
-        <form action="login.html">
-            <input type="submit" value="Login" />
-        </form>
-        <p>   </p>
-        <form action="index.html">
-            <input type="submit" value="Cancel" />
-        </form>       
-        <p>No Account <a href="register.html">Create New User</a></p>
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Login</h2>
+    <form method = "POST" class="post_form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit btn btn-default">Submit</button>
+    </form>
+{% endblock content %}
