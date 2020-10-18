@@ -5,15 +5,7 @@
 <ul>
     <li><a href="{% url 'index' %}">Index Check</a></li>
     <li><a href="{% url 'register' %}">Register</a></li>
-    <li><a href="login.html">Log in</a></li>
-    <li><a href="logout.html">Log Out</a></li>
-    <li><a href="user_new.html">New User</a></li>
-    <li><a href="user_list.html">View All Users</a></li>
-    <li><a href="user_edit.html">Edit User</a></li>
-    <li><a href="user_delete.html">Delete user</a></li>
-    <li><a href="post_new.html">New Post</a></li>
-    <li><a href="post_list.html">View All Posts</a></li>
-    <li><a href="post_edit.html">Edit Post</a></li>
-    <li><a href="post_delete.html">Delete Post</a></li>
+    <li><a href="{% url 'login' %}">Log in</a></li>
+    <li><a href="{% url 'user_list' %}">User List</a></li>
 </ul>
 {% endblock content%}
