@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block title %}User Registration{% endblock title %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}">{% endblock css %}
 {% block content %}
     <h2>New User</h2>
     <form method = "POST" class="post_form">
