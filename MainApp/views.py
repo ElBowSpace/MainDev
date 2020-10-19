@@ -24,7 +24,7 @@ def login(request):
     if request.method == "POST":
         form = LoginForm(request.POST)
         if form.is_valid():
-            return redirect('user_list')
+            return redirect('user_list')  # valid form is filled boxes, not authorized user
     else:
         form = LoginForm()
     return render(request, 'login.html', {'form': form})
