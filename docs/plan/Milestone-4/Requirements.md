@@ -356,9 +356,9 @@ https://github.com/ElBowSpace/ElBowSpaceProject/projects/1
 | Priority #   | Feature |
 | --------------------- | -----------------------------|
 |  1 | ~~Site is accessible at https://elbeauspace.pythonanywhere.com.~~ |
-|  2 | Users are able to create an account which will be stored in a database. |
-|  3 | Database contains and associates data between customer’s name, email, and password.|
-|  4 | Database is able to be referenced through the website so clients are able to access their account and all associated information. |
+|  2 | ~~Users are able to create an account which will be stored in a database.~~|
+|  3 | ~~Database contains and associates data between customer’s name, email, and password.~~|
+|  4 | ~~Database is able to be referenced through the website so clients are able to access their account and all associated information.~~|
 |  5 | Users can create posts that are viewable by ‘connected’ members: connected meaning users that have accepted connection requests with that person. |
 |  6 | User posts may contain text or images.|
 |  7 | Users will be able to connect to other users through submitting connection requests, which will be visible to both members. |
