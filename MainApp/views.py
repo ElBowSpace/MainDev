@@ -1,77 +1,43 @@
-from django.urls import reverse_lazy
-from django.views.generic import TemplateView
-from os.path import exists
-from .models import Post
-from .models import User
+from django.shortcuts import render, redirect
+from .models import Post, User
+from .forms import RegisterForm, LoginForm
 
 
-class IndexView(TemplateView):
-
-    def get_template_names(self):
-        template_name = self.kwargs.get('template', 'index.html')
-        if not exists('templates/' + template_name):
-            template_name = 'missing.html'
-        return template_name
+def index(request):
+    return render(request, 'index.html')
 
 
-# Post Class views-------------------------------------------------------------------
-class PostListView(TemplateView):
-    model = Post
-    template_name = 'post_list.html'
-    fields = ['id', 'reply', 'body', 'time_stamp', 'image', 'user']
+def register(request):
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.active = True
+            user.save()
+            return redirect('user_list')
+    else:
+        form = RegisterForm()
+    return render(request, 'register.html', {'form': form})
 
 
-class PostDetailView(TemplateView):
-    model = Post
-    template_name = 'post_detail.html'
+def login(request):
+    if request.method == "POST":
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            return redirect('user_list')  # valid form is filled boxes, not authorized user
+    else:
+        form = LoginForm()
+    return render(request, 'login.html', {'form': form})
 
 
-class PostCreateView(TemplateView):
-    model = Post
-    template_name = 'post_new.html'
-    fields = ['reply', 'body', 'time_stamp', 'image', 'user']
+def user_list(request):
+    all_user_list = User.objects.all()
+    context = {'user_list': all_user_list}
+    return render(request, 'user_list.html', context)
 
 
-class PostUpdateView(TemplateView):
-    model = Post
-    template_name = 'post_edit.html'
-    fields = ['body']
-
-
-class PostDeleteView(TemplateView):
-    model = Post
-    template_name = 'post_delete.html'
-    fields = ['id']
-    success_url = reverse_lazy('post_list')
-
-
-# User Class views-------------------------------------------------------------------
-# # Im thinking of these these as being viewed by admin not by the user.
-class UserListView(TemplateView):
-    model = User
-    template_name = 'user_list.html'
-    fields = ['id', 'connection', 'first_name', 'last_name', 'email', 'password', 'active']
-
-
-class UserDetailView(TemplateView):
-    model = User
-    template_name = 'user_detail.html'
-
-
-class UserCreateView(TemplateView):
-    model = User
-    template_name = 'user_new.html'
-    fields = ['first_name', 'last_name', 'email', 'password']
-
-
-class UserUpdateView(TemplateView):
-    model = User
-    template_name = 'user_edit.html'
-    fields = ['id', 'first_name', 'last_name', 'email']
-
-
-class UserDeleteView(TemplateView):
-    model = User
-    template_name = 'user_delete.html'
-    fields = ['id']
-    success_url = reverse_lazy('User_list')
+def user_detail(request, pk=None):
+    if pk:
+        user = User.objects.filter(pk=pk)
+        args = {'user_list': user}
+    return render(request, 'user_detail.html', args)

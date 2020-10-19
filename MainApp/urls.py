@@ -1,32 +1,11 @@
 from django.urls import path
-from .views import IndexView
 
-
-from .views import (
-    PostListView,
-    PostDetailView,
-    PostCreateView,
-    PostUpdateView,
-    PostDeleteView,
-    UserListView,
-    UserDetailView,
-    UserCreateView,
-    UserUpdateView,
-    UserDeleteView,
-)
-
-
+from . import views
+# see tutorial at https://tutorial.djangogirls.org/en/django_forms/
 urlpatterns = [
-    path('', IndexView.as_view()),
-    path('<str:template>', IndexView.as_view()),
-    path('<int:pk>/delete/', PostDeleteView.as_view(), name='post_delete'),
-    path('new/', PostCreateView.as_view(), name='post_new'),
-    path('<int:pk>/detail/', PostDetailView.as_view(), name='post_detail'),
-    path('<int:pk>/edit/', PostUpdateView.as_view(), name='post_edit'),
-    path('', PostListView.as_view(), name='post_list'),
-    path('<int:pk>/delete/', UserDeleteView.as_view(), name='user_delete'),
-    path('new/', UserCreateView.as_view(), name='user_new'),
-    path('<int:pk>/', UserDetailView.as_view(), name='user_detail'),
-    path('<int:pk>/edit/', UserUpdateView.as_view(), name='user_edit'),
-    path('', UserListView.as_view(), name='user_list'),
+    path('', views.index, name='index'),
+    path('user/new/', views.register, name='register'),
+    path('login/', views.login, name='login'),
+    path('users/', views.user_list, name='user_list'),
+    path('user/<int:pk>/', views.user_detail, name='user_detail')
 ]
