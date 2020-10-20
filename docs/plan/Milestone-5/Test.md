@@ -88,6 +88,15 @@ Goal: Continuous integration
 
 ### Implement Travis (CI tool)
 
+### Milestone 5. Test Complete
+Role: QA Engineer - Test
+
+Goal: Acceptance testing
+
+Work with Requirements specialist
+Identify unmet customer needs
+Develop client acceptance test
+
 
 ## Elbow Space - Test Plan
 
