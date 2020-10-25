@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Post, User
-from .forms import RegisterForm, LoginForm
+from .forms import RegisterForm, LoginForm, EditUserForm, NewPostForm, EditPostForm
 
 
 def index(request):
@@ -44,9 +44,10 @@ def user_detail(request, last_name=None, first_name=None):
         args = None
     return render(request, 'user_detail.html', args)
 
-def user_edit(request, pk=None):
-    if pk:
-        user = User.objects.filter(pk=pk)
+
+def user_edit(request, last_name, first_name):
+    if last_name:
+        user = User.objects.get(last_name=last_name, first_name=first_name)
     if request.method == "POST":
         form = EditUserForm(request.POST, instance=user)
         if form.is_valid():
