@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block title %}New Post{% endblock title %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'admin/css/forms.css' %}">{% endblock css %}
 {% block content %}
-    <h1>New post</h1>
-    <form action="" method="post">{% csrf_token %}
-      {{ form.as_p }}
-      <input type="submit" value="Save">
+    <h2>New Post</h2>
+    <form method = "POST" class="post_form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
     </form>
 {% endblock content %}
