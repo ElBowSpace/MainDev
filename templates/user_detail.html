@@ -5,17 +5,19 @@
 <hr>
 {% for user in user_list %}
 <!-- "user-entry" needs to be added to stylesheets -->
-<div class="user-entry">
-    <h2>{{ user.id }}</h2>
-    <p>{{ user.first_name }}</p>
-    <p>{{ user.last_name }}</p>
-    <p>{{ user.email }}</p>
-    <p>{{ user.active }}</p>
-</div>
+    <div class="user-entry">
+        <h2>{{ user.id }}</h2>
+        <p>{{ user.first_name }}</p>
+        <p>{{ user.last_name }}</p>
+        <p>{{ user.email }}</p>
+        <p>{{ user.active }}</p>
+    </div>
 
-<p><a href="{% url 'user_edit' last_name=user.last_name first_name=user.first_name pk=user.pk %}">Edit user</a></p>
-<p><a href="{% url 'new_post' author_pk=user.id %}">New Post</a></p>
-    {#<p><a href="{% url 'user_delete' user.pk %}">Delete User</a></p>#}
+    {# This three parameter url is a bug fix.  Necessary if multiple users have the same name. #}
+    <p><a href="{% url 'user_edit' last_name=user.last_name first_name=user.first_name pk=user.pk %}">Edit user</a></p>
+    <p><a href="{% url 'new_post' author_pk=user.id %}">New Post</a></p>
+    <p><a href="{% url 'post_list' pk=user.id %}">All Post by {{ user.first_name }}</a></p>
+    <p><a href="{% url 'user_delete' pk=user.id %}">Delete User</a></p>
 {% endfor %}
 <hr>
 
