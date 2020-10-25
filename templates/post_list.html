@@ -4,7 +4,7 @@
 <ul> {% for post in post_list %}
     <hr>
     <div class="row"><a href="{% url 'post_detail' post_pk=post.pk %}">
-        Post at: {{ post.time_stamp }}</a></div>
+        Post at: {{ post.time_stamp }} by: {{ post.user.first_name }} {{ post.user.last_name }}</a></div>
     <p>{{ post.body }}</p>
     <hr>
     {% empty %}
