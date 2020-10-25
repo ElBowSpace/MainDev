@@ -134,3 +134,13 @@ def post_edit(request, post_pk=None):
     else:
         form = EditPostForm(instance=post)
     return render(request, 'post_edit.html', {'form': form})
+
+
+def post_delete(request, pk=None):
+    if pk:
+        post = Post.objects.get(pk=pk)
+        author_id = post.user.pk
+        post.delete()
+        return redirect('post_list', pk=author_id)
+    else:
+        return render(request, 'post_list.html')
