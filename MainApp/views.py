@@ -38,12 +38,16 @@ def user_list(request):
     return render(request, 'user_list.html', context)
 
 
-def user_detail(request, last_name=None, first_name=None):
-    if last_name:
-        user = User.objects.filter(last_name=last_name, first_name=first_name)
+def user_detail(request, last_name=None, first_name=None, pk=None):
+    args = None
+    if pk:
+        user = User.objects.filter(pk=pk)
         args = {'user_list': user}
-    else:
-        args = None
+    elif last_name and first_name:
+        if last_name:
+            user = User.objects.filter(last_name=last_name, first_name=first_name)
+            args = {'user_list': user}
+
     return render(request, 'user_detail.html', args)
 
 
