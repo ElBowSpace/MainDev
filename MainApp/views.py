@@ -1,7 +1,8 @@
 from datetime import datetime
 from django.shortcuts import render, redirect
 from .models import Post, User
-from .forms import RegisterForm, LoginForm, EditUserForm, NewPostForm, EditPostForm
+from .forms import RegisterForm, LoginForm, \
+    EditUserForm, NewPostForm, EditPostForm
 
 
 def index(request):
@@ -49,6 +50,8 @@ def user_detail(request, last_name=None, first_name=None):
 def user_edit(request, last_name, first_name):
     if last_name:
         user = User.objects.get(last_name=last_name, first_name=first_name)
+    else:
+        user = None
     if request.method == "POST":
         form = EditUserForm(request.POST, instance=user)
         if form.is_valid():
@@ -57,8 +60,9 @@ def user_edit(request, last_name, first_name):
             user.save()
             return redirect('user_detail', user.last_name, user.first_name)
     else:
-        form = EditUserForm()
+        form = EditUserForm(instance=user)
     return render(request, 'user_edit.html', {'form': form})
+
 
 def new_post(request, author_pk=None, post_pk=None):
     if request.method == "POST":
@@ -66,9 +70,9 @@ def new_post(request, author_pk=None, post_pk=None):
         if form.is_valid():
             post = form.save(commit=False)
             post.user = User.objects.get(pk=author_pk)
-            post.time_stamp=datetime.now()
+            post.time_stamp = datetime.now()
             if post_pk:
-                post.reply=Post.objects.get(pk=post_pk)
+                post.reply = Post.objects.get(pk=post_pk)
             post.save()
             return redirect('index')
     else:
