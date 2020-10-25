@@ -1,20 +1,16 @@
 {% extends 'base.html' %}
-
+{% block title %}Post Detail{% endblock title %}
 {% block content %}
 
-<hr>
+    <hr>
+        {% for post in post_list %}
+            <div class="post-entry">
+                <h2>{{ post.id }}</h2>
+                <p>{{ post.body }}</p>
+            </div>
+            <p><a href="{% url 'post_edit' post.pk %}">Edit Post</a></p>
+            <p><a href="{% url 'post_delete' post.pk %}">Delete Post</a></p>
+        {% endfor %}
+    <hr>
 
-{% for post in object_list %}
-
-<div class="post-entry">
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.body }}</p>
-</div>
-{##{{ post.pk }}#}
-<p><a href="{% url 'post_edit' post.pk %}">Edit Blog Post</a></p>
-<p><a href="{% url 'post_delete' post.pk %}">Delete Blog Post</a></p>
-
-<hr>
-
-{% endfor %}
 {% endblock content %}
