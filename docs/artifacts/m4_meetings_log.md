@@ -10,6 +10,20 @@
 * topic 2
 * topic 3
 
+### Date: 10/19/20
+### Participants: 
+* Test Engineer - Kevin Ritter
+* Senior Code Developer - Ben McEwen
+* Project Manager - Angel Rivera
+* Head Design Engineer - Stephen Provost
+### Topics Discussed:
+* Form generation and implementation django style
+* base html and inheritance
+* git commands on python anywhere
+* Demonstrating the working database locally and on python anywhere
+* Failing tests and how to repair the code
+* The new views code and how the model interacts with a form
+
 ### Date: 10/15/2020
 ### Participants: 
 * Senior Code Developer - Ben McEwen
