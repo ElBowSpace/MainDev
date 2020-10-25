@@ -67,6 +67,14 @@ def user_edit(request, last_name, first_name, pk=None):
     return render(request, 'user_edit.html', {'form': form})
 
 
+def user_delete(request, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
+        user.active = False
+        user.save()
+        return redirect('index')
+    else:
+        return render(request, 'user_list.html')
 def new_post(request, author_pk=None, post_pk=None):
     if request.method == "POST":
         form = NewPostForm(request.POST)
