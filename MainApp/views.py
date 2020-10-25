@@ -14,7 +14,7 @@ def register(request):
             user = form.save(commit=False)
             user.active = True
             user.save()
-            return redirect('user_detail')
+            return redirect('user_detail', user.last_name, user.first_name)
     else:
         form = RegisterForm()
     return render(request, 'register.html', {'form': form})
@@ -45,14 +45,15 @@ def user_detail(request, last_name=None, first_name=None):
     return render(request, 'user_detail.html', args)
 
 def user_edit(request, pk=None):
-    user = User.objects.get(pk=pk)
+    if pk:
+        user = User.objects.filter(pk=pk)
     if request.method == "POST":
         form = EditUserForm(request.POST, instance=user)
         if form.is_valid():
             user = form.save(commit=False)
             user.active = True
             user.save()
-            return redirect('user_detail')
+            return redirect('user_detail', user.last_name, user.first_name)
     else:
         form = EditUserForm()
     return render(request, 'user_edit.html', {'form': form})
