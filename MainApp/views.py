@@ -47,11 +47,14 @@ def user_detail(request, last_name=None, first_name=None):
     return render(request, 'user_detail.html', args)
 
 
-def user_edit(request, last_name, first_name):
-    if last_name:
-        user = User.objects.get(last_name=last_name, first_name=first_name)
+def user_edit(request, last_name, first_name, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
     else:
-        user = None
+        if last_name:
+            user = User.objects.get(last_name=last_name, first_name=first_name)
+        else:
+            user = None
     if request.method == "POST":
         form = EditUserForm(request.POST, instance=user)
         if form.is_valid():
