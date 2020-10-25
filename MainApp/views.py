@@ -74,3 +74,9 @@ def new_post(request, author_pk=None, post_pk=None):
     else:
         form = NewPostForm()
     return render(request, 'post_new.html', {'form': form})
+
+
+def post_list(request):
+    all_post_list = Post.objects.all()
+    args = {'post_list': all_post_list}
+    return render(request, 'post_list.html', args)
