@@ -85,6 +85,11 @@ def new_post(request, author_pk=None, post_pk=None):
 
 def post_list(request):
     all_post_list = Post.objects.all()
+def post_list(request, pk=None):
+    if pk:
+        all_post_list = Post.objects.filter(user=User.objects.get(pk=pk))
+    else:
+        all_post_list = Post.objects.all()
     args = {'post_list': all_post_list}
     return render(request, 'post_list.html', args)
 
