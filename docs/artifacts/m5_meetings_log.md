@@ -1,4 +1,4 @@
-# Log of ElBow Space Group Meetings for Milestone 4
+# Log of ElBow Space Group Meetings for Milestone 5
 
 ## Format:
 ### Date: MM/DD/YY
@@ -13,10 +13,14 @@
 ### Date: 10/25/20
 ### Participants: 
 * Senior Code Developer - Stephen Provost
-* Project Manager, Overall Code Guru, and Overlord - Kevin Ritter
+* Project Manager, Overall Code Guru, and Overlord - Kevin 'Alimghty' Ritter
 ### Topics Discussed:
 * Worked on post_detail, post_edit. 
 * Fixed up some code using paired programming.
+* Worked on New_Post
+* Worked on Post_list
+* Worked on Views
+* Worked on Urls
 
 ### Date: 10/24/20
 ### Participants: 
