@@ -14,7 +14,8 @@
 </div>
 
 <p><a href="{% url 'user_edit' last_name=user.last_name first_name=user.first_name %}">Edit user</a></p>
-{#<p><a href="{% url 'user_delete' user.pk %}">Delete User</a></p>#}
+<p><a href="{% url 'new_post' author_pk=user.id %}">New Post</a></p>
+    {#<p><a href="{% url 'user_delete' user.pk %}">Delete User</a></p>#}
 {% endfor %}
 <hr>
 

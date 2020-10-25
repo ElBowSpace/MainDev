@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import render, redirect
 from .models import Post, User
 from .forms import RegisterForm, LoginForm, EditUserForm, NewPostForm, EditPostForm
@@ -58,3 +59,18 @@ def user_edit(request, last_name, first_name):
     else:
         form = EditUserForm()
     return render(request, 'user_edit.html', {'form': form})
+
+def new_post(request, author_pk=None, post_pk=None):
+    if request.method == "POST":
+        form = NewPostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.user = User.objects.get(pk=author_pk)
+            post.time_stamp=datetime.now()
+            if post_pk:
+                post.reply=Post.objects.get(pk=post_pk)
+            post.save()
+            return redirect('index')
+    else:
+        form = NewPostForm()
+    return render(request, 'post_new.html', {'form': form})
