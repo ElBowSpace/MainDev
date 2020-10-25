@@ -9,6 +9,8 @@ def index(request):
     return render(request, 'index.html')
 
 
+# ----------------------------------------------------------------
+# User Views
 def register(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
@@ -16,7 +18,7 @@ def register(request):
             user = form.save(commit=False)
             user.active = True
             user.save()
-            return redirect('user_detail', user.last_name, user.first_name)
+            return redirect('user_detail', user.last_name, user.first_name, user.pk)
     else:
         form = RegisterForm()
     return render(request, 'register.html', {'form': form})
@@ -33,7 +35,7 @@ def login(request):
 
 
 def user_list(request):
-    all_user_list = User.objects.all()
+    all_user_list = User.objects.filter(active=True)
     context = {'user_list': all_user_list}
     return render(request, 'user_list.html', context)
 
@@ -79,6 +81,10 @@ def user_delete(request, pk=None):
         return redirect('index')
     else:
         return render(request, 'user_list.html')
+
+
+# ----------------------------------------------------------------
+# Post Views
 def new_post(request, author_pk=None, post_pk=None):
     if request.method == "POST":
         form = NewPostForm(request.POST)
@@ -89,14 +95,12 @@ def new_post(request, author_pk=None, post_pk=None):
             if post_pk:
                 post.reply = Post.objects.get(pk=post_pk)
             post.save()
-            return redirect('index')
+            return redirect('post_list', pk=author_pk)
     else:
         form = NewPostForm()
     return render(request, 'post_new.html', {'form': form})
 
 
-def post_list(request):
-    all_post_list = Post.objects.all()
 def post_list(request, pk=None):
     if pk:
         all_post_list = Post.objects.filter(user=User.objects.get(pk=pk))
