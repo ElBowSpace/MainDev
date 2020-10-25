@@ -89,3 +89,20 @@ def post_detail(request, post_pk=None):
     else:
         args = None
     return render(request, 'post_detail.html', args)
+
+
+def post_edit(request, post_pk=None):
+    if post_pk:
+        post = Post.objects.get(pk=post_pk)
+    else:
+        post = None
+    if request.method == "POST":
+        form = EditPostForm(request.POST, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.time_stamp = datetime.now()
+            post.save()
+            return redirect('post_detail', post_pk)
+    else:
+        form = EditPostForm(instance=post)
+    return render(request, 'post_edit.html', {'form': form})
