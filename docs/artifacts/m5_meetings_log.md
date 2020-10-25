@@ -13,7 +13,7 @@
 ### Date: 10/25/20
 ### Participants: 
 * Senior Code Developer - Stephen Provost
-* Project Manager, Overall Code Guru, and Overlord - Kevin 'Alimghty' Ritter
+* Project Manager, Overall Code Guru, and Overlord - Kevin 'Almighty' Ritter
 ### Topics Discussed:
 * Worked on post_detail, post_edit. 
 * Fixed up some code using paired programming.
