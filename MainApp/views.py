@@ -80,3 +80,12 @@ def post_list(request):
     all_post_list = Post.objects.all()
     args = {'post_list': all_post_list}
     return render(request, 'post_list.html', args)
+
+
+def post_detail(request, post_pk=None):
+    if post_pk:
+        post = Post.objects.filter(pk=post_pk)
+        args = {'post_list': post}
+    else:
+        args = None
+    return render(request, 'post_detail.html', args)
