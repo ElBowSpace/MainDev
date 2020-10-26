@@ -101,6 +101,11 @@ def new_post(request, author_pk=None, post_pk=None):
     return render(request, 'post_new.html', {'form': form})
 
 
+def post_reply(request, post_pk=None):
+    if post_pk:
+        return redirect('new_post', post_pk=post_pk)
+
+
 def post_list(request, pk=None):
     if pk:
         all_post_list = Post.objects.filter(user=User.objects.get(pk=pk))
