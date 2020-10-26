@@ -1,9 +1,11 @@
 import datetime
 
-from django.test import SimpleTestCase, TestCase
+from django.test import SimpleTestCase, TestCase, Client
+from django.urls import reverse
 from MainApp.models import User, Post
 from .user import *
 from .post import *
+
 
 # python manage.py test
 
@@ -23,27 +25,14 @@ class ViewTests(SimpleTestCase):
     def test_view_home(self):
         self.check_template('/', 'index.html')
 
+    # base.html is tested in every other inherited test.  This will fail without a url path.
     # def test_base_html(self):
     #     self.check_template('/base.html', 'base.html')
-    #
-    # def test_user_credential_templates(self):
-    #     self.check_template('/register.html', 'register.html')
-    #     self.check_template('/login.html', 'login.html')
+
+    def test_user_credential_templates(self):
+        self.check_template('/user/new/', 'register.html')
+        self.check_template('/login/', 'login.html')
     #     self.check_template('/logout.html', 'logout.html')
-    #
-    # def test_post_templates(self):
-    #     self.check_template('/post_delete.html', 'post_delete.html')
-    #     self.check_template('/post_edit.html', 'post_edit.html')
-    #     self.check_template('/post_detail.html', 'post_detail.html')
-    #     self.check_template('/post_list.html', 'post_list.html')
-    #     self.check_template('/post_new.html', 'post_new.html')
-    #
-    # def test_user_templates(self):
-    #     self.check_template('/user_delete.html', 'user_delete.html')
-    #     self.check_template('/user_edit.html', 'user_edit.html')
-    #     self.check_template('/user_detail.html', 'user_detail.html')
-    #     self.check_template('/user_list.html', 'user_list.html')
-    #     self.check_template('/user_new.html', 'user_new.html')
 
 
 # -----------------------------------------------------
@@ -88,6 +77,25 @@ class AppTester(TestCase):
         post = self.setup_post(body, time_stamp, user)
         self.assertEqual(f'{post.body}', body)
         self.assertEqual(f'{user.id}', '1')
+
+    def check_template(self, page, template):
+        response = self.client.get(page)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, template_name=template)
+
+    def test_post_templates(self):
+        #     self.check_template('/post_delete.html', 'post_delete.html')
+        #     self.check_template('/post_edit.html', 'post_edit.html')
+        #     self.check_template('/post_detail.html', 'post_detail.html')
+        self.check_template('/posts/', 'post_list.html')
+
+    #     self.check_template('/post_new.html', 'post_new.html')
+
+    def test_user_templates(self):
+        #     self.check_template('/user_delete.html', 'user_delete.html')
+        #     self.check_template('/user_edit.html', 'user_edit.html')
+        #     self.check_template('/user/', 'user_detail.html')
+        self.check_template('/users/', 'user_list.html')
 
 
 # -----------------------------------------------------
@@ -148,9 +156,9 @@ class PostCRUDTest(TestCase):
 
     def generic_post_body_a(self):
         return 'Lorem Ipsum dolor sit amet, ' \
-              'consectetur adipiscing elit, ' \
-              'sed do eiusmod tempor incididunt ut ' \
-              'labore et dolore magna aliqua.'
+               'consectetur adipiscing elit, ' \
+               'sed do eiusmod tempor incididunt ut ' \
+               'labore et dolore magna aliqua.'
 
     def generic_post_body_b(self):
         return 'Neque porro quisquam est, ' \
@@ -162,18 +170,16 @@ class PostCRUDTest(TestCase):
 
     def test_a_new_post(self):
         body = 'Lorem Ipsum dolor sit amet, ' \
-              'consectetur adipiscing elit, ' \
-              'sed do eiusmod tempor incididunt ut ' \
-              'labore et dolore magna aliqua.'
+               'consectetur adipiscing elit, ' \
+               'sed do eiusmod tempor incididunt ut ' \
+               'labore et dolore magna aliqua.'
         time_stamp = datetime.datetime.now()
         first = 'fname'
         last = 'lname'
         user = add_user(first, last, 'test@mail.com', 'secret')
         post = add_post(body, time_stamp, user)
         self.assertEqual(post.body, body)
-
-        # TODO: debug" AssertionError: '2' != '1'"
-        # self.assertEqual(f'{post.id}', '1')
+        self.assertTrue(type(post.id) is int)
 
     def test_b_edit_post(self):
         user = self.create_and_get_user()
@@ -220,3 +226,17 @@ class PostCRUDTest(TestCase):
         self.assertEqual(get_all_posts().count(), 1)
         delete_post(post.id)
         self.assertEqual(get_all_posts().count(), 0)
+
+
+# -----------------------------------------------------
+#   U S E R C R E A T I O N
+#
+# class UserCreationTest(TestCase):
+#     # python manage.py test MainApp.tests.UserCreationTest
+#     # python manage.py test MainApp.tests.UserCreationTest.test_a_description
+#
+#     def test_a_new_user_redirect(self):
+#         # c = Client()
+#         response = self.client.post('user/new/', data={'first_name': 'test', 'last_name': 'user',
+#                                             'email': 'test@user.com', 'password': 'simplepass'})
+#         self.assertContains(response, 'first_name')
