@@ -18,7 +18,7 @@ def register(request):
             user = form.save(commit=False)
             user.active = True
             user.save()
-            return redirect('user_detail', user.last_name, user.first_name, user.pk)
+            return redirect('user_detail', user.pk)
     else:
         form = RegisterForm()
     return render(request, 'register.html', {'form': form})
