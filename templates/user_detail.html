@@ -6,11 +6,11 @@
 {% for user in user_list %}
 <!-- "user-entry" needs to be added to stylesheets -->
     <div class="user-entry">
-        <h2>{{ user.id }}</h2>
-        <p>{{ user.first_name }}</p>
-        <p>{{ user.last_name }}</p>
-        <p>{{ user.email }}</p>
-        <p>{{ user.active }}</p>
+        <h2>id: {{ user.id }}</h2>
+        <p>first: {{ user.first_name }}</p>
+        <p>last: {{ user.last_name }}</p>
+        <p>email: {{ user.email }}</p>
+        <p>active: {{ user.active }}</p>
     </div>
 
     {# This three parameter url is a bug fix.  Necessary if multiple users have the same name. #}
