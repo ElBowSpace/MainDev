@@ -90,12 +90,14 @@ def new_post(request, author_pk=None, post_pk=None):
         form = NewPostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            post.user = User.objects.get(pk=author_pk)
+            if author_pk:
+                post.user = User.objects.get(pk=author_pk)
             post.time_stamp = datetime.now()
             if post_pk:
                 post.reply = Post.objects.get(pk=post_pk)
+                post.user = User.objects.get(pk=Post.objects.get(pk=post_pk).user.pk)
             post.save()
-            return redirect('post_list', pk=author_pk)
+            return redirect('post_list', pk=post.user.pk)
     else:
         form = NewPostForm()
     return render(request, 'post_new.html', {'form': form})
