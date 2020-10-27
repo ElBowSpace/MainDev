@@ -1,16 +1,11 @@
-{% extends 'base.html' %} {% block content %}
-
-<hr> {% for user in object_list %}
-
-<div class="user-entry">
-    <h3>
-        #{{ user.pk }}
-        <!-- user.id is a temp place holder and may not be appropriate. -->
-        <a href="{% url 'user_detail' user.pk %}">{{ user.id }}</a>
-    </h3>
-    <p>{{ user.first_name }}</p>
-    <p>{{ user.last_name }}</p>
-    <!-- should add additional fields as appropriate -->
-</div>
-
-<hr> {% endfor %} {% endblock content %}
+{% extends 'base.html' %}
+{% block title %}User List{% endblock title %}
+{% block content %}
+<ul> {% for user in user_list %}
+    <div class="row"><a href="{% url 'user_detail' pk=user.pk%}">
+        User: {{ user.pk }} {{ user.first_name }} {{ user.last_name }}</a></div>
+    {% empty %}
+        <div class="row">No users yet.</div>
+ {% endfor %}
+</ul>
+{% endblock content %}

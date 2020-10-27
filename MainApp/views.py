@@ -1,77 +1,153 @@
-from django.urls import reverse_lazy
-from django.views.generic import TemplateView
-from os.path import exists
-from .models import Post
-from .models import User
+from datetime import datetime
+from django.shortcuts import render, redirect
+from .models import Post, User
+from .forms import RegisterForm, LoginForm, \
+    EditUserForm, NewPostForm, EditPostForm
 
 
-class IndexView(TemplateView):
-
-    def get_template_names(self):
-        template_name = self.kwargs.get('template', 'index.html')
-        if not exists('templates/' + template_name):
-            template_name = 'missing.html'
-        return template_name
+def index(request):
+    return render(request, 'index.html')
 
 
-# Post Class views-------------------------------------------------------------------
-class PostListView(TemplateView):
-    model = Post
-    template_name = 'post_list.html'
-    fields = ['id', 'reply', 'body', 'time_stamp', 'image', 'user']
+# ----------------------------------------------------------------
+# User Views
+def register(request):
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.active = True
+            user.save()
+            return redirect('user_detail', user.pk)
+    else:
+        form = RegisterForm()
+    return render(request, 'register.html', {'form': form})
 
 
-class PostDetailView(TemplateView):
-    model = Post
-    template_name = 'post_detail.html'
+def login(request):
+    if request.method == "POST":
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            return redirect('user_list')  # valid form is filled boxes, not authorized user
+    else:
+        form = LoginForm()
+    return render(request, 'login.html', {'form': form})
 
 
-class PostCreateView(TemplateView):
-    model = Post
-    template_name = 'post_new.html'
-    fields = ['reply', 'body', 'time_stamp', 'image', 'user']
+def user_list(request):
+    all_user_list = User.objects.filter(active=True)
+    context = {'user_list': all_user_list}
+    return render(request, 'user_list.html', context)
 
 
-class PostUpdateView(TemplateView):
-    model = Post
-    template_name = 'post_edit.html'
-    fields = ['body']
+def user_detail(request, last_name=None, first_name=None, pk=None):
+    args = None
+    if pk:
+        user = User.objects.filter(pk=pk)
+        args = {'user_list': user}
+    elif last_name and first_name:
+        if last_name:
+            user = User.objects.filter(last_name=last_name, first_name=first_name)
+            args = {'user_list': user}
+
+    return render(request, 'user_detail.html', args)
 
 
-class PostDeleteView(TemplateView):
-    model = Post
-    template_name = 'post_delete.html'
-    fields = ['id']
-    success_url = reverse_lazy('post_list')
+def user_edit(request, last_name, first_name, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
+    else:
+        if last_name:
+            user = User.objects.get(last_name=last_name, first_name=first_name)
+        else:
+            user = None
+    if request.method == "POST":
+        form = EditUserForm(request.POST, instance=user)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.active = True
+            user.save()
+            return redirect('user_detail', user.last_name, user.first_name)
+    else:
+        form = EditUserForm(instance=user)
+    return render(request, 'user_edit.html', {'form': form})
 
 
-# User Class views-------------------------------------------------------------------
-# # Im thinking of these these as being viewed by admin not by the user.
-class UserListView(TemplateView):
-    model = User
-    template_name = 'user_list.html'
-    fields = ['id', 'connection', 'first_name', 'last_name', 'email', 'password', 'active']
+def user_delete(request, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
+        user.active = False
+        user.save()
+        return redirect('index')
+    else:
+        return render(request, 'user_list.html')
 
 
-class UserDetailView(TemplateView):
-    model = User
-    template_name = 'user_detail.html'
+# ----------------------------------------------------------------
+# Post Views
+def new_post(request, author_pk=None, post_pk=None):
+    if request.method == "POST":
+        form = NewPostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            if author_pk:
+                post.user = User.objects.get(pk=author_pk)
+            post.time_stamp = datetime.now()
+            if post_pk:
+                post.reply = Post.objects.get(pk=post_pk)
+                post.user = User.objects.get(pk=Post.objects.get(pk=post_pk).user.pk)
+            post.save()
+            return redirect('post_list', pk=post.user.pk)
+    else:
+        form = NewPostForm()
+    return render(request, 'post_new.html', {'form': form})
 
 
-class UserCreateView(TemplateView):
-    model = User
-    template_name = 'user_new.html'
-    fields = ['first_name', 'last_name', 'email', 'password']
+def post_reply(request, post_pk=None):
+    if post_pk:
+        return redirect('new_post', post_pk=post_pk)
 
 
-class UserUpdateView(TemplateView):
-    model = User
-    template_name = 'user_edit.html'
-    fields = ['id', 'first_name', 'last_name', 'email']
+def post_list(request, pk=None):
+    if pk:
+        all_post_list = Post.objects.filter(user=User.objects.get(pk=pk))
+    else:
+        all_post_list = Post.objects.all()
+    args = {'post_list': all_post_list}
+    return render(request, 'post_list.html', args)
 
 
-class UserDeleteView(TemplateView):
-    model = User
-    template_name = 'user_delete.html'
-    fields = ['id']
-    success_url = reverse_lazy('User_list')
+def post_detail(request, post_pk=None):
+    if post_pk:
+        post = Post.objects.filter(pk=post_pk)
+        args = {'post_list': post}
+    else:
+        args = None
+    return render(request, 'post_detail.html', args)
+
+
+def post_edit(request, post_pk=None):
+    if post_pk:
+        post = Post.objects.get(pk=post_pk)
+    else:
+        post = None
+    if request.method == "POST":
+        form = EditPostForm(request.POST, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.time_stamp = datetime.now()
+            post.save()
+            return redirect('post_detail', post_pk)
+    else:
+        form = EditPostForm(instance=post)
+    return render(request, 'post_edit.html', {'form': form})
+
+
+def post_delete(request, pk=None):
+    if pk:
+        post = Post.objects.get(pk=pk)
+        author_id = post.user.pk
+        post.delete()
+        return redirect('post_list', pk=author_id)
+    else:
+        return render(request, 'post_list.html')

@@ -1,28 +1,12 @@
-<h1>ElBowSpace Application</h1>
-
-<p>Welcome to ElBowSpace, the latest in social media greatness!</p>
-
-<h2>ElBowSpace Development Views</h2>
-
+{% extends 'base.html' %}
+{% block title %}ElBowSpace{% endblock title%}
+{% block content %}
+    <h1>Contents</h1>
 <ul>
-    <li><a href="register.html">Register</a></li>
-    <li><a href="login.html">Log in</a></li>
-    <li><a href="logout.html">Log Out</a></li>
-    <li><a href="user_new.html">New User</a></li>
-    <li><a href="user_list.html">View All Users</a></li>
-    <li><a href="user_edit.html">Edit User</a></li>
-    <li><a href="user_delete.html">Delete user</a></li>
-    <li><a href="post_new.html">New Post</a></li>
-    <li><a href="post_list.html">View All Posts</a></li>
-    <li><a href="post_edit.html">Edit Post</a></li>
-    <li><a href="post_delete.html">Delete Post</a></li>
+    <li><a href="{% url 'index' %}">Index Check</a></li>
+    <li><a href="{% url 'register' %}">Register</a></li>
+    <li><a href="{% url 'login' %}">Log in</a></li>
+    <li><a href="{% url 'user_list' %}">User List</a></li>
+    <li><a href="{% url 'post_list' %}">Post List</a></li>
 </ul>
-
-
-
-
-
-
-
-
-
+{% endblock content%}

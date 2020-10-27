@@ -88,16 +88,6 @@ Goal: Continuous integration
 
 ### Implement Travis (CI tool)
 
-### Milestone 5. Test Complete
-Role: QA Engineer - Test
-
-Goal: Acceptance testing
-
-Work with Requirements specialist
-Identify unmet customer needs
-Develop client acceptance test
-
-
 ## Elbow Space - Test Plan
 
 Each level of the hierarchy produces increasing levels of detail.  Test planning should always start at the top and work down. This prevents getting lost
