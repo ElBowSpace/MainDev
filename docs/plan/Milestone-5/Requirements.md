@@ -370,5 +370,3 @@ https://github.com/ElBowSpace/ElBowSpaceProject/projects/1
 |  13 | Accounts may be deactivated, upon which clients will no longer be contacted. |
 
 
-
-

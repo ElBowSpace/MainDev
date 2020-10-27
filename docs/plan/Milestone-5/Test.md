@@ -88,7 +88,6 @@ Goal: Continuous integration
 
 ### Implement Travis (CI tool)
 
-
 ## Elbow Space - Test Plan
 
 Each level of the hierarchy produces increasing levels of detail.  Test planning should always start at the top and work down. This prevents getting lost
