@@ -235,34 +235,41 @@ class PostCRUDTest(TestCase):
 class UserCreationTest(TestCase):
     #     # python manage.py test MainApp.tests.UserCreationTest
     #     # python manage.py test MainApp.tests.UserCreationTest.test_a_description
-    #
-    #     def test_a_new_user_redirect(self):
-    #         # c = Client()
-    #         response = self.client.post('user/new/', data={'first_name': 'test', 'last_name': 'user',
-    #                                             'email': 'test@user.com', 'password': 'simplepass'})
-    #         self.assertContains(response, 'first_name')
-    #
+
+    # def test_a_new_user_redirect(self):
+    #     c = Client()
+    #     response = self.client.post('/user/new/', data={'first_name': 'test',
+    #                                                     'last_name': 'user',
+    #                                                     'email': 'test@user.com',
+    #                                                     'password': 'simplepass'
+    #                                                     })
+    #     self.assertContains(response, 'first_name')
+
     def test_get(self):
         response = self.client.get("/user/new/")
+        # print(response)
 
         self.assertEqual(response.status_code, HTTPStatus.OK)
-        self.assertContains(response, '<h2>New user</h2>', html=True)
-        self.assertContains(response, 'id_first_name', html=True)
-        self.assertContains(response, 'id_last_name', html=True)
-        self.assertContains(response, 'id_email', html=True)
-        self.assertContains(response, 'id_password', html=True)
 
-    #
-    # def test_post_success(self):
-    #     response = self.client.post(
-    #         '/user/new/', data={'first_name': 'Test',
-    #                             'last_name': 'Dummy',
-    #                             'email': 'faux@email.com',
-    #                             'password': '!ns3cure'}
-    #     )
-    #
-    #     self.assertEqual(response.status_code, HTTPStatus.FOUND)
-    #     self.assertEqual(response["Location"], "/user/")
+        # self.assertContains(response, 'status', html=True)
+        # self.assertContains(response, '<h2>New user</h2>', html=True)
+        # self.assertContains(response, 'id_first_name', html=True)
+        # self.assertContains(response, 'id_last_name', html=True)
+        # self.assertContains(response, 'id_email', html=True)
+        # self.assertContains(response, 'id_password', html=True)
+
+
+    def test_post_success(self):
+        response = self.client.post(
+            '/user/new/', data={'first_name': 'Test',
+                                'last_name': 'Dummy',
+                                'email': 'faux@email.com',
+                                'password': '!ns3cure'}
+        )
+
+        self.assertEqual(response.status_code, HTTPStatus.FOUND)
+        self.assertEqual(response["Location"], "/user/1/")
+        # TODO: duplicate with empty data, redirect to user/new, see views.register
     #
     # def test_post_error(self):
     #     response = self.client.post(
