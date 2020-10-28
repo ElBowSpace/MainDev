@@ -1,4 +1,5 @@
 import datetime
+from http import HTTPStatus
 
 from django.test import SimpleTestCase, TestCase, Client
 from django.urls import reverse
@@ -231,12 +232,44 @@ class PostCRUDTest(TestCase):
 # -----------------------------------------------------
 #   U S E R C R E A T I O N
 #
-# class UserCreationTest(TestCase):
-#     # python manage.py test MainApp.tests.UserCreationTest
-#     # python manage.py test MainApp.tests.UserCreationTest.test_a_description
-#
-#     def test_a_new_user_redirect(self):
-#         # c = Client()
-#         response = self.client.post('user/new/', data={'first_name': 'test', 'last_name': 'user',
-#                                             'email': 'test@user.com', 'password': 'simplepass'})
-#         self.assertContains(response, 'first_name')
+class UserCreationTest(TestCase):
+    #     # python manage.py test MainApp.tests.UserCreationTest
+    #     # python manage.py test MainApp.tests.UserCreationTest.test_a_description
+    #
+    #     def test_a_new_user_redirect(self):
+    #         # c = Client()
+    #         response = self.client.post('user/new/', data={'first_name': 'test', 'last_name': 'user',
+    #                                             'email': 'test@user.com', 'password': 'simplepass'})
+    #         self.assertContains(response, 'first_name')
+    #
+    def test_get(self):
+        response = self.client.get("/user/new/")
+
+        self.assertEqual(response.status_code, HTTPStatus.OK)
+        self.assertContains(response, '<h2>New user</h2>', html=True)
+        self.assertContains(response, 'id_first_name', html=True)
+        self.assertContains(response, 'id_last_name', html=True)
+        self.assertContains(response, 'id_email', html=True)
+        self.assertContains(response, 'id_password', html=True)
+
+    #
+    # def test_post_success(self):
+    #     response = self.client.post(
+    #         '/user/new/', data={'first_name': 'Test',
+    #                             'last_name': 'Dummy',
+    #                             'email': 'faux@email.com',
+    #                             'password': '!ns3cure'}
+    #     )
+    #
+    #     self.assertEqual(response.status_code, HTTPStatus.FOUND)
+    #     self.assertEqual(response["Location"], "/user/")
+    #
+    # def test_post_error(self):
+    #     response = self.client.post(
+    #         "/user/new/", data={'first_name': 'Test',
+    #                             'last_name': 'Dummy',
+    #                             'email': 'faux@email.com',
+    #                             'password': '!ns3cure'}
+    #     )
+    #
+    #     self.assertEqual(response.status_code, HTTPStatus.OK)
