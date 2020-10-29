@@ -10,6 +10,14 @@
 * topic 2
 * topic 3
 
+### Date: 10/27/20
+### Participants: 
+* Head Tester - Ben McEwen
+* Project Manager - Kevin Ritter
+### Topics Discussed:
+* Form testing enhancements
+* Merging the latest code changes into master
+
 ### Date: 10/25/20
 ### Participants: 
 * Senior Code Developer - Stephen Provost
