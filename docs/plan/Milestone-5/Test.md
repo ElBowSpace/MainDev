@@ -88,6 +88,36 @@ Goal: Continuous integration
 
 ### Implement Travis (CI tool)
 
+
+# Milestone 5. Test Complete - Test
+
+
+## PROJECT INFO
+
+* File: Milestone-5/Test.md
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-5/Test.md
+* Documents: Documents/plan/Milestone4
+* Git Repo: ElBowSpaceProject
+
+### Milestone 5. Test Complete
+
+
+Role: QA Engineer - Test
+
+Goal: Acceptance testing
+
+* Work with Requirements specialist
+* Identify unmet customer needs
+* Develop client acceptance test
+
+
+## ElbowSpace - Acceptance testing
+
+### Work with Requirements specialist
+
+### Identify unmet customer needs
+
+
 ## Elbow Space - Test Plan
 
 Each level of the hierarchy produces increasing levels of detail.  Test planning should always start at the top and work down. This prevents getting lost
