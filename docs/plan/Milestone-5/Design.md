@@ -238,30 +238,3 @@ Alternative Hosting Services
 ElbowSpace will be using Python Anywhere to do free hosting.  Tutorial documents will show
 all developers how to setup and configure a web app.
 
-=======
-Each team member is required to complete the survey for each milestone.  Tools will act as
-a reminder.
-
-#### Milestone #2 Team Survey
-
-    Kevin - (x/3 credits)
-        _x__ participated in team meetings
-        _x__ was cooperative
-        _x__ delivered contribution
-        
-    Stephen - (x/3 credits)
-        _x__ participated in team meetings
-        _x__ was cooperative
-        _x__ delivered contribution
-        
-    Angel - (x/3 credits)
-        _x__ participated in team meetings
-        _x__ was cooperative
-        _x__ delivered contribution
-        
-    Ben - (x/3 credits)
-        _x__ participated in team meetings
-        _x__ was cooperative
-        _x__ delivered contribution
-        
-    * You must add a note for missing credits
