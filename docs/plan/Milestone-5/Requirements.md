@@ -2,7 +2,7 @@
 
 ## PROJECT INFO
 
-* [Software Project Plan - ElBow Space](../Index.md)
+* [Software Project Plan - ElBow Space](Index.md)
 
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
@@ -76,13 +76,6 @@ Goal: Setup communications
 
 ## PROJECT INFO
 
-* [Software Project Plan - Book Builder](../Index.md)
-
-* Other Roles - [Requirements.md](Requirements.md)
-, [Design.md](Design.md)
-, [Code.md](Code.md)
-, [Test.md](Test.md)
-
 
 * File: Milestone-4/Requirements.md
 
@@ -109,6 +102,40 @@ Goal: Functional requirements
 
 * Plan User Stories
 * Customer review
+
+
+# Milestone 5. Test Complete - Requirements
+
+
+## PROJECT INFO
+
+* File: Milestone-5/Requirements.md
+
+* URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-5/Requirements.md
+
+* Documents: docs / plan / Milestone - 5
+
+* Git Repo: ElbowSpaceProject
+
+
+### Milestone 5. Test Complete
+
+
+Role: Project Manager - Requirements
+
+Goal: Project progress
+
+* Burn down graph
+* Prioritize Features
+* Product backlog
+
+
+
+## ElBow Space - Project progress
+### Burn down graph
+- [chart](https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/burndown/burndown.png)
+### Prioritize Features
+### Product backlog
 
 ### User Stories
 User Story 1: As a user of ElbowSpace, I would like to be able to see the main homepage upon putting in the link https://elbeauspace.pythonanywhere.com so that I can enter the site.
@@ -170,7 +197,7 @@ User Story 17: As a user, I would like to be able to edit my comments, so I can 
 ## ElBow Space - Project Charter
 
 ElBow Space is a social media platform on the web that allows users to store photos,
-send messenges to friends, (dis)like and emote on content, and share other web content
+send messages to friends, (dis)like and emote on content, and share other web content
 at their leisure.  ElBow Space will let users share as much or as little as they like.
 
 
@@ -359,14 +386,14 @@ https://github.com/ElBowSpace/ElBowSpaceProject/projects/1
 |  2 | ~~Users are able to create an account which will be stored in a database.~~|
 |  3 | ~~Database contains and associates data between customer’s name, email, and password.~~|
 |  4 | ~~Database is able to be referenced through the website so clients are able to access their account and all associated information.~~|
-|  5 | Users can create posts that are viewable by ‘connected’ members: connected meaning users that have accepted connection requests with that person. |
-|  6 | User posts may contain text or images.|
+|  5 | ~~Users can create posts~~ that are viewable by ‘connected’ members: connected meaning users that have accepted connection requests with that person. |
+|  6 | User posts may contain ~~text~~ or images.|
 |  7 | Users will be able to connect to other users through submitting connection requests, which will be visible to both members. |
 |  8 | Users will be able to accept, decline, or cancel connection requests. |
 |  9 | Users will be able to remove connections (IE: people connected with them). |
-|  10 | Users are able to edit or delete posts that they have created in the past. |
+|  10 | ~~Users are able to edit or delete posts that they have created in the past.~~ |
 |  11 | Posts are organized by date and time, and display the date and time. |
 |  12 | Users are informed via email that they have a new post. |
-|  13 | Accounts may be deactivated, upon which clients will no longer be contacted. |
+|  13 | ~~Accounts may be deactivated, upon which clients will no longer be contacted.~~ |
 
 

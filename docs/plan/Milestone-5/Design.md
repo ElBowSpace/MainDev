@@ -7,7 +7,7 @@
 , [Code.md](Code.md)
 , [Test.md](Test.md)
 
-# Milestone 1. - Desig
+# Milestone 1. - Design
 
 * File: Milestone-1/Design.md
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-1/Design.md
