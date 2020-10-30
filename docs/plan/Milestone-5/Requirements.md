@@ -133,7 +133,7 @@ Goal: Project progress
 
 ## ElBow Space - Project progress
 ### Burn down graph
-- [chart](https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/burndown/burndown.png)
+- ![chart](https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/artifacts/burndown/burndown.png)
 ### Prioritize Features
 ### Product backlog
 
