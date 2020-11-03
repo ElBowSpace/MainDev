@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Edit User{% endblock title %}
+{#TITLE should be a concatenation which includes the users screen name (ie user.name  + "/'s Homepage")#}
+
+{% block content %}
+    <body class="container mt-4">
+
+
+    <div class="card mb-4">
+        <div class="card-body">
+             <h4 class="card-title">Create Post</h4>
+            {% include 'post_new.html' %}
+
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title">Edit profile</h4>
+            {% include 'user_edit.html' %}
+
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title">Connections</h4>
+            {% include 'user_list.html' %}
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title">Recent Posts</h4>
+            {% include 'post_list.html' %}
+            {#List should be descending by date (for posts in range (10) maybe)#}
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title">Active Connections</h4>
+            {% include 'user_list.html' %}
+            {#List should be descending most recently posted (for each post in recent posts list username)#}
+        </div>
+    </div>
+
+{% endblock content %}
