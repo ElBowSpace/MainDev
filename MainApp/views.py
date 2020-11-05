@@ -7,6 +7,7 @@ from .connection import make_connection
 from .post import *
 from .user import *
 
+
 def index(request):
     return render(request, 'index.html')
 
@@ -157,6 +158,7 @@ def post_delete(request, pk=None):
         return redirect('post_list', pk=author_id)
     else:
         return render(request, 'post_list.html')
+
 
 def make_connection(request, active_user=None, pk=None):
     sender = User.objects.get(pk=active_user)
