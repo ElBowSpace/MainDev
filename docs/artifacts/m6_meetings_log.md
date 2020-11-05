@@ -10,10 +10,21 @@
 * topic 2
 * topic 3
 
+### Date: 11/05/20
+### Participants:
+* Code Surgeon - Angel Rivera
+* Project Manager - Ben McEwen
+* Lead Design Architect - Kevin Ritter
+### Topics Discussed
+* New connections model
+* Scope reduction of email feature
+* Burndown to production
+* Plan to clean code by reducing redundancies
+
 ### Date: 11/04/20
 ### Participants:
-* Coder - Angel Rivera
-* Tester - Stephen Provost
+* Code Surgeon - Angel Rivera
+* Test Engineer - Stephen Provost
 * Lead Design Architect - Kevin Ritter
 ### Topics Discussed
 * Friendship, a pre-built model for friends
