@@ -10,6 +10,16 @@
 * topic 2
 * topic 3
 
+### Date: 11/04/20
+### Participants:
+* Coder - Angel Rivera
+* Tester - Stephen Provost
+* Lead Design Architect - Kevin Ritter
+### Topics Discussed
+* Friendship, a pre-built model for friends
+* Building our own connection hub for project.
+* Views, Models, etc.
+
 ### Date: 11/03/20
 ### Participants: 
 * Req / Project Manager - Ben McEwen
