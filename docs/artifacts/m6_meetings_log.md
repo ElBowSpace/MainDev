@@ -1,4 +1,4 @@
-# Log of ElBow Space Group Meetings for Milestone 5
+# Log of ElBow Space Group Meetings for Milestone 6
 
 ## Format:
 ### Date: MM/DD/YY
