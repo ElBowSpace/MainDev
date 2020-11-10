@@ -10,11 +10,26 @@
 * topic 2
 * topic 3
 
+
+### Date: 11/09/20
+### Participants:
+* Code Surgeon - Angel Rivera
+* Project Manager - Ben McEwen
+* Lead Design Architect - Kevin Ritter
+### Topics Discussed
+* Deliverables for Friday
+* Landing Page
+* Tests added at each step
+* Bug fixing on user model
+* New User model implementation
+* Site Beautification
+
 ### Date: 11/05/20
 ### Participants:
 * Code Surgeon - Angel Rivera
 * Project Manager - Ben McEwen
 * Lead Design Architect - Kevin Ritter
+* Test Engineer - Stephen Provost
 ### Topics Discussed
 * New connections model
 * Scope reduction of email feature
