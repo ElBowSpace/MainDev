@@ -6,14 +6,14 @@ def add_user(first_name, last_name, email, password):
                             last_name=last_name,
                             email=email,
                             password=password,
-                            active=True
+                            is_active=True
                             )
     u.save()
     return u
 
 
 def edit_user(old_first, old_last, new_first=None,
-              new_last=None, new_email=None, new_password=None):
+              new_last=None, new_email=None, new_pteassword=None):
     user = User.objects.get(first_name=old_first, last_name=old_last)
     if new_first is not None:
         user.first_name = new_first
