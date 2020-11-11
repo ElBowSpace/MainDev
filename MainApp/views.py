@@ -1,9 +1,35 @@
 from datetime import datetime
 from django.shortcuts import render, redirect
-from .models import Post, User
-from .forms import RegisterForm, LoginForm, \
+from .models import Post, User, Connection
+from .forms import  LoginForm, \
     EditUserForm, NewPostForm, EditPostForm
+from .connection import newname
+from .post import *
+from .user import *
+from .forms import SignUpForm
+from django.contrib.auth import authenticate
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views import generic
 
+
+# class SignUpView(generic.CreateView):
+#     form_class = UserCreationForm
+#     success_url = reverse_lazy('login')
+#     template_name = 'registration/signup.html'
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('index')
+    else:
+        form = SignUpForm()
+    return render(request, 'registration/signup.html', {'form': form})
 
 def index(request):
     return render(request, 'index.html')
@@ -16,7 +42,7 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.active = True
+            user.is_active = True
             user.save()
             return redirect('user_detail', user.pk)
     else:
@@ -31,7 +57,7 @@ def login(request):
             return redirect('user_home')  # valid form is filled boxes, not authorized user
     else:
         form = LoginForm()
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'registration/login.html', {'form': form})
 
 
 def user_home(request):
@@ -39,7 +65,7 @@ def user_home(request):
 
 
 def user_list(request):
-    all_user_list = User.objects.filter(active=True)
+    all_user_list = User.objects.filter(is_active=True)
     context = {'user_list': all_user_list}
     return render(request, 'user_list.html', context)
 
@@ -69,7 +95,7 @@ def user_edit(request, last_name, first_name, pk=None):
         form = EditUserForm(request.POST, instance=user)
         if form.is_valid():
             user = form.save(commit=False)
-            user.active = True
+            user.is_active = True
             user.save()
             return redirect('user_detail', user.last_name, user.first_name)
     else:
@@ -80,7 +106,7 @@ def user_edit(request, last_name, first_name, pk=None):
 def user_delete(request, pk=None):
     if pk:
         user = User.objects.get(pk=pk)
-        user.active = False
+        user.is_active = False
         user.save()
         return redirect('index')
     else:
@@ -155,3 +181,10 @@ def post_delete(request, pk=None):
         return redirect('post_list', pk=author_id)
     else:
         return render(request, 'post_list.html')
+
+def make_connection(request, is_active=None, pk=None):
+    sender = User.objects.get(sender=request.user)
+    receiver = User.objects.get(pk=pk)
+    newname(sender,receiver)
+    context = {'user_list': receiver}
+    return render(request, 'user_detail.html', context)

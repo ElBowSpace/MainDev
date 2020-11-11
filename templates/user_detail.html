@@ -18,6 +18,7 @@
     <p><a href="{% url 'new_post' author_pk=user.id %}">New Post</a></p>
     <p><a href="{% url 'post_list' pk=user.id %}">All Post by {{ user.first_name }}</a></p>
     <p><a href="{% url 'user_delete' pk=user.id %}">Delete User</a></p>
+    {<p><a href="{% url 'make_connection' pk=user.id%}">Make connection</a></p>}
 {% endfor %}
 <hr>
 
