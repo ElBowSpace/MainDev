@@ -53,102 +53,15 @@ and the Views that will be implemented.
 
 
 ### Data Schema
-#### Not Yet Implemented
-<!-- * This diagram shows the key data models and how they fit together. -->
-<!-- * The boxes represent data classes and database tables -->
-<!-- * The arrows represent object references and database joins -->
-
-<!-- ![](img/Book_Data.png) -->
-
 
 
 ### Data models
-#### Not Yet Implemented
-<!--
-Data Classes and database tables
-
-* Reader
-    * user*
-* Author
-    * user*
-    * name
-* Book
-    * author*
-    * title
-* Chapter
-    * book*
-    * title
-    * order
-* Paragraph
-    * chapter*
-    * text
-    * order
-* Image
-    * chapter*
-    * src
-    * alt
-    * order
-
-“*” makes a link to another table.  This is implemented 
-by a foreign key relationship between the two tables.  
-
-Example: Books have Authors so the Book data model has
-a ForeignKeyField that points to the Author Model class.
-
--->
 
 ### App Views
-#### Not Yet Implemented
-<!--
-* Users
-    * Register Author
-    * Register Reader
-    * User Admin
-* Books
-    * Create Book
-    * List Books
-    * Edit Book
-    * Read Book
-* Chapters
-    * New Chapter
-    * Edit Chapter
-    * Read Chapter
--->
+
 
 ### Phases Of Implementation
-#### Not Yet Implemented
-<!--
-* 1 - Proof of concept
-    * Milestone 2
-    * Define the Data Models
-    * Use admin views to simulate user stories
-* 2 - Prototype
-    * Milestone 3
-    * Implement Custom View for User Stories
-    * Users
-        * Register Author
-        * Register Reader
-    * Books
-        * Create Book
-        * List Books
-        * Edit Book
-        * Read Book
-    * Chapters
-        * New Chapter
-        * Edit Chapter
-        * Read Chapter
-* 3 - Core features
-    * Streamline and improve UX
-    * Deal with Errors
-* 4 - Functionality complete
-    * Build out logging
-    * Fix errors
-    * Performance
-    * Usability testing and improvements
-* 5 - Code Complete
-    * Fix all defects
-    * Implement 100% test coverage
--->
+
 
 ## ElbowSpace - Technology selection
 Selecting the correct technology is the first important technical decision on any project.
