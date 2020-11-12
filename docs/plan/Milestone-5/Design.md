@@ -1,10 +1,13 @@
-# Milestone 1. - Design
+# Elbow Space Project
+
 ## PROJECT INFO
 * Software Project Plan - ElbowSpace
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
 , [Code.md](Code.md)
 , [Test.md](Test.md)
+
+# Milestone 1. - Design
 
 * File: Milestone-1/Design.md
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-1/Design.md
@@ -19,14 +22,6 @@ Goal: Technology selection
 
 
 # Milestone 2. Technology Proven - Design
-## PROJECT INFO
-
-* [Software Project Plan - ElBow Space](Index.md)
-* Other Roles - [Requirements.md](Requirements.md)
-, [Design.md](Design.md)
-, [Code.md](Code.md)
-, [Test.md](Test.md)
-
 
 * File: Milestone-2/Design.md
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-2/Design.md
@@ -52,16 +47,54 @@ User Stories
 and the Views that will be implemented.
 
 
-### Data Schema
+### Milestone 3. Core Features Implemented
 
+
+Role: Designer - Design
+
+Goal: Component Design - API
+
+* Prototype - development spike of core functionality
+* Implement data models
+* Implement views
+* Implement URL routes
+
+
+
+### Data Schema
 
 ### Data models
 
+Data Classes and database tables
+
+* User
+    * id
+    * connection
+    * first_name
+    * last_name
+    * email
+    * password
+    * active
+  
+* Post
+    * id
+    * reply
+    * body
+    * time_stamp
+    * image
+    * user.id*
+
+“*” makes a link to another table.  This is implemented 
+by a foreign key relationship between the two tables.  
+
+Example: Books have Authors so the Book data model has
+a ForeignKeyField that points to the Author Model class.
+
+
+
 ### App Views
 
-
 ### Phases Of Implementation
-
 
 ## ElbowSpace - Technology selection
 Selecting the correct technology is the first important technical decision on any project.
@@ -167,30 +200,3 @@ Alternative Hosting Services
 ElbowSpace will be using Python Anywhere to do free hosting.  Tutorial documents will show
 all developers how to setup and configure a web app.
 
-=======
-Each team member is required to complete the survey for each milestone.  Tools will act as
-a reminder.
-
-#### Milestone #2 Team Survey
-
-    Kevin - (x/3 credits)
-        _x__ participated in team meetings
-        _x__ was cooperative
-        _x__ delivered contribution
-        
-    Stephen - (x/3 credits)
-        _x__ participated in team meetings
-        _x__ was cooperative
-        _x__ delivered contribution
-        
-    Angel - (x/3 credits)
-        _x__ participated in team meetings
-        _x__ was cooperative
-        _x__ delivered contribution
-        
-    Ben - (x/3 credits)
-        _x__ participated in team meetings
-        _x__ was cooperative
-        _x__ delivered contribution
-        
-    * You must add a note for missing credits

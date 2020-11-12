@@ -1,10 +1,13 @@
-# Milestone 1. - Design
+# Elbow Space Project
+
 ## PROJECT INFO
 * Software Project Plan - ElbowSpace
 * Other Roles - [Requirements.md](Requirements.md)
 , [Design.md](Design.md)
 , [Code.md](Code.md)
 , [Test.md](Test.md)
+
+# Milestone 1. - Desig
 
 * File: Milestone-1/Design.md
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-1/Design.md
@@ -19,14 +22,6 @@ Goal: Technology selection
 
 
 # Milestone 2. Technology Proven - Design
-## PROJECT INFO
-
-* [Software Project Plan - ElBow Space](Index.md)
-* Other Roles - [Requirements.md](Requirements.md)
-, [Design.md](Design.md)
-, [Code.md](Code.md)
-, [Test.md](Test.md)
-
 
 * File: Milestone-2/Design.md
 * URL: https://github.com/ElBowSpace/ElBowSpaceProject/blob/master/docs/plan/Milestone-2/Design.md
@@ -51,17 +46,67 @@ User Stories
 * The design for the app requires designing the data models
 and the Views that will be implemented.
 
+### Milestone 4. Functionality Complete
+
+Role: Designer - Stephen Provost
+
+Goal: Component Design - API; Dataflow Diagram
+
+* Implement Data Models
+* Implement Developmental Functionality
+
+### Milestone 3. Core Features Implemented
+
+
+Role: Designer - Design
+
+Goal: Component Design - API
+
+* Prototype - development spike of core functionality
+* Implement data models
+* Implement views
+* Implement URL routes
+
+### Data Schema
+https://github.com/ElBowSpace/ElBowSpaceProject/tree/master/docs/artifacts/wireframes_and_flowcharts/milestone-4
+
+Represents how data flow occurs in our app.
 
 ### Data Schema
 
 
 ### Data models
 
+Data Classes and database tables
+
+* User
+    * id
+    * connection
+    * first_name
+    * last_name
+    * email
+    * password
+    * active
+  
+* Post
+    * id
+    * reply
+    * body
+    * time_stamp
+    * image
+    * user.id*
+
+“*” makes a link to another table.  This is implemented 
+by a foreign key relationship between the two tables.  
+
+Example: Books have Authors so the Book data model has
+a ForeignKeyField that points to the Author Model class.
+
+
+
 ### App Views
 
-
 ### Phases Of Implementation
-
 
 ## ElbowSpace - Technology selection
 Selecting the correct technology is the first important technical decision on any project.

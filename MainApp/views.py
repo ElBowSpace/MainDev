@@ -1,8 +1,34 @@
 from datetime import datetime
 from django.shortcuts import render, redirect
-from .models import Post, User
-from .forms import RegisterForm, LoginForm, \
-    EditUserForm, NewPostForm, EditPostForm
+from .models import Post, Connection
+from .forms import EditUserForm, NewPostForm, EditPostForm
+from .post import *
+from .user import *
+from .connection import connect_users
+from .forms import SignUpForm
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views import generic
+
+
+# class SignUpView(generic.CreateView):
+#     form_class = UserCreationForm
+#     success_url = reverse_lazy('login')
+#     template_name = 'registration/signup.html'
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('index')
+    else:
+        form = SignUpForm()
+    return render(request, 'registration/signup.html', {'form': form})
 
 
 def index(request):
@@ -11,46 +37,45 @@ def index(request):
 
 # ----------------------------------------------------------------
 # User Views
-def register(request):
-    if request.method == "POST":
-        form = RegisterForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.active = True
-            user.save()
-            return redirect('user_detail', user.last_name, user.first_name, user.pk)
-    else:
-        form = RegisterForm()
-    return render(request, 'register.html', {'form': form})
 
 
-def login(request):
-    if request.method == "POST":
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            return redirect('user_list')  # valid form is filled boxes, not authorized user
-    else:
-        form = LoginForm()
-    return render(request, 'login.html', {'form': form})
+def user_home(request):
+    return render(request, 'user_home.html')
 
 
 def user_list(request):
-    all_user_list = User.objects.filter(active=True)
+    all_user_list = User.objects.filter(is_active=True)
     context = {'user_list': all_user_list}
     return render(request, 'user_list.html', context)
 
 
-def user_detail(request, last_name=None, first_name=None, pk=None):
-    args = None
+def user_detail(request, last_name=None, first_name=None, pk=None, user_pk=None):
+    args, user = None, None
     if pk:
         user = User.objects.filter(pk=pk)
-        args = {'user_list': user}
     elif last_name and first_name:
-        if last_name:
-            user = User.objects.filter(last_name=last_name, first_name=first_name)
-            args = {'user_list': user}
-
+        user = User.objects.filter(last_name=last_name, first_name=first_name)
+    connected_list = get_connections_list(user[0].pk)
+    connected_list = get_id_list(connected_list)
+    if user_pk in connected_list:
+        connected_list = True
+    else:
+        connected_list = False
+    args = {'user_list': user, 'connections': connected_list}
     return render(request, 'user_detail.html', args)
+
+
+def get_connections_list(pk=None):
+    queryset = Connection.objects.filter(receiver_id=pk).values('sender_id')
+    sender_list = Connection.objects.filter(sender_id=pk).values('receiver_id')
+    return queryset.union(queryset, sender_list)
+
+
+def get_id_list(qs=None):
+    list_ids = []
+    for item in qs:
+        list_ids.append(item['sender_id'])
+    return list_ids
 
 
 def user_edit(request, last_name, first_name, pk=None):
@@ -65,7 +90,7 @@ def user_edit(request, last_name, first_name, pk=None):
         form = EditUserForm(request.POST, instance=user)
         if form.is_valid():
             user = form.save(commit=False)
-            user.active = True
+            user.is_active = True
             user.save()
             return redirect('user_detail', user.last_name, user.first_name)
     else:
@@ -76,7 +101,7 @@ def user_edit(request, last_name, first_name, pk=None):
 def user_delete(request, pk=None):
     if pk:
         user = User.objects.get(pk=pk)
-        user.active = False
+        user.is_active = False
         user.save()
         return redirect('index')
     else:
@@ -90,15 +115,22 @@ def new_post(request, author_pk=None, post_pk=None):
         form = NewPostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            post.user = User.objects.get(pk=author_pk)
+            if author_pk:
+                post.user = User.objects.get(pk=author_pk)
             post.time_stamp = datetime.now()
             if post_pk:
                 post.reply = Post.objects.get(pk=post_pk)
+                post.user = User.objects.get(pk=Post.objects.get(pk=post_pk).user.pk)
             post.save()
-            return redirect('post_list', pk=author_pk)
+            return redirect('post_list', pk=post.user.pk)
     else:
         form = NewPostForm()
     return render(request, 'post_new.html', {'form': form})
+
+
+def post_reply(request, post_pk=None):
+    if post_pk:
+        return redirect('new_post', post_pk=post_pk)
 
 
 def post_list(request, pk=None):
@@ -144,3 +176,10 @@ def post_delete(request, pk=None):
         return redirect('post_list', pk=author_id)
     else:
         return render(request, 'post_list.html')
+
+
+def make_connection(request, sender_pk=None, receiver_pk=None):
+    sender = User.objects.get(pk=sender_pk)
+    receiver = User.objects.get(pk=receiver_pk)
+    connect_users(sender, receiver)
+    return user_list(request)

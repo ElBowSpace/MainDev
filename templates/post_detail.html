@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
 {% block title %}Post Detail{% endblock title %}
 {% block content %}
-
-    <hr>
-        {% for post in post_list %}
-            <div class="post-entry">
-                <h2>{{ post.id }}</h2>
-                <p>{{ post.body }}</p>
-            </div>
-            <p><a href="{% url 'post_edit' post.pk %}">Edit Post</a></p>
-            <p><a href="{% url 'post_delete' post.pk %}">Delete Post</a></p>
-        {% endfor %}
-    <hr>
-
+    {% if user.is_authenticated %}
+        <hr>
+            {% for post in post_list %}
+                <div class="post-entry">
+                    <h2>id: {{ post.id }} reply: {{ post.reply.id }}</h2>
+                    <p>body: {{ post.body }}</p>
+                </div>
+                <p><a href="{% url 'post_edit' post.pk %}">Edit Post</a></p>
+                <p><a href="{% url 'post_delete' post.pk %}">Delete Post</a></p>
+                <p><a href="{% url 'post_reply' post_pk=post.pk %}">Reply</a></p>
+                <p><a href="{% url 'post_list' %}">Return to post list</a></p>
+            {% endfor %}
+        <hr>
+    {% endif %}
 {% endblock content %}

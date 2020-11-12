@@ -62,13 +62,6 @@ Goal: Component Design - API
 
 
 ### Data Schema
-#### Not Yet Implemented
-<!-- * This diagram shows the key data models and how they fit together. -->
-<!-- * The boxes represent data classes and database tables -->
-<!-- * The arrows represent object references and database joins -->
-
-<!-- ![](img/Book_Data.png) -->
-
 
 
 ### Data models
@@ -101,38 +94,10 @@ a ForeignKeyField that points to the Author Model class.
 
 
 ### App Views
-#### Not Yet Implemented
-<!--
-* Users
-    * Register Author
-    * Register Reader
-    * User Admin
-* Books
-    * Create Book
-    * List Books
-    * Edit Book
-    * Read Book
-* Chapters
-    * New Chapter
-    * Edit Chapter
-    * Read Chapter
--->
+
 
 ### Phases Of Implementation
-#### Not Yet Implemented
-<!--
-* 3 - Core features
-    * Streamline and improve UX
-    * Deal with Errors
-* 4 - Functionality complete
-    * Build out logging
-    * Fix errors
-    * Performance
-    * Usability testing and improvements
-* 5 - Code Complete
-    * Fix all defects
-    * Implement 100% test coverage
--->
+
 
 ## ElbowSpace - Technology selection
 Selecting the correct technology is the first important technical decision on any project.

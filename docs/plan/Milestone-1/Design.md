@@ -1,4 +1,3 @@
-
 # Milestone 1. - Design
 
 
@@ -18,8 +17,6 @@
 * Git Repo: https://github.com/ElBowSpace/ElBowSpaceProject
 
 
-
-
 ### Milestone 1. Project Plan Complete
 
 
@@ -31,7 +28,6 @@ Goal: Technology selection
 * Select Development Tools
 * Infrastructure - Frameworks & Tools
 * Decide on App deployment
-
 
 
 ## ElbowSpace - Technology selection
@@ -65,7 +61,7 @@ Strong consideration was given to the following frameworks.
 * Node with React and Mongo DB - Thriving community and very popular
 
 
-### Selectiong Development Tools
+### Selecting Development Tools
 
 Criteria for Technology Selection
 
