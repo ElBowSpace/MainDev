@@ -17,10 +17,12 @@ class Post(models.Model):
     def __str__(self):
         return "Post:" + str(self.id) + ", User: " + str(self.user) + ", Reply to: " + str(self.reply)
 
+
 class Connection(models.Model):
-    sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name= 'sender')
+    sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sender')
     receiver = models.ForeignKey(User, on_delete=models.CASCADE, related_name='receiver')
     active = models.BooleanField()
 
     def __str__(self):
         return "Connection:" + " User: " + str(self.sender) + " To: " + " User: " + str(self.receiver)
+

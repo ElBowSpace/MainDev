@@ -13,7 +13,7 @@ def add_user(first_name, last_name, email, password):
 
 
 def edit_user(old_first, old_last, new_first=None,
-              new_last=None, new_email=None, new_pteassword=None):
+              new_last=None, new_email=None, new_password=None):
     user = User.objects.get(first_name=old_first, last_name=old_last)
     if new_first is not None:
         user.first_name = new_first
