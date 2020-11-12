@@ -2,4 +2,22 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
+
+  font-size: 20px;
+}
+
+.card p{
+}
+
+#nav-sidebar {
+  border: 2px solid black;
+  outline: #a9a9a9 solid 5px;
+  margin: auto;
+  padding: 3px;
+  text-align: center;
+}
+
+#card_stuff {
+  text-align: center;
+  padding: 10px;
 }

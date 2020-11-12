@@ -6,7 +6,7 @@
     {% if user.is_authenticated %}
             {% for post in post_list %}
                 <div class="card">
-                    <div class="container">
+                    <div class="container" id="card_stuff">
                         <div class="post-entry">
                             <h2>id: {{ post.id }} reply: {{ post.reply.id }}</h2>
                             <p>body: {{ post.body }}</p>
