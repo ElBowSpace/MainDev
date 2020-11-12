@@ -1,18 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Post List{% endblock title %}
-
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'elbow_space_css/card.css' %}">{% endblock css %}
 {% block content %}
     {% if user.is_authenticated %}
-        <ul> {% for post in post_list %}
-            <hr>
-            <div class="row"><a href="{% url 'post_detail' post_pk=post.pk %}">
-                Post at: {{ post.time_stamp }} by: {{ post.user.first_name }} {{ post.user.last_name }}</a></div>
-            <p>{{ post.body }}</p>
-            <hr>
-            {% empty %}
-                <div class="row">No posts yet.</div>
-         {% endfor %}
-        </ul>
+        {% for post in post_list %}
+            <div class="card">
+                <div class="container">
+                    <hr>
+                    <div><a href="{% url 'post_detail' post_pk=post.pk %}">
+                        Post at: {{ post.time_stamp }} by: {{ post.user.first_name }} {{ post.user.last_name }}</a></div>
+                    <p>{{ post.body }}</p>
+                    <hr>
+                </div>
+            </div>
+        {% empty %}
+            <div class="card">
+                <div class="container">
+                    <div>No posts yet.</div>
+                </div>
+            </div>
+        {% endfor %}
+
             <p><a href="{% url 'user_list' %}">Return to user list</a></p>
     {% endif %}
 {% endblock content %}
