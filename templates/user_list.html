@@ -1,11 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}User List{% endblock title %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'elbow_space_css/card.css' %}">{% endblock css %}
 {% block content %}
-<ul> {% for user in user_list %}
-    <div class="row"><a href="{% url 'user_detail' pk=user.pk%}">
-        User: {{ user.pk }} {{ user.first_name }} {{ user.last_name }}</a></div>
-    {% empty %}
-        <div class="row">No users yet.</div>
- {% endfor %}
-</ul>
+    {% if user.is_authenticated %}
+        {% for person in user_list %}
+            <div class="card">
+                <div class="container" id="card_stuff">
+                    <div><a href="{% url 'user_detail' pk=person.pk user_pk=user.pk%}">
+                        User: {{ person.pk }}   Name: {{ person.first_name }} {{ person.last_name }}</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div>No users yet.</div>
+        {% endfor %}
+
+    {% endif %}
 {% endblock content %}

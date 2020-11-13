@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}ElBowSpace{% endblock title%}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'elbow_space_css/card.css' %}">{% endblock css %}
 {% block content %}
-    <h1>Contents</h1>
-<ul>
-    <li><a href="{% url 'index' %}">Index Check</a></li>
-    <li><a href="{% url 'register' %}">Register</a></li>
-    <li><a href="{% url 'login' %}">Log in</a></li>
-    <li><a href="{% url 'user_list' %}">User List</a></li>
-    <li><a href="{% url 'post_list' %}">Post List</a></li>
-</ul>
+            <div class="card">
+                <div class="container">
+                    <p>
+                    Welcome to ElBow Space!!!  If you have been here before, get yourself logged in.
+                    If this is your first time you need to create an account to access the site.
+                    Need a tutorial?  Today is your lucky day.  We have one just click the link!
+                    </p>
+                </div>
+            </div>
 {% endblock content%}
