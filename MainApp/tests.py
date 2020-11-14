@@ -5,6 +5,7 @@ from django.urls import reverse
 from MainApp.models import User, Post
 from .user import *
 from .post import *
+from .connection import *
 
 
 # python manage.py test
@@ -29,11 +30,6 @@ class ViewTests(SimpleTestCase):
     # def test_base_html(self):
     #     self.check_template('/base.html', 'base.html')
 
-    def test_user_credential_templates(self):
-        self.check_template('/user/new/', 'register.html')
-        self.check_template('/login/', 'login.html')
-    #     self.check_template('/logout.html', 'logout.html')
-
 
 # -----------------------------------------------------
 #   N O N C R U D
@@ -42,13 +38,14 @@ class AppTester(TestCase):
     # python manage.py test MainApp.tests.AppTester
     # python manage.py test MainApp.tests.AppTester.test_user_creation
 
-    def setup_user(self, first, last, email, password):
+    def setup_user(self, username, first, last, email, password):
         self.user = User.objects.create(
+            username=username,
             first_name=first,
             last_name=last,
             email=email,
             password=password,
-            active=True
+            is_active=True
         )
         return self.user
 
@@ -61,7 +58,8 @@ class AppTester(TestCase):
         return self.post
 
     def test_user_creation(self):
-        user = self.setup_user('Tester', 'Botz', 'test@mail.com', 'secret')
+        user = self.setup_user('', 'Tester', 'Botz', 'test@mail.com', 'secret')
+        self.assertEqual(f'{user.username}', '')
         self.assertEqual(f'{user.first_name}', 'Tester')
         self.assertEqual(f'{user.last_name}', 'Botz')
         self.assertEqual(f'{user.email}', 'test@mail.com')
@@ -73,7 +71,7 @@ class AppTester(TestCase):
                'sed do eiusmod tempor incididunt ut ' \
                'labore et dolore magna aliqua.'
         time_stamp = datetime.datetime.now()
-        user = self.setup_user('Tester', 'Botz', 'test@mail.com', 'secret')
+        user = self.setup_user('userillamo', 'Tester', 'Botz', 'test@mail.com', 'secret')
         post = self.setup_post(body, time_stamp, user)
         self.assertEqual(f'{post.body}', body)
         self.assertEqual(f'{user.id}', '1')
@@ -114,32 +112,33 @@ class UserCRUDTest(TestCase):
         self.assertEqual(u.last_name, last_name)
 
     def test_a_new_user(self):
-        add_user('generic', 'person', 'test@mail.com', 'secret')
+        add_user('genuser', 'generic', 'person', 'test@mail.com', 'secret')
         self.check_user_name('generic', 'person')
 
     def test_b_edit_users(self):
-        add_user('bland', 'person', 'test@mail.com', 'secret')
+        add_user('blaper', 'bland', 'person', 'test@mail.com', 'secret')
         edit_user(old_first='bland', old_last='person', new_first='chuck')
         self.check_user_name('chuck', 'person')
 
     def test_c_get_user(self):
+        username = 'uname'
         first = 'fname'
         last = 'lname'
-        add_user(first, last, 'test@mail.com', 'secret')
+        add_user(username, first, last, 'test@mail.com', 'secret')
         u = get_user(first_name=first, last_name=last)
         self.assertEqual(u.first_name, first)
         self.assertEqual(u.last_name, last)
 
     def test_d_get_all(self):
-        add_user("John", "Smith", 'test@mail.com', 'secret')
-        add_user("Karen", "Smith", 'test@mail.com', 'secret')
-        add_user("Jordan", "Smith", 'test@mail.com', 'secret')
+        add_user('Jsmith', "John", "Smith", 'test@mail.com', 'secret')
+        add_user('Ksmith', "Karen", "Smith", 'test@mail.com', 'secret')
+        add_user('Josmith', "Jordan", "Smith", 'test@mail.com', 'secret')
         print(get_all_users())
 
     def test_e_delete(self):
-        add_user("John", "Smith", 'test@mail.com', 'secret')
-        add_user("Karen", "Smith", 'test@mail.com', 'secret')
-        add_user("Jordan", "Smith", 'test@mail.com', 'secret')
+        add_user("JohSmith", "John", "Smith", 'test@mail.com', 'secret')
+        add_user("KaSmith", "Karen", "Smith", 'test@mail.com', 'secret')
+        add_user("JorSmith", "Jordan", "Smith", 'test@mail.com', 'secret')
         delete_user("Karen", "Smith")
         print(get_all_users())
 
@@ -152,7 +151,7 @@ class PostCRUDTest(TestCase):
     # python manage.py test MainApp.tests.PostCRUDTest.test_a_new_post
 
     def create_and_get_user(self):
-        return add_user('first_name', 'last_name', 'test@mail.com', 'secret')
+        return add_user('user_name', 'first_name', 'last_name', 'test@mail.com', 'secret')
 
     def generic_post_body_a(self):
         return 'Lorem Ipsum dolor sit amet, ' \
@@ -174,9 +173,10 @@ class PostCRUDTest(TestCase):
                'sed do eiusmod tempor incididunt ut ' \
                'labore et dolore magna aliqua.'
         time_stamp = datetime.datetime.now()
+        uname = 'username'
         first = 'fname'
         last = 'lname'
-        user = add_user(first, last, 'test@mail.com', 'secret')
+        user = add_user(uname, first, last, 'test@mail.com', 'secret')
         post = add_post(body, time_stamp, user)
         self.assertEqual(post.body, body)
         self.assertTrue(type(post.id) is int)
@@ -240,3 +240,38 @@ class PostCRUDTest(TestCase):
 #         response = self.client.post('user/new/', data={'first_name': 'test', 'last_name': 'user',
 #                                             'email': 'test@user.com', 'password': 'simplepass'})
 #         self.assertContains(response, 'first_name')
+
+# -----------------------------------------------------
+class ConnectionCRUDTests(TestCase):
+
+    def user_setup(self, username, first, last, email, password):
+        self.user = User.objects.create(
+            username=username,
+            first_name=first,
+            last_name=last,
+            email=email,
+            password=password,
+            is_active=True
+        )
+        return self.user
+
+    def test_connection(self):
+        u1 = self.user_setup('primero', 'first', 'butnotlast', '70sneverdied@yahoo.com', 'haha4378')
+        u2 = self.user_setup('deus', 'dos', 'anddeflast', 'trumpfailed@yahoo.com', 'partytime89')
+        connect_users(u1, u2)
+        check_connection(u1, u2)
+        self.assertEqual(check_connection(u1, u2), True)
+        self.assertEqual(check_connection(u2, u1), True)
+
+    def test_multiple_connections(self):
+        u1 = self.user_setup('primero', 'first', 'butnotlast', '70sneverdied@yahoo.com', 'haha4378')
+        u2 = self.user_setup('deus', 'dos', 'anddeflast', 'trumpfailed@yahoo.com', 'partytime89')
+        u3 = self.user_setup('tres', 'first', 'butnotlast', 'dontcare1@aol.com', 'haha4378')
+        u4 = self.user_setup('quatro', 'dos', 'anddeflast', 'dontcare2@aol.com', 'partytime89')
+        u5 = self.user_setup('cinco', 'first', 'butnotlast', 'dontcare3@aol.com', 'haha4378')
+        u6 = self.user_setup('seis', 'dos', 'anddeflast', 'dontcare4@aol.com', 'partytime89')
+        connect_users(u1, u2)
+        connect_users(u2, u4)
+        self.assertEqual(check_connection(u1, u2), True)
+        self.assertEqual(check_connection(u1, u3), False)
+        self.assertEqual(check_connection(u2, u3), False)

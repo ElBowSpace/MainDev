@@ -1,8 +1,9 @@
 from .models import User
 
 
-def add_user(first_name, last_name, email, password):
-    u = User.objects.create(first_name=first_name,
+def add_user(username, first_name, last_name, email, password):
+    u = User.objects.create(username=username,
+                            first_name=first_name,
                             last_name=last_name,
                             email=email,
                             password=password,
