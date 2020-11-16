@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}User Guide{% endblock title%}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'elbow_space_css/card.css' %}">{% endblock css %}
+{% block content %}
+    <div class="card">
+        <div class="container">
+            <p>
+            Welcome to the ElbowSpace User Guide.  If you find yourself elsewhere on the site and want to get
+                back, just click the 'User Guide' link in the contents box again.
+            </p>
+        </div>
+        <div class="container">
+            <p>
+            <img src="{% static '/images/tutorial/user_guide_link.png' %}" alt="user guide link location">
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <p>
+            As you might imagine, to make connections on this site you first need to sign up.  Click the link
+                that says sign up to get started.
+            </p>
+        </div>
+        <div class="container">
+            <p>
+            <img src="{% static '/images/tutorial/sign_up_link.png' %}" alt="sign up link location">
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <p>
+            We can fill out a new user we'll call 'Generic Person.'  Your user name, a unique identifier,
+                and your password are both needed to move forward.  Just note, if you leave the first and
+                last name blank people will have trouble finding you later.  Click the 'Sign Up' button to continue.
+            </p>
+        </div>
+        <div class="container">
+            <p>
+            <img src="{% static '/images/tutorial/sign_up_gp.png' %}" alt="generic person sign up">
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <p>
+            If the username was unique and your password was good then you should be redirected to the ElBow Space
+                home page.  Congrats, you've signed up and if you look to contents you've also been automatically
+                logged in.  See the different options?  'Login' and 'Sign Up' were replaced with 'Logout', 'User List',
+                and 'Post List'.  Lets have a look at the User List first by clicking the link.
+            </p>
+        </div>
+        <div class="container">
+            <p>
+            <img src="{% static '/images/tutorial/logged_in_contents.png' %}" alt="generic person sign up">
+            </p>
+        </div>
+    </div>
+{% endblock content%}

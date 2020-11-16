@@ -24,4 +24,5 @@ urlpatterns = [
     path('user/home/', views.user_home, name='user_home'),
     path('connection/new/', views.make_connection, name='make_connection'),
     path('connection/new/<int:sender_pk>_<int:receiver_pk>/', views.make_connection, name='make_connection'),
+    path('user_guide/', views.tutorial, name='tutorial'),
 ]

@@ -35,6 +35,10 @@ def index(request):
     return render(request, 'index.html')
 
 
+def tutorial(request):
+    return render(request, 'tutorial.html')
+
+
 # ----------------------------------------------------------------
 # User Views
 
