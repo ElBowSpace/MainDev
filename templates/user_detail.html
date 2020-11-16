@@ -21,7 +21,7 @@
                         <p><a href="{% url 'new_post' author_pk=user.id %}">New Post</a></p>
                         <p><a href="{% url 'user_delete' pk=user.id %}">Delete User</a></p>
                     {% else %}
-                        {% if 'connections' == True %}
+                        {% if connections == True %}
                             <p>Connected</p>
                         {% else %}
                             <p><a href="{% url 'make_connection' sender_pk=user.pk receiver_pk=person.pk%}">Make connection with {{ person.first_name }}</a></p>
