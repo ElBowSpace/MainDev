@@ -119,12 +119,13 @@ def new_post(request, author_pk=None, post_pk=None):
         form = NewPostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            if author_pk:
+            if author_pk and post_pk:
                 post.user = User.objects.get(pk=author_pk)
-            post.time_stamp = datetime.now()
-            if post_pk:
+                post.reply = Post.objects.get(pk=post_pk)
+            elif post_pk:
                 post.reply = Post.objects.get(pk=post_pk)
                 post.user = User.objects.get(pk=Post.objects.get(pk=post_pk).user.pk)
+            post.time_stamp = datetime.now()
             post.save()
             return redirect('post_list', pk=post.user.pk)
     else:
@@ -132,9 +133,9 @@ def new_post(request, author_pk=None, post_pk=None):
     return render(request, 'post_new.html', {'form': form})
 
 
-def post_reply(request, post_pk=None):
-    if post_pk:
-        return redirect('new_post', post_pk=post_pk)
+def post_reply(request, author_pk=None, post_pk=None):
+    if author_pk and post_pk:
+        return redirect('new_post', author_pk=author_pk, post_pk=post_pk)
 
 
 def post_list(request, pk=None):
