@@ -138,12 +138,21 @@ def post_reply(request, author_pk=None, post_pk=None):
         return redirect('new_post', author_pk=author_pk, post_pk=post_pk)
 
 
-def post_list(request, pk=None):
+def post_list(request, viewer_pk=None, pk=None):
+    if request.method == "POST":
+        form = NewPostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.time_stamp = datetime.now()
+            post.user = User.objects.get(pk=viewer_pk)
+            post.save()
+    else:
+        form = NewPostForm()
     if pk:
         all_post_list = Post.objects.filter(user=User.objects.get(pk=pk))
     else:
         all_post_list = Post.objects.all()
-    args = {'post_list': all_post_list}
+    args = {'post_list': all_post_list, 'form': form}
     return render(request, 'post_list.html', args)
 
 
