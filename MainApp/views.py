@@ -65,7 +65,9 @@ def user_detail(request, last_name=None, first_name=None, pk=None, user_pk=None)
         connected_list = True
     else:
         connected_list = False
-    args = {'user_list': user, 'connections': connected_list}
+    user_post_list = Post.objects.filter(user=user[0])
+    print(user_post_list)
+    args = {'user_list': user, 'connections': connected_list, 'user_post_list': user_post_list}
     return render(request, 'user_detail.html', args)
 
 
