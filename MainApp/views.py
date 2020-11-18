@@ -127,9 +127,11 @@ def new_post(request, author_pk=None, post_pk=None):
             elif post_pk:
                 post.reply = Post.objects.get(pk=post_pk)
                 post.user = User.objects.get(pk=Post.objects.get(pk=post_pk).user.pk)
+            elif author_pk:
+                post.user = User.objects.get(pk=author_pk)
             post.time_stamp = datetime.now()
             post.save()
-            return redirect('post_list', pk=post.user.pk)
+            return redirect('post_list')
     else:
         form = NewPostForm()
     return render(request, 'post_new.html', {'form': form})
