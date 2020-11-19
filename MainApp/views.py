@@ -50,7 +50,7 @@ def user_home(request):
 
 
 def user_list(request):
-    all_user_list = User.objects.filter(is_active=True)
+    all_user_list = User.objects.filter(is_active=True).order_by('first_name').order_by('last_name')
     context = {'user_list': all_user_list}
     return render(request, 'user_list.html', context)
 
