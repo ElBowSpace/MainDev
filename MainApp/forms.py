@@ -23,6 +23,8 @@ class LoginForm(forms.ModelForm):
 
 
 class EditUserForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
+
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email', 'password',)
@@ -40,4 +42,3 @@ class EditPostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('body',)
-

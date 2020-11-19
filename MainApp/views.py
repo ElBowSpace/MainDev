@@ -1,4 +1,6 @@
 from datetime import datetime
+
+from django import forms
 from django.shortcuts import render, redirect
 from .models import Post, Connection
 from .forms import EditUserForm, NewPostForm, EditPostForm
@@ -97,6 +99,7 @@ def user_edit(request, last_name, first_name, pk=None):
         if form.is_valid():
             user = form.save(commit=False)
             user.is_active = True
+            user.set_password(user.password)
             user.save()
             return redirect('user_detail', user.last_name, user.first_name)
     else:
