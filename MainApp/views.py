@@ -156,9 +156,9 @@ def post_list(request, viewer_pk=None, pk=None):
     else:
         form = NewPostForm()
     if pk:
-        all_post_list = Post.objects.filter(user=User.objects.get(pk=pk))
+        all_post_list = Post.objects.filter(user=User.objects.get(pk=pk)).order_by('time_stamp').reverse()
     else:
-        all_post_list = Post.objects.all()
+        all_post_list = Post.objects.all().order_by('time_stamp').reverse()
     args = {'post_list': all_post_list, 'form': form}
     return render(request, 'post_list.html', args)
 
