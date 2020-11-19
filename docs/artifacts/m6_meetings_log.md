@@ -11,6 +11,44 @@
 * topic 3
 
 
+### Date: 11/19/20
+### Participants:
+* Code Surgeon - Angel Rivera
+* Project Manager - Ben McEwen
+* Lead Design Architect - Kevin Ritter
+* Test Engineer - Stephen Provost
+### Topics Discussed
+* Latest polish for production code
+* Live site testing
+* Live demo this Friday
+* Listing backlog for mileston-7
+* Updates to list filter sorting
+
+### Date: 11/18/20
+### Participants:
+* Code Surgeon - Angel Rivera
+* Lead Design Architect - Kevin Ritter
+### Topics Discussed
+* Live site testing
+* Patching major bugs
+
+### Date: 11/17/20
+### Participants:
+* Code Surgeon - Angel Rivera
+* Lead Design Architect - Kevin Ritter
+### Topics Discussed
+* Live site testing
+* Patching major bugs
+
+### Date: 11/15/20
+### Participants:
+* Code Surgeon - Angel Rivera
+* Lead Design Architect - Kevin Ritter
+* Test Engineer - Stephen Provost
+### Topics Discussed
+* Live site testing
+* Patching major bugs
+
 ### Date: 11/09/20
 ### Participants:
 * Code Surgeon - Angel Rivera
