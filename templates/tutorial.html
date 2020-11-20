@@ -63,9 +63,7 @@
             <p>
             The User List is where you'll see your potential connections.  For now the list is small and easy to
                 navigate, but with more use a search feature will be added to help you find people.  Did you notice
-                you have already been added to the list?  The number next to your name is a unique id we use to
-                find and sort people quickly in our database, it doesn't mean anything here and likely won't be
-                visible later.  Click on your name to see your options.
+                you have already been added to the list?  Click on your name to see your options.
             </p>
         </div>
         <div class="container">
@@ -90,7 +88,10 @@
     <div class="card">
         <div class="container">
             <p>
-            Here's where you can edit your name, email, and password.  Saving will return you to your detail page.
+            Here's where you can edit your name, email, and password.  Saving will log you out and return you to the
+                home page for Elbow Space.  This is a security feature that signs you out of all computers if the
+                password changes.  If you don't want to change your password at this time, hit the browser back button
+                to return to your detail page.
             </p>
         </div>
         <div class="container">
@@ -126,15 +127,67 @@
     <div class="card">
         <div class="container">
             <p>
-            You've been taken to a page showing only the posts made by you.  Ta-da!  There is another link here
-                from your user detail page 'All Post by ~name~'.  The line at the top there in the image below
-                is an edit post link to let you fix spelling mistakes.  It is always available to you on your
-                own posts.  You can also delete the post there.
+            Ta-da!  The line at the top there in the image below is an post detail link to let you fix spelling mistakes.
+                It is always available to you on your own posts.  You can also delete the post there.
             </p>
         </div>
         <div class="container">
             <p>
-            <img src="{% static '/images/tutorial/only_your_posts.png' %}" alt="see your posts here">
+            <img src="{% static '/images/tutorial/post_detail.png' %}" alt="see your posts here">
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <p>
+            Another feature of this link is the reply link.  From there you can reply to the post with a new post.
+                Note: deleting a post also deletes all replies to that post.
+            </p>
+        </div>
+        <div class="container">
+            <p>
+            <img src="{% static '/images/tutorial/post_reply.png' %}" alt="see your posts here">
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <p>
+            Let's return to the User List where we see another user has joined Elbow Space.  Click on the link to see
+                New Friends detail page.
+            </p>
+        </div>
+        <div class="container">
+            <p>
+            <img src="{% static '/images/tutorial/new_friend.png' %}" alt="see your posts here">
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <p>
+            The user detail options have changed.  That's because only you can edit your own account info.  If you
+                want to connect with this user then you can click the make connection link.  You'll be returned to
+                the user list, but don't worry.  It worked!  You are connected now.
+            </p>
+        </div>
+        <div class="container">
+            <p>
+            <img src="{% static '/images/tutorial/connect_with_new.png' %}" alt="see your posts here">
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <p>
+            That's it for now.  This tutorial will be extended as more options come online.  Play around and see what
+                you can do.  Be sure to let the developers know what changes you'd like to see by logging issues on
+                their GitHub repo.
+            </p>
+        </div>
+        <div class="container">
+            <p>
+{#            <img src="{% static '/images/tutorial/connect_with_new.png' %}" alt="see your posts here">#}
             </p>
         </div>
     </div>
