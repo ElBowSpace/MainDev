@@ -16,10 +16,11 @@ class SignUpForm(UserCreationForm):
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
 
 
-class LoginForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ('email', 'password',)
+# class LoginForm(forms.ModelForm):
+#     class Meta:
+#         model = User
+#         fields = ('email', 'password',)
+# TODO include this form in views.login (currently no such view exists, login is through auth users atm)
 
 
 class EditUserForm(forms.ModelForm):
