@@ -4,12 +4,12 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 # ----------------------------------------------------------------
-# User Forms
+# U S E R - - F O R M S
 
 class SignUpForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+    first_name = forms.CharField(max_length=30, required=True, help_text='Required.')
+    last_name = forms.CharField(max_length=30, required=True, help_text='Required.')
+    email = forms.EmailField(max_length=254, help_text='Required.')
 
     class Meta:
         model = User
@@ -31,7 +31,7 @@ class EditUserForm(forms.ModelForm):
 
 
 # ----------------------------------------------------------------
-# Post Forms
+# P O S T - - F O R M S
 class NewPostForm(forms.ModelForm):
     class Meta:
         model = Post
