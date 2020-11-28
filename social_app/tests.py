@@ -2,7 +2,7 @@ import datetime
 
 from django.test import SimpleTestCase, TestCase, Client
 from django.urls import reverse
-from MainApp.models import User, Post
+from social_app.models import User, Post
 from .user import *
 from .post import *
 from .connection import *
@@ -15,8 +15,8 @@ from .connection import *
 #   S I M P L E V I E W S
 #
 class ViewTests(SimpleTestCase):
-    # python manage.py test MainApp.tests.ViewTests
-    # python manage.py test MainApp.tests.ViewTests.test_view_home
+    # python manage.py test social_app.tests.ViewTests
+    # python manage.py test social_app.tests.ViewTests.test_view_home
 
     def check_template(self, page, template):
         response = self.client.get(page)
@@ -35,8 +35,8 @@ class ViewTests(SimpleTestCase):
 #   N O N C R U D
 #
 class AppTester(TestCase):
-    # python manage.py test MainApp.tests.AppTester
-    # python manage.py test MainApp.tests.AppTester.test_user_creation
+    # python manage.py test social_app.tests.AppTester
+    # python manage.py test social_app.tests.AppTester.test_user_creation
 
     def setup_user(self, username, first, last, email, password):
         self.user = User.objects.create(
@@ -100,8 +100,8 @@ class AppTester(TestCase):
 #   U S E R C R U D
 #
 class UserCRUDTest(TestCase):
-    # python manage.py test MainApp.tests.UserCRUDTest
-    # python manage.py test MainApp.tests.UserCRUDTest.test_a_new_user
+    # python manage.py test social_app.tests.UserCRUDTest
+    # python manage.py test social_app.tests.UserCRUDTest.test_a_new_user
 
     def get_user_by_name(self, first_name, last_name):
         return User.objects.get(first_name=first_name, last_name=last_name)
@@ -147,8 +147,8 @@ class UserCRUDTest(TestCase):
 #   P O S T C R U D
 #
 class PostCRUDTest(TestCase):
-    # python manage.py test MainApp.tests.PostCRUDTest
-    # python manage.py test MainApp.tests.PostCRUDTest.test_a_new_post
+    # python manage.py test social_app.tests.PostCRUDTest
+    # python manage.py test social_app.tests.PostCRUDTest.test_a_new_post
 
     def create_and_get_user(self):
         return add_user('user_name', 'first_name', 'last_name', 'test@mail.com', 'secret')
@@ -232,8 +232,8 @@ class PostCRUDTest(TestCase):
 #   U S E R C R E A T I O N
 #
 # class UserCreationTest(TestCase):
-#     # python manage.py test MainApp.tests.UserCreationTest
-#     # python manage.py test MainApp.tests.UserCreationTest.test_a_description
+#     # python manage.py test social_app.tests.UserCreationTest
+#     # python manage.py test social_app.tests.UserCreationTest.test_a_description
 #
 #     def test_a_new_user_redirect(self):
 #         # c = Client()

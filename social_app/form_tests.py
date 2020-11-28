@@ -1,5 +1,5 @@
 import datetime
-from MainApp.models import User, Post
+from social_app.models import User, Post
 from django.test import SimpleTestCase, TestCase, Client
 from django.urls import reverse
 
@@ -10,8 +10,8 @@ from .user import *
 
 # Old man McEwen's forms tester
 class TestForm(SimpleTestCase):
-    # python manage.py test MainApp.form_tests.TestForm
-    # python manage.py test MainApp.form_tests.TestForm.test_registration_form
+    # python manage.py test social_app.form_tests.TestForm
+    # python manage.py test social_app.form_tests.TestForm.test_registration_form
 
     # ----------------------------------------------------------------
     # User Forms Tests

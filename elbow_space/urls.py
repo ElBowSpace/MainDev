@@ -1,4 +1,4 @@
-"""ElbowSpace URL Configuration
+"""elbow_space URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('', include('MainApp.urls')),
+    path('', include('social_app.urls')),
     path('admin/', admin.site.urls),
 ]

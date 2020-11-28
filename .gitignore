@@ -1,6 +1,5 @@
 *.xml
 *.iml
 *.pyc
-ElbowSpace/settings.py
+elbow_space/settings.py
 !.gitignore
-ElbowSpace/settings.py
