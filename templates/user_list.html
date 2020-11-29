@@ -7,7 +7,7 @@
         {% for person in user_list %}
             <div class="card">
                 <div class="container" id="card_stuff">
-                    <div><a href="{% url 'user_detail' pk=person.pk user_pk=user.pk%}">
+                    <div><a href="{% url 'user_detail' username=person.username %}">
                         {{ person.first_name }} {{ person.last_name }}</a>
                     </div>
                 </div>
@@ -16,5 +16,7 @@
             <div>No users yet.</div>
         {% endfor %}
 
+    {% else %}
+        {% include '_missing.html' %}
     {% endif %}
 {% endblock content %}
