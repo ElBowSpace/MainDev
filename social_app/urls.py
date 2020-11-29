@@ -1,21 +1,25 @@
-from django.urls import path
+from django.conf.urls import url
+from django.urls import path, include
 from social_app import views
 
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('user_guide/', views.tutorial, name='tutorial'),
+    url(r"^accounts/", include("django.contrib.auth.urls")),
+    path('accounts/signup/', views.signup, name='signup'),
+    path('users/', views.user_list, name='user_list'),
+    path('user/<str:username>/', views.user_detail, name='user_detail'),
+    path('posts/', views.post_list, name='post_list'),
+    path('missing/', views.missing, name='missing'),
+    path('connection/new/<str:sender_name>/<str:receiver_name>', views.make_connection, name='make_connection'),
 ]
 
-# from django.urls import path, include
 # from django.conf.urls import include, url
 # from . import views
 #
 # # see tutorial at https://tutorial.djangogirls.org/en/django_forms/
 # urlpatterns = [
-#     path('', views.index, name='index'),
-#     path('accounts/signup/', views.signup, name='signup'),
-#     url(r"^accounts/", include("django.contrib.auth.urls")),
-#     path('users/', views.user_list, name='user_list'),
 #     path('user/<last_name>_<first_name>/', views.user_detail, name='user_detail'),
 #     path('user/<int:pk>/', views.user_detail, name='user_detail'),
 #     path('user/<int:pk>/<int:user_pk>', views.user_detail, name='user_detail'),
@@ -34,5 +38,4 @@ urlpatterns = [
 #     path('user/home/', views.user_home, name='user_home'),
 #     path('connection/new/', views.make_connection, name='make_connection'),
 #     path('connection/new/<int:sender_pk>_<int:receiver_pk>/', views.make_connection, name='make_connection'),
-#     path('user_guide/', views.tutorial, name='tutorial'),
 # ]

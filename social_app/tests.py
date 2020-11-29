@@ -4,14 +4,37 @@ from django.test import SimpleTestCase
 # -----------------------------------------------------
 #   S I M P L E V I E W S
 #
-class ViewTests(SimpleTestCase):
+class SimpleViewTests(SimpleTestCase):
+    # python manage.py test social_app.tests.SimpleViewTests
+    # python manage.py test social_app.tests.SimpleViewTests.test_view_index
     def check_template(self, page, template):
+        print()
+        print("simple view test: " + template)
         response = self.client.get(page)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, template_name=template)
+        print("test view validated")
 
     def test_view_index(self):
         self.check_template('/', 'index.html')
+
+    def test_view_tutorial(self):
+        self.check_template('/user_guide/', 'tutorial.html')
+
+    def test_view_signup(self):
+        self.check_template('/accounts/signup/', 'registration/signup.html')
+
+    def test_view_login(self):
+        self.check_template('/accounts/login/', 'registration/login.html')
+
+    def test_view_user_list(self):
+        self.check_template('/users/', 'user_list.html')
+
+    def test_view_post_list(self):
+        self.check_template('/posts/', 'post_list.html')
+
+    def test_view_missing(self):
+        self.check_template('/missing/', '_missing.html')
 
 # import datetime
 #
@@ -24,27 +47,6 @@ class ViewTests(SimpleTestCase):
 #
 #
 # # python manage.py test
-#
-#
-# # -----------------------------------------------------
-# #   S I M P L E V I E W S
-# #
-# class ViewTests(SimpleTestCase):
-#     # python manage.py test social_app.tests.ViewTests
-#     # python manage.py test social_app.tests.ViewTests.test_view_home
-#
-#     def check_template(self, page, template):
-#         response = self.client.get(page)
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTemplateUsed(response, template_name=template)
-#
-#
-#
-#     # base.html is tested in every other inherited test.  This will fail without a url path.
-#     # def test_base_html(self):
-#     #     self.check_template('/base.html', 'base.html')
-#
-#
 # # -----------------------------------------------------
 # #   N O N C R U D
 # #
