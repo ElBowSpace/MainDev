@@ -1,8 +1,10 @@
-from django.test import SimpleTestCase
+from django.contrib.auth.models import User
+from django.test import SimpleTestCase, TestCase
+from social_app.user import add_user, get_user
 
 
 # -----------------------------------------------------
-#   S I M P L E V I E W S
+#   S I M P L E - - V I E W S
 #
 class SimpleViewTests(SimpleTestCase):
     # python manage.py test social_app.tests.SimpleViewTests
@@ -36,6 +38,53 @@ class SimpleViewTests(SimpleTestCase):
     def test_view_missing(self):
         self.check_template('/missing/', '_missing.html')
 
+
+# -----------------------------------------------------
+#   U S E R - - C R U D
+#
+class UserCRUD(TestCase):
+    # python manage.py test social_app.tests.UserCRUD
+    # python manage.py test social_app.tests.UserCRUD.test_user_creation
+    def setup_user(self, username, first, last, email, password):
+        self.user = User.objects.create(
+            username=username,
+            first_name=first,
+            last_name=last,
+            email=email,
+            password=password,
+        )
+        return self.user
+
+    def test_user_creation(self):
+        user = self.setup_user('named', 'Tester', 'Bot', 'bot@fake.com', 'secret')
+        self.assertEqual(f'{user.username}', 'named')
+        self.assertEqual(f'{user.first_name}', 'Tester')
+        self.assertEqual(f'{user.last_name}', 'Bot')
+        self.assertEqual(f'{user.email}', 'bot@fake.com')
+        self.assertEqual(f'{user.password}', 'secret')
+
+    def test_user_update(self):
+        user = self.setup_user('tester', 'first', 'last', 'email@address.net', 'password')
+        self.assertEqual(f'{user.email}', 'email@address.net')
+        user.email = 'newer@address.net'
+        self.assertEqual(f'{user.email}', 'newer@address.net')
+
+    def test_add_new_user(self):
+        username = 'testuser'
+        useradd = add_user(username, 'Atomic', 'User', 'aTomic@users.com', 'hidden')
+        self.assertEqual(get_user(username).first_name, useradd.first_name)
+
+    def test_uniqueness_of_username(self):
+        # this required some finagling in user dot py to test as the
+        # Auth_User model blocks duplicates implicitly
+        username = 'testusers'
+        useradd1 = add_user(username, 'Atomic', 'User', 'aTomic@users.com', 'hidden')
+        useradd2 = add_user(username, 'Binary', 'User', 'aTomiK@users.com', 'secret')
+        self.assertEqual(get_user(username).first_name, useradd1.first_name)
+        self.assertEqual(None, useradd2)
+
+
+
 # import datetime
 #
 # from django.test import TestCase, Client
@@ -44,27 +93,12 @@ class SimpleViewTests(SimpleTestCase):
 # from .user import *
 # from .post import *
 # from .connection import *
-#
-#
 # # python manage.py test
 # # -----------------------------------------------------
 # #   N O N C R U D
-# #
 # class AppTester(TestCase):
 #     # python manage.py test social_app.tests.AppTester
 #     # python manage.py test social_app.tests.AppTester.test_user_creation
-#
-#     def setup_user(self, username, first, last, email, password):
-#         self.user = User.objects.create(
-#             username=username,
-#             first_name=first,
-#             last_name=last,
-#             email=email,
-#             password=password,
-#             is_active=True
-#         )
-#         return self.user
-#
 #     def setup_post(self, body, time_stamp, user):
 #         self.post = Post.objects.create(
 #             body=body,
@@ -73,13 +107,7 @@ class SimpleViewTests(SimpleTestCase):
 #         )
 #         return self.post
 #
-#     def test_user_creation(self):
-#         user = self.setup_user('', 'Tester', 'Botz', 'test@mail.com', 'secret')
-#         self.assertEqual(f'{user.username}', '')
-#         self.assertEqual(f'{user.first_name}', 'Tester')
-#         self.assertEqual(f'{user.last_name}', 'Botz')
-#         self.assertEqual(f'{user.email}', 'test@mail.com')
-#         self.assertEqual(f'{user.password}', 'secret')
+
 #
 #     def test_post_creation(self):
 #         body = 'Lorem Ipsum dolor sit amet, ' \
@@ -118,23 +146,6 @@ class SimpleViewTests(SimpleTestCase):
 # class UserCRUDTest(TestCase):
 #     # python manage.py test social_app.tests.UserCRUDTest
 #     # python manage.py test social_app.tests.UserCRUDTest.test_a_new_user
-#
-#     def get_user_by_name(self, first_name, last_name):
-#         return User.objects.get(first_name=first_name, last_name=last_name)
-#
-#     def check_user_name(self, first_name, last_name):
-#         u = self.get_user_by_name(first_name, last_name)
-#         self.assertEqual(u.first_name, first_name)
-#         self.assertEqual(u.last_name, last_name)
-#
-#     def test_a_new_user(self):
-#         add_user('genuser', 'generic', 'person', 'test@mail.com', 'secret')
-#         self.check_user_name('generic', 'person')
-#
-#     def test_b_edit_users(self):
-#         add_user('blaper', 'bland', 'person', 'test@mail.com', 'secret')
-#         edit_user(old_first='bland', old_last='person', new_first='chuck')
-#         self.check_user_name('chuck', 'person')
 #
 #     def test_c_get_user(self):
 #         username = 'uname'
