@@ -83,7 +83,8 @@ class UserCRUD(TestCase):
         self.assertEqual(get_user(username).first_name, useradd1.first_name)
         self.assertEqual(None, useradd2)
 
-
+# TODO User crud delete and edit
+# TODO Post crud
 
 # import datetime
 #
@@ -131,7 +132,6 @@ class UserCRUD(TestCase):
 #         #     self.check_template('/post_detail.html', 'post_detail.html')
 #         self.check_template('/posts/', 'post_list.html')
 #
-#     #     self.check_template('/post_new.html', 'post_new.html')
 #
 #     def test_user_templates(self):
 #         #     self.check_template('/user_delete.html', 'user_delete.html')
