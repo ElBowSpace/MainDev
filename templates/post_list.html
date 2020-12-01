@@ -9,8 +9,8 @@
             <div class="card">
                 <div class="container">
                     <hr>
-{#                    <div><a href="{% url 'post_detail' post_pk=post.pk %}">#}
-{#                        Post at: {{ post.time_stamp }} by: {{ post.user.first_name }} {{ post.user.last_name }}</a></div>#}
+                    <div><a href="{% url 'post_detail' post_pk=post.pk %}">
+                        Post at: {{ post.time_stamp }} by: {{ post.user.first_name }} {{ post.user.last_name }}</a></div>
                     <p>{{ post.body }}</p>
                     <hr>
                 </div>
