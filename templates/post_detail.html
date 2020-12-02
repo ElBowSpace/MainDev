@@ -10,7 +10,9 @@
                         <div class="post-entry">
                             <h2>reply to post: {{ post.reply.id }}</h2>
                             <h2>author: {{ post.user.username }}</h2>
-                            <p>{{ post.body }}</p>
+                            <div class="pbody" id="post-body">
+                                <p> {{ post.body }} </p>
+                            </div>
                         </div>
                         {% if user.pk == post.user.pk %}
                             <p><a href="{% url 'post_edit' post.pk %}">Edit Post</a></p>
