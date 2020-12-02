@@ -8,6 +8,7 @@
             <div class="card">
                 <div class="container">
                     <div class="user-entry">
+                        <p>{{ person.username }}</p>
                         <p>{{ person.first_name }} {{ person.last_name }}</p>
                         <p>email: {{ person.email }}</p>
                     </div>
@@ -23,7 +24,7 @@
                             temp connect placeholder
                             <p>
                                 <a href="{% url 'make_connection' sender_name=user.username receiver_name=person.username %}">
-                                Make connection with {{ person.first_name }}</a>
+                                Make connection with {{ person.username }}</a>
                             </p>
                         {% endif %}
                     {% endif %}
@@ -31,27 +32,42 @@
                 </div>
             </div>
         {% endfor %}
-            <div class="card">
-                <div class="container">
-                    {% include '_new_post.html' %}
-                </div>
+        <div class="card">
+            <div class="container">
+                {% include '_new_post.html' %}
             </div>
-        {% for post in user_post_list %}
-            <div class="card">
-                <div class="container">
-                    <hr>
-                    <div><a href="{% url 'post_detail' post_pk=post.pk %}">
-                        Post at: {{ post.time_stamp }} by: {{ post.user.username }}</a></div>
-                    <p>{{ post.body }}</p>
-                    <hr>
+        </div>
+        {% for person in user_list %}
+            {% if user.pk == person.pk or connections == True %}
+                {% for post in user_post_list %}
+                    <div class="card">
+                        <div class="container">
+                            <hr>
+                            <div>Post at: {{ post.time_stamp }} by: {{ post.user.username }}</div>
+                            <div class="pbody" id="post-body">
+                                <p> {{ post.body }} </p>
+                            </div>
+                            <div><a href="{% url 'post_detail' post_pk=post.pk %}">
+                                Reply</a></div>
+                            <hr>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="card">
+                        <div class="container">
+                            <div>No posts yet.</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="card">
+                    <div class="container">
+                        <hr>
+                        Connect with {{ person.username }} to see their posts.
+                        <hr>
+                    </div>
                 </div>
-            </div>
-        {% empty %}
-            <div class="card">
-                <div class="container">
-                    <div>No posts yet.</div>
-                </div>
-            </div>
+            {% endif %}
         {% endfor %}
     {% else %}
         {% include '_missing.html' %}
