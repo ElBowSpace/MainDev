@@ -140,7 +140,7 @@ def new_post_request(request, reply_pk=None):
             post.user = request.user
             if reply_pk:
                 post.reply = Post.objects.get(pk=reply_pk)
-                # TODO replies currently don't appear below post; high priority
+                # TODO for M-7 replies currently don't appear below post; high priority
             post.save()
     else:
         form = NewPostForm()
