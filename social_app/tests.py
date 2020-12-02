@@ -38,6 +38,18 @@ class SimpleViewTests(SimpleTestCase):
     def test_view_missing(self):
         self.check_template('/missing/', '_missing.html')
 
+#     def test_post_templates(self):
+#         self.check_template('/post_edit.html', 'post_edit.html')
+#         self.check_template('/post_detail.html', 'post_detail.html')
+#         self.check_template('/posts/', 'post_list.html')
+#
+#
+#     def test_user_templates(self):
+#         #     self.check_template('/user_delete.html', 'user_delete.html')
+#         #     self.check_template('/user_edit.html', 'user_edit.html')
+#         #     self.check_template('/user/', 'user_detail.html')
+#         self.check_template('/users/', 'user_list.html')
+
 
 # -----------------------------------------------------
 #   U S E R - - C R U D
@@ -120,24 +132,8 @@ class UserCRUD(TestCase):
 #         post = self.setup_post(body, time_stamp, user)
 #         self.assertEqual(f'{post.body}', body)
 #         self.assertEqual(f'{user.id}', '1')
-#
-#     def check_template(self, page, template):
-#         response = self.client.get(page)
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTemplateUsed(response, template_name=template)
-#
-#     def test_post_templates(self):
-#         #     self.check_template('/post_delete.html', 'post_delete.html')
-#         #     self.check_template('/post_edit.html', 'post_edit.html')
-#         #     self.check_template('/post_detail.html', 'post_detail.html')
-#         self.check_template('/posts/', 'post_list.html')
-#
-#
-#     def test_user_templates(self):
-#         #     self.check_template('/user_delete.html', 'user_delete.html')
-#         #     self.check_template('/user_edit.html', 'user_edit.html')
-#         #     self.check_template('/user/', 'user_detail.html')
-#         self.check_template('/users/', 'user_list.html')
+
+
 #
 #
 # # -----------------------------------------------------
