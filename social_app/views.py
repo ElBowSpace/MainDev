@@ -54,7 +54,7 @@ def user_detail(request, username=None):
                 connected_list = True
             else:
                 connected_list = False
-        user_post_list = Post.objects.filter(user=page_user[0])
+        user_post_list = Post.objects.filter(user=page_user[0]).order_by('time_stamp').reverse()
         form = new_post_request(request)
         args = {'user_list': page_user, 'connections': connected_list, 'user_post_list': user_post_list, 'form': form}
         return render(request, 'user_detail.html', args)
