@@ -8,8 +8,10 @@
                 <div class="card">
                     <div class="container" id="card_stuff">
                         <div class="post-entry">
-                            <h2>reply to post: {{ post.reply.id }}</h2>
-                            <h2>author: {{ post.user.username }}</h2>
+                            <p>Author: {{ post.user.username }}</p>
+                            {% for reply in replied_to_list %}
+                                <p>Post reply to {{ reply.user.username }}'s <a href="{% url 'post_detail' post_pk=reply.pk %}">post</a></p>
+                            {% endfor %}
                             <div class="pbody" id="post-body">
                                 <p> {{ post.body }} </p>
                             </div>
@@ -26,6 +28,26 @@
                         <p>{% include '_new_post_reply.html' %}</p>
                     </div>
                 </div>
+                {% for reply in post_replies_list %}
+                    <div class="card">
+                        <div class="container">
+                            <hr>
+                            <div>Post at: {{ reply.time_stamp }} by: {{ reply.user.username }}</div>
+                            <div class="pbody" id="post-body">
+                                <p> {{ reply.body }} </p>
+                            </div>
+                            <div><a href="{% url 'post_detail' post_pk=reply.pk %}">
+                                Reply</a></div>
+                            <hr>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="card">
+                        <div class="container">
+                            <div>No replies yet.</div>
+                        </div>
+                    </div>
+                {% endfor %}
             {% endfor %}
     {% endif %}
 {% endblock content %}

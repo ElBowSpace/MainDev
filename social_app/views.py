@@ -125,7 +125,11 @@ def post_detail(request, post_pk=None):
     form = new_post_request(request, post_pk)
     if post_pk:
         post = Post.objects.filter(pk=post_pk)
-        args = {'post_list': post, 'form': form}
+        replied = None
+        if post[0].reply:
+            replied = Post.objects.filter(pk=post[0].reply.pk)
+        replies = Post.objects.filter(reply=Post.objects.get(pk=post_pk)).order_by('time_stamp').reverse()
+        args = {'post_list': post, 'form': form, 'replied_to_list': replied, 'post_replies_list': replies}
     else:
         args = None
     return render(request, 'post_detail.html', args)
