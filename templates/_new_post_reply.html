@@ -1,0 +1,7 @@
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'elbow_space_css/card.css' %}">{% endblock css %}
+<h2>Reply</h2>
+<form method = "POST" class="post_form">
+    {% csrf_token %}
+    {{ form.as_p }} <button type="submit" class="btn-post">Enter</button>
+</form>

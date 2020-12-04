@@ -8,19 +8,46 @@
                 <div class="card">
                     <div class="container" id="card_stuff">
                         <div class="post-entry">
-                            <h2>post id: {{ post.id }}</h2>
-                            <h2>reply to post: {{ post.reply.id }}</h2>
-                            <h2>author: {{ post.user.first_name }} {{ post.user.last_name }}</h2>
-                            <p>body: {{ post.body }}</p>
+                            <p>Author: {{ post.user.username }}</p>
+                            {% for reply in replied_to_list %}
+                                <p>Post reply to {{ reply.user.username }}'s <a href="{% url 'post_detail' post_pk=reply.pk %}">post</a></p>
+                            {% endfor %}
+                            <div class="pbody" id="post-body">
+                                <p> {{ post.body }} </p>
+                            </div>
                         </div>
                         {% if user.pk == post.user.pk %}
                             <p><a href="{% url 'post_edit' post.pk %}">Edit Post</a></p>
                             <p><a href="{% url 'post_delete' post.pk %}">Delete Post</a></p>
                         {% endif %}
-                        <p><a href="{% url 'post_reply' author_pk=user.pk post_pk=post.pk %}">Reply</a></p>
                         <p><a href="{% url 'post_list' %}">Return to post list</a></p>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="container" id="card_stuff">
+                        <p>{% include '_new_post_reply.html' %}</p>
+                    </div>
+                </div>
+                {% for reply in post_replies_list %}
+                    <div class="card">
+                        <div class="container">
+                            <hr>
+                            <div>Post at: {{ reply.time_stamp }} by: {{ reply.user.username }}</div>
+                            <div class="pbody" id="post-body">
+                                <p> {{ reply.body }} </p>
+                            </div>
+                            <div><a href="{% url 'post_detail' post_pk=reply.pk %}">
+                                Reply</a></div>
+                            <hr>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="card">
+                        <div class="container">
+                            <div>No replies yet.</div>
+                        </div>
+                    </div>
+                {% endfor %}
             {% endfor %}
     {% endif %}
 {% endblock content %}

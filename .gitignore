@@ -1,6 +1,7 @@
 *.xml
 *.iml
 *.pyc
-ElbowSpace/settings.py
+elbow_space/settings.py
+social_app/migrations/0001_initial.py
+social_app/migrations/__init__.py
 !.gitignore
-ElbowSpace/settings.py

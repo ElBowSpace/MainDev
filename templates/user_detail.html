@@ -8,43 +8,68 @@
             <div class="card">
                 <div class="container">
                     <div class="user-entry">
+                        <p>{{ person.username }}</p>
                         <p>{{ person.first_name }} {{ person.last_name }}</p>
                         <p>email: {{ person.email }}</p>
                     </div>
                 </div>
                 <div class="container">
                     {% if user.pk == person.pk %}
-                        {# This three parameter url is a bug fix.  Necessary if multiple users have the same name. #}
-                        <p><a href="{% url 'user_edit' last_name=user.last_name first_name=user.first_name pk=user.pk %}">Edit user</a></p>
-                        <p><a href="{% url 'new_post' author_pk=user.id %}">New Post</a></p>
-                        <p><a href="{% url 'user_delete' pk=user.id %}">Delete User</a></p>
+                        <p><a href="{% url 'user_edit' pk=user.pk %}">Edit user</a></p>
+                        <p><a href="{% url 'user_delete' pk=user.pk %}">Delete User</a></p>
                     {% else %}
                         {% if connections == True %}
                             <p>Connected</p>
                         {% else %}
-                            <p><a href="{% url 'make_connection' sender_pk=user.pk receiver_pk=person.pk%}">Make connection with {{ person.first_name }}</a></p>
+                            temp connect placeholder
+                            <p>
+                                <a href="{% url 'make_connection' sender_name=user.username receiver_name=person.username %}">
+                                Make connection with {{ person.username }}</a>
+                            </p>
                         {% endif %}
                     {% endif %}
                     <p><a href="{% url 'user_list' %}">Return to user list</a></p>
                 </div>
             </div>
         {% endfor %}
-        {% for post in user_post_list %}
-            <div class="card">
-                <div class="container">
-                    <hr>
-                    <div><a href="{% url 'post_detail' post_pk=post.pk %}">
-                        Post at: {{ post.time_stamp }} by: {{ post.user.first_name }} {{ post.user.last_name }}</a></div>
-                    <p>{{ post.body }}</p>
-                    <hr>
-                </div>
+        <div class="card">
+            <div class="container">
+                {% include '_new_post.html' %}
             </div>
-        {% empty %}
-            <div class="card">
-                <div class="container">
-                    <div>No posts yet.</div>
+        </div>
+        {% for person in user_list %}
+            {% if user.pk == person.pk or connections == True %}
+                {% for post in user_post_list %}
+                    <div class="card">
+                        <div class="container">
+                            <hr>
+                            <div>Post at: {{ post.time_stamp }} by: {{ post.user.username }}</div>
+                            <div class="pbody" id="post-body">
+                                <p> {{ post.body }} </p>
+                            </div>
+                            <div><a href="{% url 'post_detail' post_pk=post.pk %}">
+                                Reply</a></div>
+                            <hr>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="card">
+                        <div class="container">
+                            <div>No posts yet.</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="card">
+                    <div class="container">
+                        <hr>
+                        Connect with {{ person.username }} to see their posts.
+                        <hr>
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         {% endfor %}
+    {% else %}
+        {% include '_missing.html' %}
     {% endif %}
 {% endblock content %}

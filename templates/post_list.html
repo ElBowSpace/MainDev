@@ -9,9 +9,12 @@
             <div class="card">
                 <div class="container">
                     <hr>
+                    <div>Post at: {{ post.time_stamp }} by: {{ post.user.username }}</div>
+                    <div class="pbody" id="post-body">
+                        <p> {{ post.body }} </p>
+                    </div>
                     <div><a href="{% url 'post_detail' post_pk=post.pk %}">
-                        Post at: {{ post.time_stamp }} by: {{ post.user.first_name }} {{ post.user.last_name }}</a></div>
-                    <p>{{ post.body }}</p>
+                        Reply</a></div>
                     <hr>
                 </div>
             </div>
@@ -24,5 +27,7 @@
         {% endfor %}
 
             <p><a href="{% url 'user_list' %}">Return to user list</a></p>
+    {% else %}
+        {% include '_missing.html' %}
     {% endif %}
 {% endblock content %}

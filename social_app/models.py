@@ -25,4 +25,3 @@ class Connection(models.Model):
 
     def __str__(self):
         return "Connection:" + " User: " + str(self.sender) + " To: " + " User: " + str(self.receiver)
-
